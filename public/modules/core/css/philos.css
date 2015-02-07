@@ -1,0 +1,106 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.navbar-fixed-top{
+    background-attachment:fixed;
+	background-image:url(../content/images/pattern_image.png);
+    background-position: top center;
+    background-repeat:repeat;
+}
+
+section#contact {
+    background-color: #222;
+    background-attachment:fixed;
+	background-image:url(../content/images/pattern_image.png);
+    background-position: top center;
+    background-repeat:repeat;
+}
+
+
+.btn-md {
+    padding: 15px 30px;
+    border: #00B36E 2px solid;
+    text-transform: uppercase;
+    font-family: 'Raleway', "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+	letter-spacing:8px;
+    color: #00B36E;
+    background-color: #fff;
+	transition:all ease-out 300ms;
+}
+
+.btn-md:hover,
+.btn-md:focus,
+.btn-md:active,
+.btn-md.active,
+.open .dropdown-toggle.btn-md {
+    border-color: #FF4C27;
+    color: #FF4C27;
+    background-color: #fff;
+}
+
+.btn-md:active,
+.btn-md.active,
+.open .dropdown-toggle.btn-md {
+    background-image: none;
+}
+
+.btn-md.disabled,
+.btn-md[disabled],
+fieldset[disabled] .btn-md,
+.btn-md.disabled:hover,
+.btn-md[disabled]:hover,
+fieldset[disabled] .btn-md:hover,
+.btn-md.disabled:focus,
+.btn-md[disabled]:focus,
+fieldset[disabled] .btn-md:focus,
+.btn-md.disabled:active,
+.btn-md[disabled]:active,
+fieldset[disabled] .btn-md:active,
+.btn-md.disabled.active,
+.btn-md[disabled].active,
+fieldset[disabled] .btn-md.active {
+    border-color: #FF4C27;
+    background-color: #FF4C27;
+}
+
+.btn-md .badge {
+    color: #FF4C27;
+    background-color: #fff;
+}
+
+
+.btn-md {
+	border-radius:40px;
+}
+
+h2{	
+	letter-spacing:0.3em;
+}
+
+@media(min-width:768px) {
+    header .intro-text {
+        padding-top: 150px;
+        padding-bottom: 50px;
+    }
+	
+	.navbar-brand-logo{
+		display:block;
+	}
+	
+    .navbar-default.navbar-shrink {
+        padding: 10px 0;
+  		background-attachment:fixed;
+		background-image:url(../content/images/pattern_image.png);
+  		background-position: top center;
+  		background-repeat:repeat;
+    }
+}
+
+
+@media(max-width:767px) {
+		.navbar{
+			padding:10px;
+		}
+}
