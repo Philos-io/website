@@ -13,12 +13,13 @@ var init = require('./config/init')(),
  */
 
 // Bootstrap db connection
-var db = mongoose.connect(config.db, function(err) {
-	if (err) {
-		console.error(chalk.red('Could not connect to MongoDB!'));
-		console.log(chalk.red(err));
-	}
-});
+var db = null;
+// var db = mongoose.connect(config.db, function(err) {
+// 	if (err) {
+// 		console.error(chalk.red('Could not connect to MongoDB!'));
+// 		console.log(chalk.red(err));
+// 	}
+// });
 
 // Init the express application
 var app = require('./config/express')(db);
@@ -31,6 +32,3 @@ app.listen(config.port);
 
 // Expose app
 exports = module.exports = app;
-
-// Logging initialization
-console.log('MEAN.JS application started on port ' + config.port);
