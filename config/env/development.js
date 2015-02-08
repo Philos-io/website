@@ -3,7 +3,7 @@
 module.exports = {
 	db: 'mongodb://localhost/philos-dev',
 	app: {
-		title: 'philos - Development Environment'
+		title: 'Philos | Learn.Build.Share'
 	},
 	facebook: {
 		clientID: process.env.FACEBOOK_ID || 'APP_ID',
