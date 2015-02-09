@@ -1,25 +1,20 @@
-
-<!-- Header -->
-<header>
-    <div class="container home_screen">
-        <div class="intro-text">
-            <div class="intro-lead-in">A twist into corporate trainings!</div>
-            <div class="intro-heading">Learn.Build.Share</div>
-        </div>
-    </div>
-</header>
-
 <!-- Portfolio Grid Section -->
 <section id="portfolio" class="bg-light-gray">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h2 class="section-heading">Pick your Trainings</h2>
-                <h3 class="section-subheading text-muted">and explore technology like never before!</h3>
+                <h2 class="section-heading">Explore our trainings</h2>
+            </div>
+            <div class="col-lg-offset-2 col-lg-8 text-center">
+                <form class="form" role="search">
+                    <div class="form-group">
+                      <input type="text" class="form-control" placeholder="Search">
+                    </div>
+              </form>
             </div>
         </div>
         <div class="row">
-            <div class="col-md-4 col-sm-6 portfolio-item animated fadeInLeft">
+            <div class="col-md-4 col-sm-6 portfolio-item animated fadeInLeft" data-ng-click="Trainings.get()">
                 <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
                     <div class="portfolio-hover">
                         <div class="portfolio-hover-content">
@@ -103,6 +98,48 @@
                     <p class="text-muted">Automation Tools</p>
                 </div>
             </div>
+            <div class="col-md-4 col-sm-6 portfolio-item animated fadeInLeft">
+                <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+                    <div class="portfolio-hover">
+                        <div class="portfolio-hover-content">
+                            <i class="fa fa-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    <img src="modules/core/img/portfolio/roundicons.png" class="img-responsive" alt="">
+                </a>
+                <div class="portfolio-caption">
+                    <h4>AngularJS</h4>
+                    <p class="text-muted">JavaScript Frameworks</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 portfolio-item animated fadeIn">
+                <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+                    <div class="portfolio-hover">
+                        <div class="portfolio-hover-content">
+                            <i class="fa fa-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    <img src="modules/core/img/portfolio/startup-framework.png" class="img-responsive" alt="">
+                </a>
+                <div class="portfolio-caption">
+                    <h4>ES6</h4>
+                    <p class="text-muted">How to work with JavaScript today!</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 portfolio-item animated fadeInRight">
+                <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
+                    <div class="portfolio-hover">
+                        <div class="portfolio-hover-content">
+                            <i class="fa fa-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    <img src="modules/core/img/portfolio/treehouse.png" class="img-responsive" alt="">
+                </a>
+                <div class="portfolio-caption">
+                    <h4>Test Driven Developement</h4>
+                    <p class="text-muted">TDD for better design</p>
+                </div>
+            </div>
         </div>
         <div class="row">
             <div class="col-lg-12 text-center">
@@ -112,79 +149,3 @@
         </div>
     </div>
 </section>
-
-<section class="testimonial">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <h2 class="section-heading">Testimonials</h2>
-                <h4 class="text-muted">( They spent few hours with us! )</h4>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-6 col-md-4">
-                <div class="thumbnail">
-                    <img src="modules/core/img/portfolio/roundicons.png" class="img-responsive" alt="">
-                    <div class="caption">
-                        <h3>AngularJS Workshop</h3>
-                        <p class="text-muted">This has been an amazing learning experience</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <div class="thumbnail">
-                    <img src="modules/core/img/portfolio/startup-framework.png" class="img-responsive" alt="">
-                    <div class="caption">
-                        <h3>AngularJS Workshop</h3>
-                        <p class="text-muted">This has been an amazing learning experience</p>
-                        
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <div class="thumbnail">
-                    <img src="modules/core/img/portfolio/startup-framework.png" class="img-responsive" alt="">
-                    <div class="caption">
-                        <h3>Ionic Framework</h3>
-                        <p class="text-muted">This is by far the best learning experience I've had</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Clients Aside -->
-<aside class="clients">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <h2 class="section-heading">They trust us</h2>
-                <h4 class="text-muted">( and they are happy! )</h4>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-3 col-sm-6">
-                <a href="#">
-                    <img src="modules/core/img/logos/mediahuis.png" class="img-responsive img-centered" alt="">
-                </a>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <a href="#">
-                    <img src="modules/core/img/logos/kbc.png" class="img-responsive img-centered" alt="">
-                </a>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <a href="#">
-                    <img src="modules/core/img/logos/aston_carter.png" class="img-responsive img-centered" alt="">
-                </a>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <a href="#">
-                    <img src="modules/core/img/logos/volt.png" class="img-responsive img-centered" alt="">
-                </a>
-            </div>
-        </div>
-    </div>
-</aside>
-
