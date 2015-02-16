@@ -84,6 +84,18 @@ h2{
     color: rgb(51, 51, 51);
 }
 
+.btn-philos{
+    color: #fff;
+    background: rgba(255,76,39,.9);
+}
+
+/**Training section***/
+section#trainingDetails{
+    margin-top: 50px;
+    height: 90%;
+    min-height: 750px;
+}
+
 @media(min-width:768px) {
     header .intro-text {
         padding-top: 150px;

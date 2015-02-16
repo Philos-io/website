@@ -14,17 +14,17 @@ angular.module('trainings').config(['$stateProvider', '$urlRouterProvider',
 			controller: 'TrainingsController',
 			controllerAs: 'Trainings'
 		})
-		.state('trainings.add', {
-			url: '/trainings.add',
+		.state('add', {
+			url: '/trainings/add',
 			templateUrl: 'modules/trainings/views/trainings.add.view.html',
 			controller: 'TrainingsController',
 			controllerAs: 'Trainings'
 		})
-		.state('trainings.detail', {
-			url: '/trainings:training_id',
-			templateUrl: 'modules/trainings/views/trainingDetails.index.view.html',
+		.state('detail', {
+			url: '/trainings/{training_id}',
+			templateUrl: 'modules/trainings/views/trainings.details.view.html',
 			controller: 'TrainingDetailsController',
-			controllerAs: 'Trainings'
+			controllerAs: 'Training'
 		});
 	}
 ]);
