@@ -9,4 +9,7 @@ module.exports = function(app){
 
 	app.route('/trainings/:trainingId')
 		.get(trainings.get);
+
+	app.route('/trainings/add')
+		.get(trainings.add);
 };
