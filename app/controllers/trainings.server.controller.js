@@ -6,18 +6,21 @@ exports.list = function(req, res){
 
 exports.get = function(req, res){
 
-  //res.json({training: 'NodeJS'});
-  debugger;
   var mongoose = require('mongoose');
   var Training = mongoose.model('Training');
 
-  Training.create(training, function(err, col){
+  var id = req.params.trainingId;
+  Training.find({id: id}, function(err, result){
     if(err) throw err;
-    console.log('A new training has been added');
-
-    res.json({success: true});
+    res.json(result);
   });
 
+  // Training.create(training, function(err, col){
+  //   if(err) throw err;
+  //   console.log('A new training has been added');
+  //
+  //   res.json({success: true});
+  // });
 };
 
 

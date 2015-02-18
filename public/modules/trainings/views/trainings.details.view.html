@@ -1,20 +1,23 @@
 <section id="trainingDetails" class="container-fluid">
 	<div class="row">
+		
+		<div class="row well title">
+			<h5>{{Training.title}}</h5>
+		</div>
 
 		<div class="col-lg-6 col-xs-12 col-md-6">
 			<img width="400" ng-src="{{Training.logo}}" alt="NodeJS workshop by Philos.io" class="img-thumbnail">
 		</div>
-		<div class="col-lg-6 col-xs-12 bg-info col-md-6">
-			{{Training.description}}
+
+		<div class="col-lg-4 col-xs-12 col-md-6 well">
+			<h5 class="info">Course at the glance</h5>
+			<p>
+				{{Training.description}}
+			</p>
 		</div>
 
 	</div>
 	<hr/>
-	<span>Related workshops</span>
-
-	<!-- <hr/>
-	<div class="container">
-		<a href="#!/trainings" class="btn btn-philos btn-lg">Explore Our Trainings</a>
-	</div> -->
-
+	<h4>Related workshops</h4>
+	<courses data-model="Training.relatedCourses"></courses>
 </section>

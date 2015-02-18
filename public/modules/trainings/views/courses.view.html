@@ -1,0 +1,11 @@
+<div class="row" data-ng-repeat="course in model">
+        <div class="col-md-4 col-sm-6 portfolio-item animated pulse" data-ng-click="Trainings.get()">
+            <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+                <img data-ng-src="course.logo" class="img-responsive" alt="course.title">
+            </a>
+            <div class="portfolio-caption">
+                <h4 data-ng-bind="course.title"></h4>
+                <p class="text-muted" data-ng-bind="course.category"></p>
+            </div>
+        </div>
+    </div>
