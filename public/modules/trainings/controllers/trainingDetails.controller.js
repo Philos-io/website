@@ -7,6 +7,7 @@ function TrainingDetailsController($stateParams, $http, $q){
 
 	function success(result){
 		_.extend(self, result.data[0]);
+		self.fullName = self.firstName + " "+ self.lastName;
 	}
 
 
@@ -19,5 +20,3 @@ function TrainingDetailsController($stateParams, $http, $q){
 TrainingDetailsController.$inject = ['$stateParams', '$http', '$q'];
 
 angular.module('trainings').controller('TrainingDetailsController', TrainingDetailsController);
-
-

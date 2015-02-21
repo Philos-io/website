@@ -1,23 +1,67 @@
-<section id="trainingDetails" class="container-fluid">
+<section id="trainingDetails" class="container">
 	<div class="row">
-		
-		<div class="row well title">
-			<h5>{{Training.title}}</h5>
+
+		<div class="row well">
+			<h5 class="title" data-ng-bind="Training.title"></h5>
 		</div>
 
-		<div class="col-lg-6 col-xs-12 col-md-6">
-			<img width="400" ng-src="{{Training.logo}}" alt="NodeJS workshop by Philos.io" class="img-thumbnail">
+		<div class="col-lg-6 col-xs-12 col-md-6 logo">
+			<img width="400" data-ng-src="{{::Training.logo}}" alt="{{::Training.title}}" class="img-thumbnail animated pulse"/>
 		</div>
 
 		<div class="col-lg-4 col-xs-12 col-md-6 well">
+			<h5 class="info">About the course</h5>
+			<p data-ng-bind="::Training.description"></p>
+		</div>
+		<div class="col-lg-4 col-xs-12 col-md-6 well">
 			<h5 class="info">Course at the glance</h5>
 			<p>
-				{{Training.description}}
+				<ul>
+					<li>3 days of intense hacking</li>
+					<li>6 people maximum! Quality matters</li>
+					<li>Philos Methodology: Learn.Build.Share</li>
+					<li>English</li>
+				</ul>
 			</p>
 		</div>
-
+		<div class="col-lg-4 col-xs-12 col-md-6 well">
+			<h5>Mentors</h5>
+			<div>
+				<ul data-ng-repeat="instructor in Training.instructors track by $index">
+					<mentor data-model="instructor"></mentor>
+				</ul>
+			</div>
+		</div>
+		<div class="col-lg-4 col-xs-12 col-md-6 well">
+			<h5 class="info">Course details</h5>
+			<div data-ng-repeat="desc in Training.modules track by desc.title">
+	            <h5>{{desc.title}}</h5>
+	            <br>
+	            <ul data-ng-repeat="topic in desc.topics track by $index">
+	                <li>{{desc.topics[$index]}}</li>
+	            </ul>
+	            <br>
+	        </div>
+		</div>
+		<div class="col-lg-4 col-xs-12 col-md-6 well">
+			<h5>Sessions</h5>
+			<form data-ng-submit="Training.join()">
+				<select name="session" id="" class="form-control">
+					<option selected>March 12, 2015</option>
+					<option>February 12, 2015</option>
+					<option>Future Sessions</option>
+				</select>
+				<br/>
+				<form class="form-group">
+					<input type="button" value="Join this workshop!" class="btn btn-philos form-control">
+				</form>
+				<div>
+					<a href="#" class="">Need to convince your manager?</a>
+				</div>
+			</form>
+		</div>
 	</div>
 	<hr/>
-	<h4>Related workshops</h4>
+	<h5>Related workshops</h5>
 	<courses data-model="Training.relatedCourses"></courses>
 </section>

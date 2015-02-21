@@ -5,7 +5,7 @@ function TrainingsController($state){
 	console.log('inside training controller');
 	this.get = function(id){
 		var state = $state;
-		$state.transitionTo('detail', {training_id: 8727});
+		$state.transitionTo('detail', {training_id: 8725});
 	};
 
 	this.suggest = function(){
@@ -16,4 +16,3 @@ function TrainingsController($state){
 TrainingsController.$inject = ['$state'];
 
 angular.module('trainings').controller('TrainingsController', TrainingsController);
-

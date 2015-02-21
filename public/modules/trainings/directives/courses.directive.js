@@ -6,7 +6,7 @@ function Courses(){
 		scope: {
 			model: '='
 		},
-		templateUrl: 'modules/trainings/views/Courses.view.html'
+		templateUrl: 'modules/trainings/views/courses.view.html'
 	}
 }
 

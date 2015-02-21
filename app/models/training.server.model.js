@@ -11,6 +11,7 @@ var TrainingSchema = new Schema({
     type: String,
     required: true
   },
+  modules: [],
   logo: {
     type: String,
     required: true
@@ -40,12 +41,13 @@ var TrainingSchema = new Schema({
     required: true
   },
   instructors: {
-    type: [String]
+    type: []
   },
   requirements: {
     type: [String],
     required: true
   },
+  relatedCourses: [Schema.Types.ObjectId],
   created: {
     type: Date,
     default: Date.now
@@ -54,5 +56,6 @@ var TrainingSchema = new Schema({
     type: Date
   }
 });
+
 
 mongoose.model('Training', TrainingSchema);

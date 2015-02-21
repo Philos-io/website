@@ -79,7 +79,7 @@ fieldset[disabled] .btn-md.active {
 .navbar-default{
     border-color: transparent;
 }
-h2{	
+h2{
 	letter-spacing:0.3em;
     color: rgb(51, 51, 51);
 }
@@ -89,10 +89,6 @@ h2{
     background: rgba(255,76,39,.9);
 }
 
-#trainingDetails{
-    text-align: center;
-}
-
 /**Training section***/
 section#trainingDetails{
     margin-top: 50px;
@@ -100,16 +96,48 @@ section#trainingDetails{
     min-height: 750px;
 }
 
+#trainingDetails .title{
+    text-align: center;
+}
+
+#trainingDetails h5{
+    text-align: left;
+    font-weight: bold;
+}
+
+#trainingDetails .well {
+    background: transparent;
+    border-radius: 0;
+    border-color: transparent;
+    border-top-color: rgba(255,76,39,.9);
+    margin-bottom: 2px;
+}
+
+#trainingDetails .logo{
+    margin-bottom: 5%;
+}
+
+.mentor img{
+  width: 50%;
+  border-radius: 50%;
+}
+
+.mentor{
+  width: 100%;
+  margin-left: -40px;
+  padding: 0 1%;
+}
+
 @media(min-width:768px) {
     header .intro-text {
         padding-top: 150px;
         padding-bottom: 50px;
     }
-	
+
 	.navbar-brand-logo{
 		display:block;
 	}
-	
+
     .navbar-default.navbar-shrink {
         padding: 10px 0;
   		background-attachment:fixed;
