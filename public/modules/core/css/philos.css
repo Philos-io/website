@@ -90,6 +90,12 @@ h2{
 }
 
 /**Training section***/
+section#portfolio{
+    margin-top: 100px;
+    height: 90%;
+}
+
+/**Training section***/
 section#trainingDetails{
     margin-top: 50px;
     height: 90%;

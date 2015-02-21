@@ -21,6 +21,8 @@ var TrainingSchema = new Schema({
     default: 'Hacker Dojo',
     required: true
   },
+  shortTitle: String,
+  category: String,
   type: {
     type: String,
     enum: ['corporate', 'onedayonetech', 'meetup'],
@@ -36,6 +38,7 @@ var TrainingSchema = new Schema({
   tags: {
     type: [String]
   },
+  takeways: [String],
   description: {
     type: String,
     required: true

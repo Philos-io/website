@@ -1,7 +1,7 @@
 'use strict';
 
 function TrainingService($http, $q){
-	
+
 	function getAll(){
 
 	}
@@ -19,5 +19,4 @@ function TrainingService($http, $q){
 TrainingService.$inject = ['$http', '$q'];
 
 
-angular.module('trainings').factory('TrainingService', TrainingService);
-
+angular.module('workshops').factory('TrainingService', TrainingService);

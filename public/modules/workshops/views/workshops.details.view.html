@@ -6,12 +6,12 @@
 		</div>
 
 		<div class="col-lg-6 col-xs-12 col-md-6 logo">
-			<img width="400" data-ng-src="{{::Training.logo}}" alt="{{::Training.title}}" class="img-thumbnail animated pulse"/>
+			<img width="400" data-ng-src="{{::ws.logo}}" alt="{{::ws.title}}" class="img-thumbnail animated pulse"/>
 		</div>
 
 		<div class="col-lg-4 col-xs-12 col-md-6 well">
 			<h5 class="info">About the course</h5>
-			<p data-ng-bind="::Training.description"></p>
+			<p data-ng-bind="::ws.description"></p>
 		</div>
 		<div class="col-lg-4 col-xs-12 col-md-6 well">
 			<h5 class="info">Course at the glance</h5>
@@ -27,14 +27,14 @@
 		<div class="col-lg-4 col-xs-12 col-md-6 well">
 			<h5>Mentors</h5>
 			<div>
-				<ul data-ng-repeat="instructor in Training.instructors track by $index">
+				<ul data-ng-repeat="instructor in ws.instructors track by $index">
 					<mentor data-model="instructor"></mentor>
 				</ul>
 			</div>
 		</div>
 		<div class="col-lg-4 col-xs-12 col-md-6 well">
 			<h5 class="info">Course details</h5>
-			<div data-ng-repeat="desc in Training.modules track by desc.title">
+			<div data-ng-repeat="desc in ws.modules track by desc.title">
 	            <h5>{{desc.title}}</h5>
 	            <br>
 	            <ul data-ng-repeat="topic in desc.topics track by $index">
@@ -45,7 +45,7 @@
 		</div>
 		<div class="col-lg-4 col-xs-12 col-md-6 well">
 			<h5>Sessions</h5>
-			<form data-ng-submit="Training.join()">
+			<form data-ng-submit="ws.join()">
 				<select name="session" id="" class="form-control">
 					<option selected>March 12, 2015</option>
 					<option>February 12, 2015</option>
@@ -63,5 +63,5 @@
 	</div>
 	<hr/>
 	<h5>Related workshops</h5>
-	<courses data-model="Training.relatedCourses"></courses>
+	<courses data-model="ws.relatedCourses"></courses>
 </section>

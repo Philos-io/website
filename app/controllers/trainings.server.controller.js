@@ -1,36 +1,42 @@
 'use strict';
+var mongoose = require('mongoose');
+var Training = mongoose.model('Training');
 
 exports.list = function(req, res){
-  //res.json({training: 'philos.io'});
+    Training.find(callback);
+
+    function callback(err, collection){
+      if(err) throw err;
+      res.json({workshops: collection});
+    }
 };
 
 exports.get = function(req, res){
+  var id = req.params.workshopId;
 
-  var mongoose = require('mongoose');
-  var Training = mongoose.model('Training');
-
-  var id = req.params.trainingId;
+  //if(!id) res.redirect('/api/workshops');
 
   Training.find({id: id}, function(err, result){
     if(err) throw err;
     res.json(result);
   });
 
-
-  // Training.create(angularjs, function(err, col){
+  // var training = ionicjs;
+  // Training.create(training, function(err, col){
   //   if(err) throw err;
-  //   console.log(angularjs.title);
-  //   res.json({success: true, elements: angularjs});
+  //   console.log(training.title);
+  //   res.json({success: true, elements: training});
   // });
-
 };
 
 var ionicjs = {
   id: '8723',
   title: 'Building LinkedIn mobile with Ionic Framework and AngularJS',
+  shortTitle: 'IonicFramework',
   tags: ['javascript', 'mobile application', 'AngularJS'],
   description: 'Have you tried LinkedIn mobile? How did you find it? Straight to the point, right? Imagine you had the skills to build such an application? This is what you gonna learn during this intense session! Our mentors will teach you how to use Angularjs, Cordova (ng-cordova) and NodeJS to build a slicker version of LinkedIn mobile! Join US!',
   level: 'beginner',
+  category: 'JavaScript Framework',
   modules:[
     {
       title: 'Unit 1: Setting up everything',
@@ -50,8 +56,8 @@ var ionicjs = {
     }
   ],
   requirements: ['Your laptop', 'Github Account', 'Heroku Account', 'Ionic CLI installed', 'Android and/or iOS phone', 'A smile and a lot of energy'],
-  //takeAways: ['You can build advanced mobile applications with web technologies', 'Pair programming', 'JavaScript OS: The big picture', 'Write clean and maintenable code', 'Ionic Framework and AngularJS are here to stay'],
-  logo: 'modules/trainings/images/TRAININGS-ILLUSTRATIONS-05.png',
+  takeAways: ['You can build advanced mobile applications with web technologies', 'Pair programming', 'JavaScript OS: The big picture', 'Write clean and maintenable code', 'Ionic Framework and AngularJS are here to stay'],
+  logo: 'modules/workshops/images/TRAININGS-ILLUSTRATIONS-05.png',
   instructors: [{
             firstName: 'Davy',
             lastName: 'Engone',
@@ -69,6 +75,9 @@ var nodejs = {
   tags: ['javascript', 'NodeJS', 'Express', 'Koa'],
   description: 'This is a deepth dive into JavaScript on the server: NodeJS! In this One week, One project we are going to build, deploy and monitore a NodeJS application! Throughout our journey, we are going to learn everything you need to know to get going with NodeJS!',
   level: 'intermediaire',
+  shortTitle: 'NodeJS',
+  category: 'JS Runtime Environment',
+  takeAways: ['Be able to prototype quickly your NodeJS application', 'Pair programming', 'JavaScript OS: The big picture', 'Write clean and maintenable code', 'NodeJS will become a very good friend'],
   modules: [
     {
       title: 'Unit 1: Getting Started With NodeJS',
@@ -88,7 +97,7 @@ var nodejs = {
     }
   ],
   requirements: ['Experience with at least one programming language', 'A computer', 'Github Account'],
-  logo: 'modules/trainings/images/TRAININGS-ILLUSTRATIONS-01.png',
+  logo: 'modules/workshops/images/TRAININGS-ILLUSTRATIONS-01.png',
   instructors: [{
             firstName: 'Davy',
             lastName: 'Engone',
@@ -106,6 +115,9 @@ var angularjs = {
   tags: ['javascript', 'NodeJS', 'Express', 'Koa'],
   description: 'AngularJS is a frontend framework that helps you build fast and well architected web applications! This workshop will take you from beginner to advanced level on AngularJS in few days. We will dive into the heart of this technology! By the end of this workshop you will be able to build scalable applications with AngularJS!',
   level: 'beginner',
+  shortTitle: 'AngularJS',
+  category: 'JavaScript Framework',
+  takeAways: ['Why using AngularJS in your next project', 'Developping big project with JavaScript', 'Write clean and maintenable code', 'Advanced debugging techniques'],
   modules: [
     {
       title: 'Unit 1: Getting started with AngularJS',
@@ -125,7 +137,7 @@ var angularjs = {
     }
   ],
   requirements: ['Experience with at least one programming language', 'A computer', 'Github Account'],
-  logo: 'modules/trainings/images/TRAININGS-ILLUSTRATIONS-03.png',
+  logo: 'modules/workshops/images/TRAININGS-ILLUSTRATIONS-03.png',
   instructors: [{
             firstName: 'Davy',
             lastName: 'Engone',

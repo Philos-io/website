@@ -3,13 +3,13 @@
 var trainings = require('../../app/controllers/trainings.server.controller');
 
 module.exports = function(app){
-	app.route('/trainings')
+	app.route('/api/workshops')
 		.get(trainings.list);
 
 
-	app.route('/trainings/:trainingId')
+	app.route('/api/workshops/:workshopId')
 		.get(trainings.get);
 
-	app.route('/trainings/add')
+	app.route('/api/workshops/add')
 		.get(trainings.add);
 };

@@ -6,9 +6,9 @@ function Courses(){
 		scope: {
 			model: '='
 		},
-		templateUrl: 'modules/trainings/views/courses.view.html'
+		templateUrl: 'modules/workshops/views/courses.view.html'
 	}
 }
 
 Courses.$inject = [];
-angular.module('trainings').directive('courses', Courses);
+angular.module('workshops').directive('courses', Courses);
