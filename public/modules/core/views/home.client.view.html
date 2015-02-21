@@ -5,13 +5,13 @@
         <div class="intro-text">
             <div class="intro-lead-in">A twist into corporate trainings!</div>
             <div class="intro-heading">Learn.Build.Share</div>
-            <a href="#!/trainings" class="btn btn-philos btn-lg">Explore Our Trainings</a>
+            <a href="#!/workshops" class="btn btn-philos btn-lg">Explore Our Trainings</a>
         </div>
     </div>
 </header>
 
 <!-- Portfolio Grid Section -->
-<section id="portfolio" class="bg-light-gray" ng-controller="TrainingsController as Trainings">
+<section id="portfolio" class="bg-light-gray home animated fadeInUpSmall" ng-controller="WorkshopsController as model">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
@@ -20,47 +20,8 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-4 col-sm-6 portfolio-item animated pulse" ng-click="Trainings.get(id)">
-                <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
-                    <div class="portfolio-hover">
-                        <div class="portfolio-hover-content">
-                            <i class="fa fa-plus fa-3x"></i>
-                        </div>
-                    </div>
-                    <img src="modules/core/img/portfolio/roundicons.png" class="img-responsive" alt="">
-                </a>
-                <div class="portfolio-caption">
-                    <h4>AngularJS</h4>
-                    <p class="text-muted">JavaScript Frameworks</p>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6 portfolio-item animated pulse" ng-click="Trainings.get(id)">
-                <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
-                    <div class="portfolio-hover">
-                        <div class="portfolio-hover-content">
-                            <i class="fa fa-plus fa-3x"></i>
-                        </div>
-                    </div>
-                    <img src="modules/core/img/portfolio/startup-framework.png" class="img-responsive" alt="">
-                </a>
-                <div class="portfolio-caption">
-                    <h4>NodeJS</h4>
-                    <p class="text-muted">JavaScript on the Server</p>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6 portfolio-item animated pulse" ng-click="Trainings.get(id)">
-                <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
-                    <div class="portfolio-hover">
-                        <div class="portfolio-hover-content">
-                            <i class="fa fa-plus fa-3x"></i>
-                        </div>
-                    </div>
-                    <img src="modules/core/img/portfolio/treehouse.png" class="img-responsive" alt="">
-                </a>
-                <div class="portfolio-caption">
-                    <h4>Test Driven Developement</h4>
-                    <p class="text-muted">TDD for better design</p>
-                </div>
+            <div data-ng-repeat="ws in model.workshops">
+              <course data-model="ws" data-getDetails="model.get()"></course>
             </div>
         </div>
         <div class="row">
@@ -72,6 +33,42 @@
     </div>
 </section>
 
+
+<!-- Clients Aside -->
+<aside class="clients">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h3 class="section-heading">Getting better starts here</h3>
+                <h4 class="text-muted">They already know that!</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 col-sm-6">
+                <a href="#">
+                    <img src="modules/core/img/logos/mediahuis.png" class="img-responsive img-centered" alt="">
+                </a>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <a href="#">
+                    <img src="modules/core/img/logos/kbc.png" class="img-responsive img-centered" alt="">
+                </a>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <a href="#">
+                    <img src="modules/core/img/logos/aston_carter.png" class="img-responsive img-centered" alt="">
+                </a>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <a href="#">
+                    <img src="modules/core/img/logos/volt.png" class="img-responsive img-centered" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+</aside>
+
+<hr/>
 <section class="testimonial">
     <div class="container">
         <div class="row">
@@ -112,37 +109,3 @@
         </div>
     </div>
 </section>
-
-<!-- Clients Aside -->
-<aside class="clients">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <h2 class="section-heading">They trust us</h2>
-                <h4 class="text-muted">( and they are happy! )</h4>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-3 col-sm-6">
-                <a href="#">
-                    <img src="modules/core/img/logos/mediahuis.png" class="img-responsive img-centered" alt="">
-                </a>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <a href="#">
-                    <img src="modules/core/img/logos/kbc.png" class="img-responsive img-centered" alt="">
-                </a>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <a href="#">
-                    <img src="modules/core/img/logos/aston_carter.png" class="img-responsive img-centered" alt="">
-                </a>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <a href="#">
-                    <img src="modules/core/img/logos/volt.png" class="img-responsive img-centered" alt="">
-                </a>
-            </div>
-        </div>
-    </div>
-</aside>

@@ -1,13 +1,28 @@
 'use strict';
 
-function WorkshopDetailsController($stateParams, $http){
-	var url = 'api/workshops/'+ $stateParams.workshop_id, self = this;
+function WorkshopDetailsController($stateParams, $state, WorkshopService){
+	var self = this;
 
-	$http.get(url).then(success, error);
+	this.get = function(id){
+		debugger;
+		$state.transitionTo('detail', {workshop_id: id});
+	};
+
+	this.join = function(){
+		alert('this is a test');
+	};
+
+	WorkshopService.get($stateParams.workshop_id).then(success, error);
 
 	function success(result){
 		_.extend(self, result.data[0]);
 		self.fullName = self.firstName + " "+ self.lastName;
+		
+		WorkshopService.getAll().then(function(result){
+			self.relatedCourses = result.data.workshops.filter(function(workshop){
+				return workshop.id != $stateParams.workshop_id;
+			});
+		});
 	}
 
 	function error(){
@@ -16,6 +31,6 @@ function WorkshopDetailsController($stateParams, $http){
 
 }
 
-WorkshopDetailsController.$inject = ['$stateParams', '$http'];
+WorkshopDetailsController.$inject = ['$stateParams', '$state', 'WorkshopService'];
 
 angular.module('workshops').controller('WorkshopDetailsController', WorkshopDetailsController);

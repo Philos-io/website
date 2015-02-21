@@ -1,13 +1,13 @@
 'use strict';
 
-function TrainingService($http, $q){
+function WorkshopService($http, $q){
 
 	function getAll(){
-
+		return $http.get('api/workshops');
 	}
 
-	function getDetails(){
-
+	function getDetails(id){
+		return $http.get('api/workshops/'+id);
 	}
 
 	return {
@@ -16,7 +16,7 @@ function TrainingService($http, $q){
 	};
 }
 
-TrainingService.$inject = ['$http', '$q'];
+WorkshopService.$inject = ['$http', '$q'];
 
 
-angular.module('workshops').factory('TrainingService', TrainingService);
+angular.module('workshops').factory('WorkshopService', WorkshopService);

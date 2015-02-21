@@ -1,9 +1,10 @@
 'use strict';
 
-function WorkshopsController($state, $http){
+function WorkshopsController($state, WorkshopService){
 
 	var self = this;
-	$http.get('/api/workshops').then(success, error);
+
+	WorkshopService.getAll().then(success, error);
 
 	function success(result){
 		self.workshops = result.data.workshops;
@@ -12,8 +13,8 @@ function WorkshopsController($state, $http){
 	function error(){}
 
 	this.get = function(id){
-		var state = $state;
-		$state.transitionTo('detail', {training_id: 8725});
+		debugger
+		$state.transitionTo('detail', {workshop_id: id});
 	};
 
 	this.suggest = function(){
@@ -21,6 +22,6 @@ function WorkshopsController($state, $http){
 	};
 }
 
-WorkshopsController.$inject = ['$state', '$http'];
+WorkshopsController.$inject = ['$state', 'WorkshopService'];
 
 angular.module('workshops').controller('WorkshopsController', WorkshopsController);

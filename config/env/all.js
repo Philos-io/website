@@ -21,15 +21,15 @@ module.exports = {
 				'public/lib/jquery/dist/jquery.js',
 				'public/lib/jquery.easing/js/jquery.easing.js',
 				'public/lib/angular/angular.js',
-				'public/lib/angular-resource/angular-resource.js', 
-				'public/lib/angular-animate/angular-animate.js', 
-				'public/lib/angular-touch/angular-touch.js', 
+				'public/lib/angular-resource/angular-resource.js',
+				'public/lib/angular-animate/angular-animate.js',
+				'public/lib/angular-touch/angular-touch.js',
 				'public/lib/angular-ui-router/release/angular-ui-router.js',
 				'public/lib/angular-ui-utils/ui-utils.js',
 				'public/lib/angular-bootstrap/ui-bootstrap-tpls.js',
 				'public/lib/bootstrap/dist/js/bootstrap.js',
 				'public/lib/wow/dist/wow.js',
-				'public/lib/lodash/lodash.js'
+				'public/lib/underscore/underscore.js'
 			]
 		},
 		css: [

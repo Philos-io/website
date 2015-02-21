@@ -1,14 +1,15 @@
 'use strict';
 
-function Courses(){
+function Course(){
 	return {
 		restrict: 'E',
+		replace: true,
 		scope: {
-			model: '='
+			model: '=',
+			getDetails: '&'
 		},
-		templateUrl: 'modules/workshops/views/courses.view.html'
+		templateUrl: 'modules/workshops/views/course.view.html'
 	}
 }
 
-Courses.$inject = [];
-angular.module('workshops').directive('courses', Courses);
+angular.module('workshops').directive('course', Course);

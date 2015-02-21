@@ -1,5 +1,5 @@
 <!-- Portfolio Grid Section -->
-<section id="portfolio" class="bg-light-gray">
+<section id="portfolio" class="bg-light-gray animated fadeInUpSmall">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
@@ -48,142 +48,15 @@
         </div>
         <hr/>
         <div class="row">
-            <div data-ng-repeat="ws in model.workshops">
-              <div class="col-md-4 col-sm-6 portfolio-item animated bounceIn" data-ng-click="ws.get(ws.id)">
-                  <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
-                      <div class="portfolio-hover">
-                          <div class="portfolio-hover-content">
-                              <span>Learn more..</span>
-                          </div>
-                      </div>
-                      <img ng-src="{{ws.logo}}" class="img-responsive" alt="{{ws.title}}">
-                  </a>
-                  <div class="portfolio-caption">
-                      <h4 data-ng-bind="ws.shortTitle"></h4>
-                      <p class="text-muted" data-ng-bind="ws.category"></p>
-                  </div>
-              </div>
+            <div data-ng-repeat="info in model.workshops">
+              <course data-model="info" data-getDetails="model.get()"></course>
             </div>
         </div>
         <div class="row">
             <div class="col-lg-12 text-center">
                 <h4 class="text-muted">Nothing that suits you?</h4>
-                <input type="button" value="Suggest a training" class="btn btn-md" ng-click="Trainings.suggest()">
+                <input type="button" value="Suggest a training" class="btn btn-md" ng-click="model.suggest()">
             </div>
         </div>
     </div>
 </section>
-
-
-<!-- <div class="col-md-4 col-sm-6 portfolio-item animated pulse">
-    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
-        <div class="portfolio-hover">
-            <div class="portfolio-hover-content">
-                <i class="fa fa-plus fa-3x"></i>
-            </div>
-        </div>
-        <img src="modules/core/img/portfolio/startup-framework.png" class="img-responsive" alt="">
-    </a>
-    <div class="portfolio-caption">
-        <h4>NodeJS</h4>
-        <p class="text-muted">JavaScript on the Server</p>
-    </div>
-</div>
-<div class="col-md-4 col-sm-6 portfolio-item animated pulse">
-    <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
-        <div class="portfolio-hover">
-            <div class="portfolio-hover-content">
-                <i class="fa fa-plus fa-3x"></i>
-            </div>
-        </div>
-        <img src="modules/core/img/portfolio/treehouse.png" class="img-responsive" alt="">
-    </a>
-    <div class="portfolio-caption">
-        <h4>Test Driven Developement</h4>
-        <p class="text-muted">TDD for better design</p>
-    </div>
-</div>
-<div class="col-md-4 col-sm-6 portfolio-item animated pulse">
-    <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
-        <div class="portfolio-hover">
-            <div class="portfolio-hover-content">
-                <i class="fa fa-plus fa-3x"></i>
-            </div>
-        </div>
-        <img src="modules/core/img/portfolio/golden.png" class="img-responsive" alt="">
-    </a>
-    <div class="portfolio-caption">
-        <h4>Ionic Framework</h4>
-        <p class="text-muted">HTML5 & Mobile Apps</p>
-    </div>
-</div>
-<div class="col-md-4 col-sm-6 portfolio-item animated pulse">
-    <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
-        <div class="portfolio-hover">
-            <div class="portfolio-hover-content">
-                <i class="fa fa-plus fa-3x"></i>
-            </div>
-        </div>
-        <img src="modules/core/img/portfolio/escape.png" class="img-responsive" alt="">
-    </a>
-    <div class="portfolio-caption">
-        <h4>JavaScript</h4>
-        <p class="text-muted">Programming Languages</p>
-    </div>
-</div>
-<div class="col-md-4 col-sm-6 portfolio-item animated pulse">
-    <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
-        <div class="portfolio-hover">
-            <div class="portfolio-hover-content">
-                <i class="fa fa-plus fa-3x"></i>
-            </div>
-        </div>
-        <img src="modules/core/img/portfolio/dreams.png" class="img-responsive" alt="">
-    </a>
-    <div class="portfolio-caption">
-        <h4>Grunt or Gulp</h4>
-        <p class="text-muted">Automation Tools</p>
-    </div>
-</div>
-<div class="col-md-4 col-sm-6 portfolio-item animated pulse">
-    <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
-        <div class="portfolio-hover">
-            <div class="portfolio-hover-content">
-                <i class="fa fa-plus fa-3x"></i>
-            </div>
-        </div>
-        <img src="modules/core/img/portfolio/roundicons.png" class="img-responsive" alt="">
-    </a>
-    <div class="portfolio-caption">
-        <h4>AngularJS</h4>
-        <p class="text-muted">JavaScript Frameworks</p>
-    </div>
-</div>
-<div class="col-md-4 col-sm-6 portfolio-item animated pulse">
-    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
-        <div class="portfolio-hover">
-            <div class="portfolio-hover-content">
-                <i class="fa fa-plus fa-3x"></i>
-            </div>
-        </div>
-        <img src="modules/core/img/portfolio/startup-framework.png" class="img-responsive" alt="">
-    </a>
-    <div class="portfolio-caption">
-        <h4>ES6</h4>
-        <p class="text-muted">How to work with JavaScript today!</p>
-    </div>
-</div>
-<div class="col-md-4 col-sm-6 portfolio-item animated pulse">
-    <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
-        <div class="portfolio-hover">
-            <div class="portfolio-hover-content">
-                <i class="fa fa-plus fa-3x"></i>
-            </div>
-        </div>
-        <img src="modules/core/img/portfolio/treehouse.png" class="img-responsive" alt="">
-    </a>
-    <div class="portfolio-caption">
-        <h4>Test Driven Developement</h4>
-        <p class="text-muted">TDD for better design</p>
-    </div>
-</div> -->
