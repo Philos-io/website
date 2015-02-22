@@ -291,10 +291,10 @@ header .intro-text .intro-heading {
     margin-bottom: 25px;
     text-transform: uppercase;
     font-family: 'Raleway', "Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 35px;
+    font-size: initial;
     font-weight: 400;
-    line-height: 35px;
-	letter-spacing:10px;
+    line-height: 25px;
+    letter-spacing:10px;
 }
 
 @media(min-width:768px) {
@@ -329,7 +329,7 @@ section {
 section h2.section-heading {
     margin-top: 0;
     margin-bottom: 15px;
-    font-size: 40px;
+    font-size: initial;
 }
 
 section h3.section-subheading {
