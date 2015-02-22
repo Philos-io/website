@@ -5,103 +5,22 @@
         <div class="intro-text">
             <div class="intro-lead-in">A twist into corporate trainings!</div>
             <div class="intro-heading">Learn.Build.Share</div>
+            <a href="#!/workshops" class="btn btn-philos btn-lg">Explore Our Trainings</a>
         </div>
     </div>
 </header>
-
 <!-- Portfolio Grid Section -->
-<section id="portfolio" class="bg-light-gray">
+<section id="portfolio" class="bg-light-gray home animated fadeInUpSmall" ng-controller="WorkshopsController as model">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h2 class="section-heading">Pick your Trainings</h2>
+                <h2 class="section-heading">Popular Workshops</h2>
                 <h3 class="section-subheading text-muted">and explore technology like never before!</h3>
             </div>
         </div>
         <div class="row">
-            <div class="col-md-4 col-sm-6 portfolio-item animated pulse" ng-click="Trainings.get(id)">
-                <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
-                    <div class="portfolio-hover">
-                        <div class="portfolio-hover-content">
-                            <i class="fa fa-plus fa-3x"></i>
-                        </div>
-                    </div>
-                    <img src="modules/core/img/portfolio/roundicons.png" class="img-responsive" alt="">
-                </a>
-                <div class="portfolio-caption">
-                    <h4>AngularJS</h4>
-                    <p class="text-muted">JavaScript Frameworks</p>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6 portfolio-item animated pulse">
-                <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
-                    <div class="portfolio-hover">
-                        <div class="portfolio-hover-content">
-                            <i class="fa fa-plus fa-3x"></i>
-                        </div>
-                    </div>
-                    <img src="modules/core/img/portfolio/startup-framework.png" class="img-responsive" alt="">
-                </a>
-                <div class="portfolio-caption">
-                    <h4>NodeJS</h4>
-                    <p class="text-muted">JavaScript on the Server</p>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6 portfolio-item animated pulse">
-                <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
-                    <div class="portfolio-hover">
-                        <div class="portfolio-hover-content">
-                            <i class="fa fa-plus fa-3x"></i>
-                        </div>
-                    </div>
-                    <img src="modules/core/img/portfolio/treehouse.png" class="img-responsive" alt="">
-                </a>
-                <div class="portfolio-caption">
-                    <h4>Test Driven Developement</h4>
-                    <p class="text-muted">TDD for better design</p>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6 portfolio-item animated pulse">
-                <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
-                    <div class="portfolio-hover">
-                        <div class="portfolio-hover-content">
-                            <i class="fa fa-plus fa-3x"></i>
-                        </div>
-                    </div>
-                    <img src="modules/core/img/portfolio/golden.png" class="img-responsive" alt="">
-                </a>
-                <div class="portfolio-caption">
-                    <h4>Ionic Framework</h4>
-                    <p class="text-muted">HTML5 & Mobile Apps</p>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6 portfolio-item animated pulse">
-                <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
-                    <div class="portfolio-hover">
-                        <div class="portfolio-hover-content">
-                            <i class="fa fa-plus fa-3x"></i>
-                        </div>
-                    </div>
-                    <img src="modules/core/img/portfolio/escape.png" class="img-responsive" alt="">
-                </a>
-                <div class="portfolio-caption">
-                    <h4>JavaScript</h4>
-                    <p class="text-muted">Programming Languages</p>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6 portfolio-item animated pulse">
-                <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
-                    <div class="portfolio-hover">
-                        <div class="portfolio-hover-content">
-                            <i class="fa fa-plus fa-3x"></i>
-                        </div>
-                    </div>
-                    <img src="modules/core/img/portfolio/dreams.png" class="img-responsive" alt="">
-                </a>
-                <div class="portfolio-caption">
-                    <h4>Grunt or Gulp</h4>
-                    <p class="text-muted">Automation Tools</p>
-                </div>
+            <div data-ng-repeat="ws in model.workshops">
+              <course data-model="ws" data-getDetails="model.get()"></course>
             </div>
         </div>
         <div class="row">
@@ -113,54 +32,13 @@
     </div>
 </section>
 
-<section class="testimonial">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <h2 class="section-heading">Testimonials</h2>
-                <h4 class="text-muted">( They spent few hours with us! )</h4>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-6 col-md-4">
-                <div class="thumbnail">
-                    <img src="modules/core/img/portfolio/roundicons.png" class="img-responsive" alt="">
-                    <div class="caption">
-                        <h3>AngularJS Workshop</h3>
-                        <p class="text-muted">This has been an amazing learning experience</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <div class="thumbnail">
-                    <img src="modules/core/img/portfolio/startup-framework.png" class="img-responsive" alt="">
-                    <div class="caption">
-                        <h3>AngularJS Workshop</h3>
-                        <p class="text-muted">This has been an amazing learning experience</p>
-                        
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <div class="thumbnail">
-                    <img src="modules/core/img/portfolio/startup-framework.png" class="img-responsive" alt="">
-                    <div class="caption">
-                        <h3>Ionic Framework</h3>
-                        <p class="text-muted">This is by far the best learning experience I've had</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
 <!-- Clients Aside -->
 <aside class="clients">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h2 class="section-heading">They trust us</h2>
-                <h4 class="text-muted">( and they are happy! )</h4>
+                <h3 class="section-heading">Getting better starts here</h3>
+                <h4 class="text-muted">They already know that!</h4>
             </div>
         </div>
         <div class="row">
@@ -188,3 +66,73 @@
     </div>
 </aside>
 
+<!-- Services Section -->
+<section id="services">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h3 class="section-heading">What do they say?</h3>
+            </div>
+        </div>
+        <div class="row text-center">
+            <div class="col-md-4">
+                <img src="modules/core/img/davy.jpg" alt="" class="img-rounded" width="140"/>
+                <h5 class="service-heading">Software engineer</h5>
+                <p class="text-muted">Microsoft</p>
+            </div>
+            <div class="col-md-4">
+                <img src="modules/core/img/mehdi.jpg" alt="" class="img-rounded" width="140"/>
+                <h5 class="service-heading">CEO</h5>
+                <p class="text-muted">Famo.us</p>
+            </div>
+            <div class="col-md-4">
+                <img src="modules/core/img/davy.jpg" alt="" class="img-rounded" width="140"/>
+                <h5 class="service-heading">Software Engineer</h5>
+                <p class="text-muted">Google Inc</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact" data-ng-controller="ContactController">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h3 class="section-heading">How can we help?</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <form name="sentMessage" id="contactForm" novalidate>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Your Name *" id="name" required data-validation-required-message="Please enter your name.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control" placeholder="Your Email *" id="email" required data-validation-required-message="Please enter your email address.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="form-group">
+                                    <input type="tel" class="form-control" placeholder="Your Phone *" id="phone" required data-validation-required-message="Please enter your phone number.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <textarea class="form-control" placeholder="Your Message *" id="message" required data-validation-required-message="Please enter a message."></textarea>
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="col-lg-12 text-center">
+                                <div id="success"></div>
+                                <button type="submit" class="btn btn-philos">Send Message</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>

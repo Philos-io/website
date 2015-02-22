@@ -1,0 +1,83 @@
+<section id="trainingDetails" class="container animated fadeInUpSmall">
+	<div class="row">
+		<h5 class="title" data-ng-bind="::ws.title"></h5>
+		<hr/>
+	</div>
+	<div class="row">
+		<div class="col-lg-6 col-xs-12 col-md-6 logo">
+			<img width="400" data-ng-src="{{::ws.logo}}" alt="{{::ws.title}}" class="img-thumbnail animated pulse"/>
+		</div>
+
+		<div class="col-lg-4 col-xs-12 col-md-6">
+			<h5 class>About the course</h5>
+			<hr/>
+			<p data-ng-bind="::ws.description"></p>
+		</div>
+	</div>
+	<br/>
+	<div class="row">
+		<div class="col-lg-8 col-xs-12 col-md-6">
+			<h5 class="info">Course at the glance</h5>
+			<hr/>
+			<p>
+				<ul>
+					<li>3 days of intense hacking</li>
+					<li>6 people maximum! Quality matters</li>
+					<li>Philos Methodology: Learn.Build.Share</li>
+					<li>English</li>
+				</ul>
+			</p>
+		</div>
+		<div class="col-lg-4 col-xs-12 col-md-6">
+			<h5>Sessions</h5>
+			<hr/>
+			<form data-ng-submit="ws.join()">
+				<select name="session" id="" class="form-control">
+					<option selected>Coming Sessions</option>
+				</select>
+				<br/>
+				<form class="form-group">
+					<input type="button" value="Join this workshop!" data-ng-click="ws.get('8725')" class="btn btn-philos form-control">
+				</form>
+				<div>
+					<a href="#" class="">Need to convince your manager?</a>
+				</div>
+			</form>
+		</div>
+	</div>
+	<br/>
+	<div class="row">
+		<div class="col-lg-8 col-xs-12 col-md-6">
+			<h5>Course details</h5>
+			<hr/>
+			<div data-ng-repeat="desc in ws.modules track by desc.title">
+				<h5 data-ng-bind="desc.title"></h5>
+				<br>
+				<ul data-ng-repeat="topic in desc.topics track by $index">
+						<li><span data-ng-bind="desc.topics[$index]"></span></li>
+				</ul>
+				<br>
+			</div>
+		</div>
+		<div class="col-lg-4 col-xs-12 col-md-6">
+			<h5>Mentor(s)</h5>
+			<hr/>
+			<div>
+				<ul data-ng-repeat="instructor in ::ws.instructors track by $index">
+					<mentor data-model="::instructor"></mentor>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<br/>
+	<div class="row">
+		<div id="portfolio" class="container">
+				<h5>Related workshops</h5>
+				<hr/>
+				<div data-ng-repeat="workshop in ws.relatedCourses">
+					<course data-model="workshop" data-getDetails="ws.get()"></course>
+				</div>
+		</div>
+	</div>
+
+</section>

@@ -1,0 +1,62 @@
+<!-- Portfolio Grid Section -->
+<section id="portfolio" class="bg-light-gray animated fadeInUpSmall">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading">Explore our workshops</h2>
+            </div>
+            <!-- <div class="col-lg-12 text-center">
+                <div class="btn-group" data-toggle="buttons">
+                    <label class="btn btn-default active">
+                        <input type="radio" name="options" id="option1" autocomplete="off" checked> All
+                    </label>
+                    <label class="btn btn-default">
+                        <input type="radio" name="options" id="option2" autocomplete="off"> JavaScript
+                    </label>
+                    <label class="btn btn-default">
+                        <input type="radio" name="options" id="option3" autocomplete="off"> NodeJS
+                    </label>
+                    <label class="btn btn-default">
+                        <input type="radio" name="options" id="option3" autocomplete="off"> AngularJS
+                    </label>
+                    <label class="btn btn-default">
+                        <input type="radio" name="options" id="option3" autocomplete="off"> Testing
+                    </label>
+                    <label class="btn btn-default">
+                        <input type="radio" name="options" id="option3" autocomplete="off"> #1day1tech
+                    </label>
+                    <label class="btn btn-default">
+                        <input type="radio" name="options" id="option3" autocomplete="off"> Grunt
+                    </label>
+                    <label class="btn btn-default">
+                        <input type="radio" name="options" id="option3" autocomplete="off"> Gulp
+                    </label>
+                    <label class="btn btn-default">
+                        <input type="radio" name="options" id="option3" autocomplete="off"> ES6
+                    </label>
+                    <label class="btn btn-default">
+                        <input type="radio" name="options" id="option3" autocomplete="off"> Product management
+                    </label>
+                    <label class="btn btn-default">
+                        <input type="radio" name="options" id="option3" autocomplete="off"> Coming soon
+                    </label>
+                    <label class="btn btn-default">
+                        <input type="radio" name="options" id="option3" autocomplete="off"> Web Design
+                    </label>
+                </div>
+            </div> -->
+        </div>
+        <hr/>
+        <div class="row">
+            <div data-ng-repeat="info in model.workshops">
+              <course data-model="info" data-getDetails="model.get()"></course>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h4 class="text-muted">Nothing that suits you?</h4>
+                <input type="button" value="Suggest a training" class="btn btn-md" ng-click="model.suggest()">
+            </div>
+        </div>
+    </div>
+</section>
