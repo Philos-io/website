@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-	db: 'mongodb://localhost/philos-dev',
+	db: process.env.MONGOLAB_URI,
 	app: {
 		title: 'Philos | Learn.Build.Share'
 	},
@@ -31,7 +31,7 @@ module.exports = {
 		callbackURL: '/auth/github/callback'
 	},
 	parse:{
-		
+
 	},
 	mailer: {
 		from: process.env.MAILER_FROM || 'MAILER_FROM',

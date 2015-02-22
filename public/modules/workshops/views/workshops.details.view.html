@@ -8,7 +8,7 @@
 			<img width="400" data-ng-src="{{::ws.logo}}" alt="{{::ws.title}}" class="img-thumbnail animated pulse"/>
 		</div>
 
-		<div class="col-lg-4 col-xs-12 col-md-6">
+		<div class="col-lg-6 col-xs-12 col-md-6">
 			<h5 class>About the course</h5>
 			<hr/>
 			<p data-ng-bind="::ws.description"></p>
@@ -16,7 +16,7 @@
 	</div>
 	<br/>
 	<div class="row">
-		<div class="col-lg-8 col-xs-12 col-md-6">
+		<div class="col-lg-6 col-xs-12 col-md-6">
 			<h5 class="info">Course at the glance</h5>
 			<hr/>
 			<p>
@@ -28,7 +28,7 @@
 				</ul>
 			</p>
 		</div>
-		<div class="col-lg-4 col-xs-12 col-md-6">
+		<div class="col-lg-6 col-xs-12 col-md-6">
 			<h5>Sessions</h5>
 			<hr/>
 			<form data-ng-submit="ws.join()">
@@ -47,7 +47,7 @@
 	</div>
 	<br/>
 	<div class="row">
-		<div class="col-lg-8 col-xs-12 col-md-6">
+		<div class="col-lg-6 col-xs-12 col-md-6">
 			<h5>Course details</h5>
 			<hr/>
 			<div data-ng-repeat="desc in ws.modules track by desc.title">
@@ -59,7 +59,7 @@
 				<br>
 			</div>
 		</div>
-		<div class="col-lg-4 col-xs-12 col-md-6">
+		<div class="col-lg-6 col-xs-12 col-md-6">
 			<h5>Mentor(s)</h5>
 			<hr/>
 			<div>
