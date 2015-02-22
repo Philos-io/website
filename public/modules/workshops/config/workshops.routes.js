@@ -14,7 +14,7 @@ angular.module('workshops').config(['$stateProvider', '$urlRouterProvider',
 			controller: 'WorkshopsController',
 			controllerAs: 'model'
 		})
-		.state('add', {
+		.state('workshops.add', {
 			url: '/workshops/add',
 			templateUrl: 'modules/workshops/views/workshops.add.view.html',
 			controller: 'WorkshopsController',
