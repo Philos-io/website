@@ -127,6 +127,10 @@ section#trainingDetails{
     margin-bottom: 5%;
 }
 
+#signup{
+  margin-top: 10%;
+}
+
 .sessionCard{
   cursor: pointer;
 }
@@ -206,4 +210,16 @@ section#portfolio.home{
 .fadeInUpSmall {
   -webkit-animation-name: fadeInUpSmall;
   animation-name: fadeInUpSmall;
+}
+
+section#signup{
+  padding: 10px;
+}
+
+section#signup .container{
+  background: #FFF;
+  box-shadow: 0 0 2px rgba(16,42,46,0.25);
+  border-radius: 4px;
+  padding: 2%;
+  max-width: 600px;
 }
