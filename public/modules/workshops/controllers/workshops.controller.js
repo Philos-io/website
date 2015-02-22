@@ -8,12 +8,18 @@ function WorkshopsController($state, WorkshopService){
 
 	function success(result){
 		self.workshops = result.data.workshops;
+		self.onedayonetech = result.data.workshops.filter(function(workshop){
+			return workshop.type === "onedayonetech";
+		});
+
+		self.corporate = result.data.workshops.filter(function(workshop){
+			return workshop.type === "corporate";
+		});
 	}
 
 	function error(){}
 
 	this.get = function(id){
-		debugger
 		$state.transitionTo('detail', {workshop_id: id});
 	};
 

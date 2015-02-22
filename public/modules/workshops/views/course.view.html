@@ -1,14 +1,17 @@
 <div class="col-md-4 col-sm-6 portfolio-item animated pulse sessionCard" data-ng-click="getDetails(model.id)">
+    <div class="portfolio-caption">
+        <h4 data-ng-bind="model.shortTitle"></h4>
+    </div>
     <a href="#!/workshops/{{model.id}}" class="portfolio-link" data-toggle="modal">
         <div class="portfolio-hover">
             <div class="portfolio-hover-content">
-                <span>Learn more..</span>
+                <span>Learn more...</span>
             </div>
         </div>
         <img ng-src="{{model.logo}}" class="img-responsive" alt="{{model.title}}">
     </a>
     <div class="portfolio-caption">
-        <h4 data-ng-bind="model.shortTitle"></h4>
+        <p data-ng-bind="model.description"></p>
         <hr/>
         <p class="text-muted" data-ng-bind="model.category"></p>
     </div>
