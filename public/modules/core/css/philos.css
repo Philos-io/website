@@ -221,3 +221,13 @@ section#signin .container{
   padding: 2%;
   max-width: 600px;
 }
+
+span.category{
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  padding: 1% 0;
+  border-top: 1px solid rgba(255,76,39,.9);
+  border-bottom: 1px solid rgba(255,76,39,.9);
+  margin: 2% 0;
+}

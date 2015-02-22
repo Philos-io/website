@@ -118,7 +118,89 @@ var angularjs = {
           }]
 };
 
-var workshops = [angularjs, nodejs, ionicjs];
+var javascript = {
+  id: '8700',
+  title: 'JavaScript from Zero to Hero',
+  shortTitle: 'JavaScript',
+  tags: ['javascript', 'mobile application', 'AngularJS'],
+  description: 'Have you tried LinkedIn mobile? How did you find it? Straight to the point, right? Imagine you had the skills to build such an application? This is what you gonna learn during this intense session! Our mentors will teach you how to use Angularjs, Cordova (ng-cordova) and NodeJS to build a slicker version of LinkedIn mobile! Join US!',
+  level: 'beginner',
+  type: 'onedayonetech',
+  category: 'Programming Language',
+  modules:[
+    {
+      title: 'Unit 1: Setting up everything',
+      topics: ['JavaScript Fundamentals','Introduction to git and GitHub workflow','Command line: from zero to confident in 60 minutes', 'Install Ionic and getting started with Ionic CLI', 'Mobile Developement: The big picture', 'Introduction to Cordova']
+    },
+    {
+      title: 'Getting started With AngularJS and the fantastic Ionic Framework',
+      topics: ['Understanding AngularJS','Deep dive into Angular Directives', 'Introduction to Ionic Framework']
+    },
+    {
+      title: 'Unit 3: Building a clone of LinkedIn mobile (fun fun fun)',
+      topics: ['OAuth with LinkedIn', 'Using Ionic Components', 'Building custom Components', 'Off-line and online modes', 'Communicating with an ExpressJS API', 'Introduction to Backend as Service with Parse.com and Firebase', 'From 2 ways binding to 3 ways binding with Firebase', 'Designing the app and defining the scope','Best practices on writing Ionic/AngularJS apps', 'Accessing your contacts information with ng-cordova', 'Exploring more options on ng-cordova']
+    },
+    {
+      title: 'Unit 4: Test and Deployment',
+      topics: ['Testing the app on emulators and on devices','Deploying the server side on heroku', 'Submit your app on Google Play and Apple App Store']
+    }
+  ],
+  requirements: ['Your laptop', 'Github Account', 'Heroku Account', 'Ionic CLI installed', 'Android and/or iOS phone', 'A smile and a lot of energy'],
+  takeAways: ['You can build advanced mobile applications with web technologies', 'Pair programming', 'JavaScript OS: The big picture', 'Write clean and maintenable code', 'Ionic Framework and AngularJS are here to stay'],
+  logo: 'modules/workshops/images/TRAININGS-ILLUSTRATIONS-02.png',
+  instructors: [{
+            firstName: 'Davy',
+            lastName: 'Engone',
+            company: 'Philos.io',
+            fullName: 'Davy Engone',
+            profession: 'Software Engineer',
+            picture: 'modules/core/img/davy.jpg',
+            description: 'Davy is the CTO at Philos.io. He has many years of experience as developer! He used to work for famo.us in the US where he led the team that build famo.us university! He also works as a trainer and consultant for Alten Belgium where he trained teams on technologies like JavaScript, KnockoutJS, ASP.NET Web API, Unit testing, AngularJS, NodeJS. Davy is an early adopter on many technologies including NodeJS, Ionic Framework and AngularJS'
+          }]
+};
+
+var gulpjs = {
+  id: '87250',
+  title: 'Introduction to Gulp for automation',
+  shortTitle: 'Gulp for automation',
+  tags: ['javascript', 'mobile application', 'AngularJS'],
+  description: 'Have you tried LinkedIn mobile? How did you find it? Straight to the point, right? Imagine you had the skills to build such an application? This is what you gonna learn during this intense session! Our mentors will teach you how to use Angularjs, Cordova (ng-cordova) and NodeJS to build a slicker version of LinkedIn mobile! Join US!',
+  level: 'beginner',
+  type: 'onedayonetech',
+  category: 'Automation & CI',
+  modules:[
+    {
+      title: 'Unit 1: Setting up everything',
+      topics: ['JavaScript Fundamentals','Introduction to git and GitHub workflow','Command line: from zero to confident in 60 minutes', 'Install Ionic and getting started with Ionic CLI', 'Mobile Developement: The big picture', 'Introduction to Cordova']
+    },
+    {
+      title: 'Getting started With AngularJS and the fantastic Ionic Framework',
+      topics: ['Understanding AngularJS','Deep dive into Angular Directives', 'Introduction to Ionic Framework']
+    },
+    {
+      title: 'Unit 3: Building a clone of LinkedIn mobile (fun fun fun)',
+      topics: ['OAuth with LinkedIn', 'Using Ionic Components', 'Building custom Components', 'Off-line and online modes', 'Communicating with an ExpressJS API', 'Introduction to Backend as Service with Parse.com and Firebase', 'From 2 ways binding to 3 ways binding with Firebase', 'Designing the app and defining the scope','Best practices on writing Ionic/AngularJS apps', 'Accessing your contacts information with ng-cordova', 'Exploring more options on ng-cordova']
+    },
+    {
+      title: 'Unit 4: Test and Deployment',
+      topics: ['Testing the app on emulators and on devices','Deploying the server side on heroku', 'Submit your app on Google Play and Apple App Store']
+    }
+  ],
+  requirements: ['Your laptop', 'Github Account', 'Heroku Account', 'Ionic CLI installed', 'Android and/or iOS phone', 'A smile and a lot of energy'],
+  takeAways: ['You can build advanced mobile applications with web technologies', 'Pair programming', 'JavaScript OS: The big picture', 'Write clean and maintenable code', 'Ionic Framework and AngularJS are here to stay'],
+  logo: 'modules/workshops/images/TRAININGS-ILLUSTRATIONS-07.png',
+  instructors: [{
+            firstName: 'Davy',
+            lastName: 'Engone',
+            company: 'Philos.io',
+            fullName: 'Davy Engone',
+            profession: 'Software Engineer',
+            picture: 'modules/core/img/davy.jpg',
+            description: 'Davy is the CTO at Philos.io. He has many years of experience as developer! He used to work for famo.us in the US where he led the team that build famo.us university! He also works as a trainer and consultant for Alten Belgium where he trained teams on technologies like JavaScript, KnockoutJS, ASP.NET Web API, Unit testing, AngularJS, NodeJS. Davy is an early adopter on many technologies including NodeJS, Ionic Framework and AngularJS'
+          }]
+};
+
+var workshops = [angularjs, nodejs, ionicjs, javascript, gulpjs];
 
 exports.init = function(){
   var mongoose = require('mongoose');

@@ -74,7 +74,7 @@
 		<div id="portfolio" class="container">
 				<h5>Related workshops</h5>
 				<hr/>
-				<div data-ng-repeat="workshop in ws.relatedCourses">
+				<div data-ng-repeat="workshop in ws.relatedCourses | limitTo: 3">
 					<course data-model="workshop" data-getDetails="ws.get()"></course>
 				</div>
 		</div>

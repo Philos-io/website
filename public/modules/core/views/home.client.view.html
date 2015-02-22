@@ -19,7 +19,7 @@
             </div>
         </div>
         <div class="row">
-            <div data-ng-repeat="ws in model.workshops">
+            <div data-ng-repeat="ws in model.workshops | limitTo: 3">
               <course data-model="ws" data-getDetails="model.get()"></course>
             </div>
         </div>

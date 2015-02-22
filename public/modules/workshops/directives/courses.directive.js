@@ -6,7 +6,8 @@ function Course(){
 		replace: true,
 		scope: {
 			model: '=',
-			getDetails: '&'
+			getDetails: '&',
+			type: '@'
 		},
 		templateUrl: 'modules/workshops/views/course.view.html'
 	}
