@@ -231,3 +231,194 @@ span.category{
   border-bottom: 1px solid rgba(255,76,39,.9);
   margin: 2% 0;
 }
+
+
+/*// Testimonial//*/
+.left{
+  display:block;
+  float:left;
+}
+
+.right{
+  display:block;
+  float:right;
+}
+
+.clear{
+  clear:both;
+}
+
+.testimonial_box{
+  margin-top:20px;
+  margin-bottom:20px;
+}
+
+.testimonial{
+  background-color:#fff;
+  height: 320px;
+  margin:auto;
+}
+
+.profile_picture{
+  height: 135px;
+  width: 135px;
+  margin:auto;
+  margin-bottom:10px;
+  border-radius:70px;
+  background-color:#27ffac;
+}
+
+.profile_text{
+  width: 135px;
+  margin:auto;
+  text-align:center;
+}
+
+.profile_name{
+  width: 135px;
+  font-family: Raleway;
+  color: #00b36e;
+  font-size: 18px;
+  font-weight: 700;
+  text-align:center;
+  text-transform:uppercase;
+  letter-spacing:5px;
+}
+
+.profile_position{
+  width: 135px;
+  font-family: Raleway;
+  color: #333333;
+  font-size: 14px;
+  font-weight: 400;
+  text-align:center;
+}
+
+.arrow_left{
+  background:url(../img/arrow_left.png) no-repeat center center;
+  background-size:50%;
+  height: 320px;
+  display:block;
+  float:left;
+}
+
+.arrow_right{
+  background:url(../img/arrow_right.png) no-repeat center center;
+  background-size:50%;
+  height: 320px;
+  display:block;
+  float:left;
+}
+
+.bubblepin{
+  background:url(../img/bubblepin.png) no-repeat;
+  background-size:50%;
+  background-position:34px 40px;
+  height: 200px;
+}
+
+.quote{
+  background-color:#ff4c27;
+  font-family: Raleway;
+  color: #ffffff;
+}
+
+.quote.text{
+  background-color:#ff4c27;
+  height:250px;
+  padding-top:30px;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 30px;
+}
+
+.quote.left{
+  background:#ff4c27 url(../img/quote_left.png) right top no-repeat;
+  height:250px;
+  border-radius:3px 0 0 3px;
+}
+
+.quote.right{
+  background:#ff4c27 url(../img/quote_right.png) left bottom no-repeat;
+  height:250px;
+  border-radius:0 3px 3px 0 ;
+}
+
+.logo{
+  height:75px;
+  margin-top:20px;
+}
+
+
+@media screen and (max-width: 992px)
+{
+    /* Rédigez vos propriétés CSS ici */
+.arrow_left{
+  display:none;
+}
+.arrow_right{
+  display:none;
+}
+
+.profile_text{
+  margin-bottom:20px;
+}
+.quote.left{
+  display:none;
+}
+.quote.right{
+  display:none;
+}
+.quote.text{
+  height:auto;
+  padding-bottom:20px;
+  border-radius:3px;
+  text-align:center;
+}
+}
+
+
+@media screen and (max-width: 768px)
+{
+    /* Rédigez vos propriétés CSS ici */
+.arrow_left{
+  display:none;
+}
+.arrow_right{
+  display:none;
+}
+
+.profile_text{
+  margin-bottom:20px;
+}
+.bubblepin{
+  display:none;
+}
+.quote.left{
+  display:none;
+}
+.quote.right{
+  display:none;
+}
+.quote.text{
+  height:auto;
+  padding-bottom:20px;
+  text-align:center;
+}
+}
+
+
+@media screen and (min-width: 993px)
+{
+  .bubblepin{
+    background-position:41px 40px;
+    height: 200px;
+  }
+}
+
+
+.profile_picture img{
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}
