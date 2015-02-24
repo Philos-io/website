@@ -43,6 +43,9 @@ var TrainingSchema = new Schema({
     type: String,
     required: true
   },
+  importantPoints: [String],
+  language: String,
+  pricing: String,
   instructors: {
     type: []
   },

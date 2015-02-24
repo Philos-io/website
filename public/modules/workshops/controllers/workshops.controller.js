@@ -15,6 +15,10 @@ function WorkshopsController($state, WorkshopService){
 		self.corporate = result.data.workshops.filter(function(workshop){
 			return workshop.type === "corporate";
 		});
+
+		self.comingsoon = result.data.workshops.filter(function(workshop){
+			return workshop.type === "comingsoon";
+		});
 	}
 
 	function error(){}

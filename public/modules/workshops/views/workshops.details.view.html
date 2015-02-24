@@ -4,8 +4,8 @@
 		<hr/>
 	</div>
 	<div class="row">
-		<div class="col-lg-6 col-xs-12 col-md-6 logo">
-			<img width="400" data-ng-src="{{::ws.logo}}" alt="{{::ws.title}}" class="img-thumbnail animated pulse"/>
+		<div class="col-lg-6 col-xs-12 col-md-6">
+			<img data-ng-src="{{::ws.logo}}" alt="{{::ws.title}}" class="img-thumbnail animated pulse"/>
 		</div>
 
 		<div class="col-lg-6 col-xs-12 col-md-6">
@@ -17,14 +17,18 @@
 	<br/>
 	<div class="row">
 		<div class="col-lg-6 col-xs-12 col-md-6">
-			<h5 class="info">Course at the glance</h5>
+			<h5 class="info">Key points</h5>
 			<hr/>
 			<p>
-				<ul>
-					<li>3 days of intense hacking</li>
-					<li>6 people maximum! Quality matters</li>
-					<li>Philos Methodology: Learn.Build.Share</li>
-					<li>English</li>
+				<ul data-ng-repeat="ls in ::ws.importantPoints track by $index">
+					<li data-ng-if="$first" class="first">
+						<span>{{::ws.pricing}}</span>
+
+					</li>
+					<li><span>{{::ws.importantPoints[$index]}}</span></li>
+					<li data-ng-if="$last" class="last">
+						<span>{{::ws.language}}</span>
+					</li>
 				</ul>
 			</p>
 		</div>

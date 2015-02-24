@@ -124,7 +124,7 @@ section#trainingDetails{
 }
 
 #trainingDetails .logo{
-    margin-bottom: 5%;
+    margin-bottom: 12%;
 }
 
 .sessionCard{
@@ -421,4 +421,12 @@ span.category{
   height: 100%;
   width: 100%;
   border-radius: 50%;
+}
+
+.first{
+  margin-bottom: 6px;
+}
+
+.last{
+  margin-top: 6px;
 }
