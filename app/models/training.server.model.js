@@ -25,7 +25,7 @@ var TrainingSchema = new Schema({
   category: String,
   type: {
     type: String,
-    enum: ['corporate', 'onedayonetech', 'meetup'],
+    enum: ['corporate', 'onedayonetech', 'meetup', 'comingsoon'],
     default: 'corporate',
     required: true
   },

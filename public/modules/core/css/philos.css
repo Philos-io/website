@@ -1,9 +1,17 @@
 @charset "UTF-8";
 /* CSS Document */
 
+body{
+  font-family: 'Raleway', "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+a{
+  color:#00B36E;
+}
+
 .navbar-fixed-top{
     background-attachment:fixed;
-	background-image:url(../content/images/pattern_image.png);
+    background-image:url(../content/images/pattern_image.png);
     background-position: top center;
     background-repeat:repeat;
 }
@@ -11,7 +19,7 @@
 section#contact {
     background-color: #222;
     background-attachment:fixed;
-	background-image:url(../content/images/pattern_image.png);
+	  background-image:url(../content/images/pattern_image.png);
     background-position: top center;
     background-repeat:repeat;
 }
@@ -24,7 +32,7 @@ section#contact {
     font-family: 'Raleway', "Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 14px;
     font-weight: 700;
-	letter-spacing:8px;
+    letter-spacing:8px;
     color: #00B36E;
     background-color: #fff;
 	transition:all ease-out 300ms;
@@ -79,19 +87,35 @@ fieldset[disabled] .btn-md.active {
 .navbar-default{
     border-color: transparent;
 }
+
 h2{
 	letter-spacing:0.3em;
-    color: rgb(51, 51, 51);
+  color: rgb(51, 51, 51);
 }
 
 .btn-philos{
     color: #fff;
+    text-transform: uppercase;
+    font-family: 'Raleway', "Helvetica Neue",Helvetica,Arial,sans-serif;
     background: rgba(255,76,39,.9);
+    letter-spacing: 3px;
+    border-radius: 50px;
+    padding-right: 25px;
+    padding-left: 25px;
+    border: 1px solid rgba(255,76,39,.9);
+    transition: all 300ms;
+}
+
+.btn-philos:hover,
+.btn-philos:focus{
+  color: #fff;
+  background: #00b36e;
+  border-color: #fff;
 }
 
 /**Training section***/
 section#portfolio{
-    margin-top: 100px;
+  padding-top:120px;
     height: 90%;
 }
 
@@ -171,6 +195,19 @@ section#portfolio.home{
 		.navbar{
 			padding:10px;
 		}
+
+
+    /**Training section***/
+    section#portfolio{
+      padding-top:70px;
+        height: 90%;
+    }
+    /*end training*/
+
+
+    .clients{
+      padding-top:70px;
+    }
 }
 
 @-webkit-keyframes fadeInUpSmall {
@@ -231,7 +268,6 @@ span.category{
   border-bottom: 1px solid rgba(255,76,39,.9);
   margin: 2% 0;
 }
-
 
 /*// Testimonial//*/
 .left{
@@ -429,4 +465,41 @@ span.category{
 
 .last{
   margin-top: 6px;
+}
+
+#portfolio .portfolio-item .portfolio-caption p{
+  font-style: normal;
+  font-family: 'Raleway', "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+
+section h2.section-heading{
+  text-transform:none;
+  font-weight:300;
+  letter-spacing:0px;
+  font-size:24px;
+  color:#999;
+}
+
+#portfolio .portfolio-item .portfolio-caption h4{
+  font-family:"droid serif", serif;
+  font-size:20px;
+}
+
+.category_tag{
+  color:#00b36e;
+}
+
+.suggest_cation{
+  text-transform:none;
+  font-size:16px;
+  font-family:"droid serif", serif;
+}
+
+.clients{
+  padding-top:120px;
+}
+
+.section-subheading{
+  margin-bottom:0px;
 }

@@ -247,7 +247,7 @@ var meteor = {
   ],
   requirements: ['Your laptop', 'Github Account', 'Heroku Account', 'Ionic CLI installed', 'Android and/or iOS phone', 'A smile and a lot of energy'],
   takeAways: ['You can build advanced mobile applications with web technologies', 'Pair programming', 'JavaScript OS: The big picture', 'Write clean and maintenable code', 'Ionic Framework and AngularJS are here to stay'],
-  logo: 'modules/workshops/images/TRAININGS-ILLUSTRATIONS-07.png',
+  logo: 'modules/workshops/images/TRAININGS-ILLUSTRATIONS-06.png',
   instructors: [{
             firstName: 'Davy',
             lastName: 'Engone',
@@ -292,7 +292,7 @@ var html5 = {
   ],
   requirements: ['Your laptop', 'Github Account', 'Heroku Account', 'Ionic CLI installed', 'Android and/or iOS phone', 'A smile and a lot of energy'],
   takeAways: ['You can build advanced mobile applications with web technologies', 'Pair programming', 'JavaScript OS: The big picture', 'Write clean and maintenable code', 'Ionic Framework and AngularJS are here to stay'],
-  logo: 'modules/workshops/images/TRAININGS-ILLUSTRATIONS-07.png',
+  logo: 'modules/workshops/images/TRAININGS-ILLUSTRATIONS-09.png',
   instructors: [{
             firstName: 'Davy',
             lastName: 'Engone',
@@ -304,7 +304,7 @@ var html5 = {
           }]
 };
 
-var workshops = [angularjs, nodejs, ionicjs, javascript, gulpjs];
+var workshops = [angularjs, nodejs, ionicjs, javascript, gulpjs, html5, meteor];
 
 exports.init = function(){
   var mongoose = require('mongoose');

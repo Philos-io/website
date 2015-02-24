@@ -17,6 +17,7 @@ function WorkshopsController($state, WorkshopService){
 		});
 
 		self.comingsoon = result.data.workshops.filter(function(workshop){
+			debugger;
 			return workshop.type === "comingsoon";
 		});
 	}
