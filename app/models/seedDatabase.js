@@ -304,7 +304,7 @@ var html5 = {
           }]
 };
 
-var workshops = [angularjs, nodejs, ionicjs, javascript, gulpjs];
+var workshops = [angularjs, nodejs, ionicjs];
 
 exports.init = function(){
   var mongoose = require('mongoose');
