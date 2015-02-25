@@ -1,0 +1,45 @@
+<section id="contact">
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-12 text-center">
+              <h2 class="section-heading">How can we help?</h2>
+          </div>
+      </div>
+      <hr/>
+      <div class="row">
+          <div class="col-lg-12">
+              <form name="contactForm" data-ng-submit="contact.send()" novalidate>
+                  <div class="row">
+                      <div class="col-md-6">
+                          <div class="form-group">
+                              <input type="text" class="form-control" placeholder="Your Name *" id="name" required data-ng-model="contact.name">
+                              <p class="help-block text-danger"></p>
+                          </div>
+                          <div class="form-group">
+                              <input type="email" class="form-control" placeholder="Your Email *" id="email" required data-ng-model="contact.email">
+                              <p class="help-block text-danger"></p>
+                          </div>
+                          <div class="form-group">
+                              <input type="tel" class="form-control" placeholder="Your Phone *" id="phone" required data-ng-model="contact.phone">
+                              <p class="help-block text-danger"></p>
+                          </div>
+                      </div>
+                      <div class="col-md-6">
+                          <div class="form-group">
+                              <textarea class="form-control" placeholder="Your Message *" id="message" required data-ng-model="contact.message"></textarea>
+                              <p class="help-block text-danger"></p>
+                          </div>
+                      </div>
+
+                      <div class="clearfix"></div>
+                      <div class="col-lg-12 text-center">
+                          <div id="success"></div>
+                          <button type="submit" class="btn btn-philos btn-lg">Send Message</button>
+                      </div>
+                  </div>
+                  <div class="g-recaptcha" data-sitekey="6LcipQITAAAAAFLSIWqfb8KnbfF6K0tIH59dm8DK"></div>
+              </form>
+          </div>
+      </div>
+  </div>
+</section>
