@@ -1,8 +1,9 @@
 'use strict';
 
-function Configuration($stateProvider, $urlRouterProvider) {
+function Configuration($stateProvider, $urlRouterProvider, $compileProvider) {
 	// Redirect to home view when route not found
 	$urlRouterProvider.otherwise('/');
+	$compileProvider.debugInfoEnabled(false);
 
 	// Home state routing
 	$stateProvider.
@@ -20,7 +21,7 @@ function Configuration($stateProvider, $urlRouterProvider) {
 }
 
 // Setting up dependencies
-var dependencies = ['$stateProvider', '$urlRouterProvider', Configuration]
+var dependencies = ['$stateProvider', '$urlRouterProvider', '$compileProvider', Configuration]
 
 // Setting up route
 angular.module('core').config(dependencies);
