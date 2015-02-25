@@ -6,29 +6,41 @@
                 <h2 class="section-heading">Explore our workshops</h2>
             </div>
         </div>
-        <span class="category">#Corporate</span>
+        <hr/>
+        <!-- <div class="row toggle_buttons">
+          <div class="category_toggle">
+            <a href="#!/workshops/corporate">All</a>
+          </div>
+          <div class="category_toggle">
+            <a href="#!/workshops/corporate">#Corporate</a>
+          </div>
+          <div class="category_toggle">
+            <a href="#onedayonetech">#1Day1Tech</a>
+          </div>
+          <div class="category_toggle">
+            <a href="#comingsoon">#comingsoon</a>
+          </div>
+        </div> -->
+
         <div class="row">
             <div data-ng-repeat="info in model.corporate">
-              <course data-model="info" data-getDetails="model.get()"></course>
+              <course data-model="info" data-get="model.get(info.id)" data-display="true"></course>
             </div>
         </div>
-        <span class="category">#1Day1Tech</span>
         <div class="row">
             <div data-ng-repeat="info in model.onedayonetech">
-              <course data-model="info" data-getDetails="model.get()"></course>
+              <course data-model="info" data-get="model.get()" data-display="true"></course>
             </div>
         </div>
-
-        <span class="category">#comingsoon</span>
         <div class="row">
             <div data-ng-repeat="info in model.comingsoon">
-              <course data-model="info" data-getDetails="model.get()"></course>
+              <course data-model="info" data-get="model.get()" data-display="true"></course>
             </div>
         </div>
         <div class="row">
             <div class="col-lg-12 text-center">
                 <h5 class="text-muted">Nothing that suits you?</h5>
-                <input type="button" value="Suggest a training" class="btn btn-philos btn-lg" ng-click="model.suggest()">
+                <input type="button" value="Suggest a training" class="btn btn-philos btn-lg" data-ng-click="model.suggest()">
             </div>
         </div>
     </div>

@@ -102,7 +102,6 @@ h2{
     border-radius: 50px;
     padding-right: 25px;
     padding-left: 25px;
-    border: 1px solid rgba(255,76,39,.9);
     transition: all 300ms;
 }
 
@@ -110,7 +109,6 @@ h2{
 .btn-philos:focus{
   color: #fff;
   background: #00b36e;
-  border-color: #fff;
 }
 
 /**Training section***/
@@ -121,7 +119,7 @@ section#portfolio{
 
 /**Training section***/
 section#trainingDetails{
-    margin-top: 50px;
+    padding-top: 120px;
     height: 90%;
     min-height: 750px;
 }
@@ -130,25 +128,18 @@ section#trainingDetails{
     text-align: center;
 }
 
-#trainingDetails h5{
-    text-align: left;
-    font-weight: bold;
-}
-
-#trainingDetails.divider{
-  margin-bottom: 20px;
-}
-
-#trainingDetails .well {
-    background: transparent;
-    border-radius: 0;
-    border-color: transparent;
-    border-top-color: rgba(255,76,39,.9);
-    margin-bottom: 2px;
-}
 
 #trainingDetails .logo{
     margin-bottom: 12%;
+}
+
+#trainingDetails h4{
+    color: #00B36E;
+    margin-top: 20px;
+}
+
+#trainingDetails .btn-philos{
+  width: auto;
 }
 
 .sessionCard{
@@ -156,7 +147,7 @@ section#trainingDetails{
 }
 
 .mentor img{
-  width: 50%;
+  width: 100%;
   border-radius: 50%;
 }
 
@@ -164,6 +155,21 @@ section#trainingDetails{
   width: 100%;
   margin-left: -40px;
   padding: 0 1%;
+}
+
+.mentor .info{
+  padding: 9% 10px;
+  font-size: 16px;
+}
+
+.mentor .fullname{
+  font-weight: bold;
+}
+
+.mentor .profession{
+  font-style: italic;
+  color: #666;
+  font-family: "droid serif", serif;
 }
 
 @media(min-width:768px) {
@@ -195,6 +201,20 @@ section#portfolio.home{
 		.navbar{
 			padding:10px;
 		}
+
+    .mentor .info{
+      padding: 7% 10px;
+      font-size: 14px;
+    }
+
+    #trainingDetails h4{
+        text-align: center;
+    }
+
+    .btn-philos{
+      display: block;
+      margin: auto;
+    }
 
 
     /**Training section***/
@@ -259,14 +279,41 @@ section#signin .container{
   max-width: 600px;
 }
 
-span.category{
-  display: inline-block;
+.toggle_buttons{
   text-align: center;
-  width: 100%;
-  padding: 1% 0;
-  border-top: 1px solid rgba(255,76,39,.9);
-  border-bottom: 1px solid rgba(255,76,39,.9);
-  margin: 2% 0;
+  margin-bottom: 25px;
+}
+
+.category_toggle{
+  display: inline;
+  text-align: center;
+  color: #666;
+  text-transform: uppercase;
+  font-family: 'Raleway', "Helvetica Neue",Helvetica,Arial,sans-serif;
+  background: transparent;
+  letter-spacing: 3px;
+  border-radius: 50px;
+  padding-right:15px;
+  padding-left: 15px;
+  border: 1px solid #666;
+  margin: 10px 10px;
+  transition: all 300ms;
+}
+
+.category_toggle:hover,
+.category_toggle:active{
+  background: #666;
+  border-color: #666;
+}
+
+.category_toggle a{
+  color: #666;
+  text-decoration: none;
+}
+
+.category_toggle a:hover{
+  text-decoration: none;
+  color: #fff;
 }
 
 /*// Testimonial//*/
@@ -502,4 +549,11 @@ section h2.section-heading{
 
 .section-subheading{
   margin-bottom:0px;
+}
+
+img.img-thumbnail{
+  border: 1px solid #e5e5e5;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
 }

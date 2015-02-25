@@ -20,7 +20,7 @@
         </div>
         <div class="row">
             <div data-ng-repeat="ws in model.workshops | limitTo: 3">
-              <course data-model="ws" data-getDetails="model.get()"></course>
+              <course data-model="ws" data-getDetails="model.get()" data-display="true"></course>
             </div>
         </div>
         <div class="row">
@@ -68,7 +68,7 @@
 </section>
 
 <!-- Feedback Section -->
-<feedback></feedback>
+<!-- <feedback></feedback> -->
 
 <section id="contact">
         <div class="container">

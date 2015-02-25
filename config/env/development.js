@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-	db: process.env.MONGOLAB_URI, //'mongodb://localhost/philos',
+	db: 'mongodb://localhost/philos', // process.env.MONGOLAB_URI
 	app: {
 		title: 'Philos | Learn.Build.Share'
 	},

@@ -8,7 +8,7 @@ var ionicjs = {
   category: 'JavaScript Framework',
   importantPoints: ['6 sessions of 3 hours each!','6 people maximum! Quality matters.', 'Philos Methodology: Learn.Build.Share.'],
   language: 'English',
-  pricing: '200 €/pers/session excl. tax',
+  pricing: '200 €/pers./session excl. taxes',
   modules:[
     {
       title: 'Unit 1: Setting up everything',
@@ -36,7 +36,7 @@ var ionicjs = {
             company: 'Philos.io',
             fullName: 'Davy Engone',
             profession: 'Software Engineer',
-            picture: 'modules/core/img/davy.jpg',
+            picture: 'modules/core/img/davy.png',
             description: 'Davy is the CTO at Philos.io. He has many years of experience as developer! He used to work for famo.us in the US where he led the team that build famo.us university! He also works as a trainer and consultant for Alten Belgium where he trained teams on technologies like JavaScript, KnockoutJS, ASP.NET Web API, Unit testing, AngularJS, NodeJS. Davy is an early adopter on many technologies including NodeJS, Ionic Framework and AngularJS'
           }]
 };
@@ -51,7 +51,7 @@ var nodejs = {
   category: 'JS Runtime Environment',
   importantPoints: ['6 sessions of 3 hours each!','6 people maximum! Quality matters.', 'Philos Methodology: Learn.Build.Share.'],
   language: 'English',
-  pricing: '200 €/pers/session excl. tax',
+  pricing: '200 €/pers./session excl. taxes',
   takeAways: ['Be able to prototype quickly your NodeJS application', 'Pair programming', 'JavaScript OS: The big picture', 'Write clean and maintenable code', 'NodeJS will become a very good friend'],
   modules: [
     {
@@ -79,14 +79,14 @@ var nodejs = {
             company: 'Philos.io',
             fullName: 'Davy Engone',
             profession: 'Software Engineer',
-            picture: 'modules/core/img/davy.jpg',
+            picture: 'modules/core/img/davy.png',
             description: 'Davy is the CTO at Philos.io. He has many years of experience as developer! He used to work for famo.us in the US where he led the team that build famo.us university! He also works as a trainer and consultant for Alten Belgium where he trained teams on technologies like JavaScript, KnockoutJS, ASP.NET Web API, Unit testing, AngularJS, NodeJS. Davy is an early adopter on many technologies including NodeJS, Ionic Framework and AngularJS'
           }]
 };
 
 var angularjs = {
   id: 'deep-dive-into-angularjs',
-  title: 'Learn AngularJS',
+  title: 'Deep dive into AngularJS',
   tags: ['javascript', 'NodeJS', 'Express', 'Koa'],
   description: 'AngularJS is a frontend framework that helps you build fast and well architected web applications! This workshop will take you from beginner to advanced level on AngularJS in few days. We will dive into the heart of this technology! By the end of this workshop you will be able to build scalable applications with AngularJS!',
   level: 'beginner',
@@ -95,7 +95,7 @@ var angularjs = {
   takeAways: ['Why using AngularJS in your next project', 'Developping big project with JavaScript', 'Write clean and maintenable code', 'Advanced debugging techniques'],
   importantPoints: ['6 sessions of 3 hours each!','6 people maximum! Quality matters.', 'Philos Methodology: Learn.Build.Share.'],
   language: 'English',
-  pricing: '200 €/pers/session excl. tax',
+  pricing: '200 €/pers./session excl. taxes',
   modules: [
     {
       title: 'Unit 1: Getting started with AngularJS',
@@ -122,7 +122,7 @@ var angularjs = {
             company: 'Philos.io',
             fullName: 'Davy Engone',
             profession: 'Software Engineer',
-            picture: 'modules/core/img/davy.jpg',
+            picture: 'modules/core/img/davy.png',
             description: 'Davy is the CTO at Philos.io. He has many years of experience as developer! He used to work for famo.us in the US where he led the team that build famo.us university! He also works as a trainer and consultant for Alten Belgium where he trained teams on technologies like JavaScript, KnockoutJS, ASP.NET Web API, Unit testing, AngularJS, NodeJS. Davy is an early adopter on many technologies including NodeJS, Ionic Framework and AngularJS'
           }]
 };
@@ -166,7 +166,7 @@ var javascript = {
             company: 'Philos.io',
             fullName: 'Davy Engone',
             profession: 'Software Engineer',
-            picture: 'modules/core/img/davy.jpg',
+            picture: 'modules/core/img/davy.png',
             description: 'Davy is the CTO at Philos.io. He has many years of experience as developer! He used to work for famo.us in the US where he led the team that build famo.us university! He also works as a trainer and consultant for Alten Belgium where he trained teams on technologies like JavaScript, KnockoutJS, ASP.NET Web API, Unit testing, AngularJS, NodeJS. Davy is an early adopter on many technologies including NodeJS, Ionic Framework and AngularJS'
           }]
 };
@@ -210,7 +210,7 @@ var gulpjs = {
             company: 'Philos.io',
             fullName: 'Davy Engone',
             profession: 'Software Engineer',
-            picture: 'modules/core/img/davy.jpg',
+            picture: 'modules/core/img/davy.png',
             description: 'Davy is the CTO at Philos.io. He has many years of experience as developer! He used to work for famo.us in the US where he led the team that build famo.us university! He also works as a trainer and consultant for Alten Belgium where he trained teams on technologies like JavaScript, KnockoutJS, ASP.NET Web API, Unit testing, AngularJS, NodeJS. Davy is an early adopter on many technologies including NodeJS, Ionic Framework and AngularJS'
           }]
 };
@@ -254,7 +254,7 @@ var meteor = {
             company: 'Philos.io',
             fullName: 'Davy Engone',
             profession: 'Software Engineer',
-            picture: 'modules/core/img/davy.jpg',
+            picture: 'modules/core/img/davy.png',
             description: 'Davy is the CTO at Philos.io. He has many years of experience as developer! He used to work for famo.us in the US where he led the team that build famo.us university! He also works as a trainer and consultant for Alten Belgium where he trained teams on technologies like JavaScript, KnockoutJS, ASP.NET Web API, Unit testing, AngularJS, NodeJS. Davy is an early adopter on many technologies including NodeJS, Ionic Framework and AngularJS'
           }]
 };
@@ -299,12 +299,12 @@ var html5 = {
             company: 'Philos.io',
             fullName: 'Davy Engone',
             profession: 'Software Engineer',
-            picture: 'modules/core/img/davy.jpg',
+            picture: 'modules/core/img/davy.png',
             description: 'Davy is the CTO at Philos.io. He has many years of experience as developer! He used to work for famo.us in the US where he led the team that build famo.us university! He also works as a trainer and consultant for Alten Belgium where he trained teams on technologies like JavaScript, KnockoutJS, ASP.NET Web API, Unit testing, AngularJS, NodeJS. Davy is an early adopter on many technologies including NodeJS, Ionic Framework and AngularJS'
           }]
 };
 
-var workshops = [angularjs, nodejs, ionicjs, javascript, gulpjs, html5, meteor];
+var workshops = [angularjs, nodejs, ionicjs, javascript, gulpjs];
 
 exports.init = function(){
   var mongoose = require('mongoose');
