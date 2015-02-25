@@ -19,7 +19,7 @@ var ionicjs = {
       topics: ['Understanding AngularJS','Deep dive into Angular Directives', 'Introduction to Ionic Framework']
     },
     {
-      title: 'Unit 3: Building a clone of LinkedIn mobile (fun fun fun)',
+      title: 'Unit 3: Building a clone of LinkedIn mobile',
       topics: ['OAuth with LinkedIn', 'Using Ionic Components', 'Building custom Components', 'Off-line and online modes', 'Communicating with an ExpressJS API', 'Introduction to Backend as Service with Parse.com and Firebase', 'From 2 ways binding to 3 ways binding with Firebase', 'Designing the app and defining the scope','Best practices on writing Ionic/AngularJS apps', 'Accessing your contacts information with ng-cordova', 'Exploring more options on ng-cordova']
     },
     {
