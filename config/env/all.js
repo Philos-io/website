@@ -3,12 +3,12 @@
 module.exports = {
 	app: {
 		title: 'Philos | Learn.Build.Share',
-		description: 'philos, one week one project',
-		keywords: 'workshops, trainings, monitoring and more...'
+		description: 'philos, Learn.Build.Share',
+		keywords: 'software engineering, workshops, training, monitoring and more...'
 	},
 	port: process.env.PORT || 3000,
 	templateEngine: 'swig',
-	sessionSecret: 'MEAN',
+	sessionSecret: 'philosontherise',
 	sessionCollection: 'sessions',
 	assets: {
 		lib: {
@@ -47,3 +47,19 @@ module.exports = {
 		]
 	}
 };
+
+//
+// <!-- Facebook META -->
+// <meta property="fb:app_id" content="{{facebookAppId}}">
+// <meta property="og:site_name" content="{{title}}">
+// <meta property="og:title" content="{{title}}">
+// <meta property="og:description" content="{{description}}">
+// <meta property="og:url" content="{{url}}">
+// <meta property="og:image" content="{{log}}">
+// <meta property="og:type" content="website">
+//
+// <!-- Twitter META -->
+// <meta name="twitter:title" content="{{title}}">
+// <meta name="twitter:description" content="{{description}}">
+// <meta name="twitter:url" content="{{url}}">
+// <meta name="twitter:image" content="/img/brand/logo.png">
