@@ -9,7 +9,14 @@ function Configuration($stateProvider, $urlRouterProvider) {
 	state('home', {
 		url: '/',
 		templateUrl: 'modules/core/views/home.client.view.html'
+	})
+	.state('suggest', {
+		url: '/suggest',
+		controller: 'CommonController',
+		controllerAs: 'vm',
+		templateUrl: 'modules/core/views/suggestWorkshop.view.html'
 	});
+
 }
 
 // Setting up dependencies
