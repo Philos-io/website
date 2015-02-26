@@ -308,14 +308,14 @@ var workshops = [angularjs, nodejs, ionicjs];
 
 exports.init = function(){
   var mongoose = require('mongoose');
-  var Training = mongoose.model('Training');
+  var Workshop = mongoose.model('Workshop');
 
-  Training.find(function(err, collection){
+  Workshop.find(function(err, collection){
     if(err) throw err;
 
     if(collection.length === 0){
       workshops.forEach(function(workshop){
-        Training.create(workshop, function(err, col){
+        Workshop.create(workshop, function(err, col){
           if(err) throw err;
           console.log(workshop);
         });

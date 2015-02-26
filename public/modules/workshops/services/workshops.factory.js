@@ -10,9 +10,15 @@ function WorkshopService($http, $q){
 		return $http.get('api/workshops/'+id);
 	}
 
+	function register(info){
+		debugger;
+		return $http.post('api/workshops/register', {info: info});
+	}
+
 	return {
 		getAll: getAll,
-		get: getDetails
+		get: getDetails,
+		register: register
 	};
 }
 

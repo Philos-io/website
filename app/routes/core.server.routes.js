@@ -23,7 +23,7 @@ module.exports = function(app) {
 		// save the suggestion
 
 		// then send the email
-		sendEmail(req.body.info);
+		sendEmail(req, res);
 	});
 };
 

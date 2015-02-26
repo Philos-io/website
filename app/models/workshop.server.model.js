@@ -3,7 +3,7 @@
 var mongoose = require('mongoose'),
     Schema = mongoose.Schema;
 
-var TrainingSchema = new Schema({
+var WorkshopSchema = new Schema({
   id: {
     type: String
   },
@@ -64,4 +64,4 @@ var TrainingSchema = new Schema({
 });
 
 
-mongoose.model('Training', TrainingSchema);
+mongoose.model('Workshop', WorkshopSchema);

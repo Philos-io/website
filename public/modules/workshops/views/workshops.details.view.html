@@ -43,7 +43,9 @@
 				</ul>
 			</p>
 			<br/>
-			<input type="button" value="Book your workshop now!" class="btn btn-philos form-control">
+			<a data-ui-sref="join({workshop_id:ws.id})" class="btn btn-philos form-control"><span>Book your workshop now!</span></a>
+			<!-- <button class="btn btn-philos form-control" ng-click="ws.join(ws.id)">Book your workshop now!</button> -->
+			<!-- <a data-ui-sref="workshops.join" class="btn btn-philos form-control"><span>Book your workshop now!</span></a> -->
 		</div>
 
 	</div>

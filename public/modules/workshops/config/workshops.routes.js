@@ -20,6 +20,12 @@ angular.module('workshops').config(['$stateProvider', '$urlRouterProvider',
 			controller: 'WorkshopsController',
 			controllerAs: 'ws'
 		})
+		.state('join', {
+			url: '/workshops/{workshop_id}/join',
+			templateUrl: 'modules/workshops/views/workshops.join.view.html',
+			controller: 'WorkshopsController',
+			controllerAs: 'ws'
+		})
 		.state('detail', {
 			url: '/workshops/{workshop_id}',
 			templateUrl: 'modules/workshops/views/workshops.details.view.html',

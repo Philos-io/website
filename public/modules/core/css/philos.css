@@ -557,3 +557,9 @@ img.img-thumbnail{
   border-radius: 0;
   box-shadow: none;
 }
+
+/**Training section***/
+section#suggest, section#join{
+    padding-top: 120px;
+    min-height: 700px;
+}

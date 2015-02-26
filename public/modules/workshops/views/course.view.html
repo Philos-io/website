@@ -2,7 +2,7 @@
     <div class="portfolio-caption">
         <h4 data-ng-bind="model.shortTitle"></h4>
     </div>
-    <a href="#!/workshops/{{model.id}}" class="portfolio-link" data-toggle="modal">
+    <a data-ui-sref="detail({workshop_id: model.id})" class="portfolio-link" data-toggle="modal">
         <div class="portfolio-hover">
             <div class="portfolio-hover-content">
                 <span>Learn more...</span>

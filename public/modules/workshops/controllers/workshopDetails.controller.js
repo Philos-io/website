@@ -7,10 +7,6 @@ function WorkshopDetailsController($stateParams, $state, WorkshopService){
 		$state.transitionTo('detail', {workshop_id: id});
 	};
 
-	this.join = function(){
-		alert('this is a test');
-	};
-
 	WorkshopService.get($stateParams.workshop_id).then(success, error);
 
 	function success(result){
