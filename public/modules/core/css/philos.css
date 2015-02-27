@@ -563,3 +563,7 @@ section#suggest, section#join{
     padding-top: 120px;
     min-height: 700px;
 }
+
+textarea.form-control{
+  min-height: 100px;
+}

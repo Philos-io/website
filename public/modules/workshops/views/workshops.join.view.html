@@ -12,18 +12,16 @@
                   <div class="row">
                       <div class="col-md-offset-1 col-md-6">
                           <div class="form-group">
-                            <select class="form-control"
+                            <select class="form-control" required
                               data-ng-model="ws.currentWorkshop"
                               name="selectedCourse" data-ng-change="ws.setCurrentWorkshop()"
                               data-ng-options="workshop.shortTitle group by workshop.type for workshop in ws.workshops">
                             </select>
-                            <p class="help-block text-danger"></p>
                           </div>
                           <div class="form-group">
                               <input type="text" class="form-control" placeholder="Company's name *"  required data-ng-model="ws.company">
                               <p class="help-block text-danger"></p>
                           </div>
-                          <hr/>
                           <div class="form-group">
                               <input type="text" class="form-control" placeholder="Contact Person's name *" required data-ng-model="ws.contactName">
                               <p class="help-block text-danger"></p>
@@ -45,7 +43,8 @@
                               <p class="help-block text-danger"></p>
                           </div>
                       </div>
-                      <div class="col-md-4 hidden-xs">
+
+                      <div class="col-md-4 hidden-xs hidden-sm">
                         <div class="col-lg-12 animated fadeInUp">
                           <img data-ng-src="{{ws.currentWorkshop.logo}}" alt="{{::ws.currentWorkshop.title}}" class="img-thumbnail"/>
                         </div>
@@ -57,7 +56,6 @@
                     				<ul data-ng-repeat="ls in ::ws.currentWorkshop.importantPoints track by $index">
                     					<li data-ng-if="$first" class="first">
                     						<span>{{::ws.currentWorkshop.pricing}}</span>
-
                     					</li>
                     					<li><span>{{::ws.currentWorkshop.importantPoints[$index]}}</span></li>
                     					<li data-ng-if="$last" class="last">
@@ -69,8 +67,7 @@
                       </div>
                       <div class="clearfix"></div>
                       <div class="col-lg-8 text-center">
-                          <div id="success"></div>
-                          <button type="submit" class="btn btn-philos btn-lg">Join this session</button>
+                          <button type="submit" class="btn btn-philos btn-lg" data-ng-disabled="registerForm.$invalid">Join this session</button>
                       </div>
                   </div>
 
