@@ -519,6 +519,10 @@ section#signin .container{
   font-family: 'Raleway', "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
+#portfolio .portfolio-item .portfolio-caption p.description{
+  text-align: left;
+}
+
 
 section h2.section-heading{
   text-transform:none;
