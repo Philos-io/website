@@ -1,7 +1,7 @@
 {
   "name": "philos",
   "version": "0.0.1",
-  "description": "Philos: Learn.Build.Share",
+  "description": "'philos, one week one project'",
   "dependencies": {
     "bootstrap": "~3.3.2",
     "angular": "~1.3",
@@ -11,6 +11,7 @@
     "angular-touch": "~1.3",
     "angular-bootstrap": "~0.11.2",
     "angular-ui-utils": "~0.1.1",
+    "angular-ui-router": "~0.2.11",
     "jquery": "~2.1.3",
     "jquery.easing": "~1.3.1",
     "wow": "~1.0.3",
@@ -20,6 +21,6 @@
     "ng-messages": "*"
   },
   "resolutions": {
-    "angular": "~1.3"
+    "angular": "1.3.12"
   }
 }
