@@ -3,7 +3,7 @@
 function Configuration($stateProvider, $urlRouterProvider, $compileProvider) {
 	// Redirect to home view when route not found
 	$urlRouterProvider.otherwise('/');
-	$compileProvider.debugInfoEnabled(false);
+	//$compileProvider.debugInfoEnabled(false);
 
 	// Home state routing
 	$stateProvider.
