@@ -50,6 +50,11 @@
       ga('create', 'UA-54806614-2');
       ga('send', 'pageview');
   </script>
+
+	{% if process.env.NODE_ENV === 'development' %}
+	<!--Livereload script rendered -->
+	<script type="text/javascript" src="http://{{request.hostname}}:35729/livereload.js"></script>
+	{% endif %}
 </body>
 
 </html>

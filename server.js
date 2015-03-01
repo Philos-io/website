@@ -19,7 +19,6 @@ var db = mongoose.connect(config.db, function(err) {
 		console.error(chalk.red('Could not connect to MongoDB!'));
 		console.log(chalk.red(err));
 	}else{
-		debugger;
 		seed.init();
 	}
 });
