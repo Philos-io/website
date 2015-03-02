@@ -3,21 +3,36 @@
 // Setting up route
 angular.module('users').config(['$stateProvider',
 	function($stateProvider) {
+
 		// Users state routing
 		$stateProvider.
-		state('profile', {
-			url: '/settings/profile',
-			templateUrl: 'modules/users/views/settings/edit-profile.client.view.html'
-		}).
+
 		state('password', {
 			url: '/settings/password',
 			templateUrl: 'modules/users/views/settings/change-password.client.view.html'
 		}).
-		state('accounts', {
-			url: '/settings/accounts',
-			templateUrl: 'modules/users/views/settings/social-accounts.client.view.html'
-		}).
-		state('signup', {
+		state('account',{
+			url: '/account',
+			abstract: true,
+			templateUrl: 'modules/users/views/settings/edit-profile.client.view.html'
+		})
+		.state('account.workshops',{
+			url: '/workshops',
+			template: 'workshop view'
+		})
+		.state('account.profile',{
+			url: '/profile',
+			template: 'profile view'
+		})
+		.state('account.quizz',{
+			url: '/quizz',
+			template: 'quizz view'
+		})
+		.state('account.settings',{
+			url: '/settings',
+			template: 'settings view'
+		})
+		.state('signup', {
 			url: '/signup',
 			controller: 'AuthenticationController',
 			controllerAs: 'auth',

@@ -113,7 +113,7 @@ h2{
 }
 
 /**Training section***/
-section#portfolio{
+section#portfolio, section#profile{
   padding-top:120px;
     height: 90%;
 }
@@ -219,7 +219,7 @@ section#portfolio.home{
 
 
     /**Training section***/
-    section#portfolio{
+    section#portfolio, section#profile{
       padding-top:70px;
         height: 90%;
     }
@@ -562,4 +562,9 @@ section#suggest, section#join{
 
 textarea.form-control{
   min-height: 100px;
+}
+
+li.active{
+  border: 1px solid #ccc;
+  background: #ccc;
 }
