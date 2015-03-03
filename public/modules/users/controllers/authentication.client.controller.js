@@ -31,6 +31,8 @@ function AuthenticationController($http, $location, Authentication) {
 			// If successful we assign the response to the global user model
 			self.authentication.user = response;
 
+			//
+			self.authentication.user.fullName = response.firstName +" "+ response.lastName;
 			// And redirect to the index page
 			$location.path('/');
 		}).error(function(response) {

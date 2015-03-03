@@ -9,14 +9,14 @@
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" data-ng-controller="AuthenticationController as vm">
                 <!-- <ul class="nav navbar-nav navbar-right">
                     <li>
 
                     </li>
                 </ul> -->
 
-                <ul ng-if="user.authenticated" class="list-inline navbar-right social-buttons">
+                <ul ng-if="!vm.authentication.user" class="list-inline navbar-right social-buttons">
                     <li>
                       <a href="/#!/signin">
                         <i class="fa fa-sign-in"></i></i>
@@ -24,9 +24,9 @@
                     </li>
                 </ul>
 
-                <div ng-if="!user.authenticated" class="navbar-right authenticated animated fadeInRight">
+                <div ng-if="vm.authentication.user" class="navbar-right authenticated animated fadeInRight">
                   <a href="/#!/account/workshops">
-                    {{user.fullName}}
+                    {{vm.authentication.user.fullName}}
                     <!-- <i class="fa fa-user"></i> -->
                   </a>
                 </div>
