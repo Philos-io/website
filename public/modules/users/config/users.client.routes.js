@@ -6,7 +6,6 @@ angular.module('users').config(['$stateProvider',
 
 		// Users state routing
 		$stateProvider.
-
 		state('password', {
 			url: '/settings/password',
 			templateUrl: 'modules/users/views/settings/change-password.client.view.html'
@@ -14,23 +13,31 @@ angular.module('users').config(['$stateProvider',
 		state('account',{
 			url: '/account',
 			abstract: true,
-			templateUrl: 'modules/users/views/settings/edit-profile.client.view.html'
+			templateUrl: 'modules/users/views/account/edit-profile.client.view.html'
 		})
 		.state('account.workshops',{
 			url: '/workshops',
-			template: 'workshop view'
+			controller: 'UserController',
+			controllerAs: 'user',
+			templateUrl: 'modules/users/views/account/workshops.view.html'
 		})
 		.state('account.profile',{
 			url: '/profile',
-			template: 'profile view'
+			controller: 'UserController',
+			controllerAs: 'user',
+			templateUrl: 'modules/users/views/account/profile.view.html'
 		})
 		.state('account.quizz',{
 			url: '/quizz',
-			template: 'quizz view'
+			controller: 'UserController',
+			controllerAs: 'user',
+			templateUrl: 'modules/users/views/account/quizz.view.html'
 		})
 		.state('account.settings',{
 			url: '/settings',
-			template: 'settings view'
+			controller: 'UserController',
+			controllerAs: 'user',
+			templateUrl: 'modules/users/views/account/settings.view.html'
 		})
 		.state('signup', {
 			url: '/signup',

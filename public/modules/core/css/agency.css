@@ -7,6 +7,15 @@
 body {
     overflow-x: hidden;
     font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
+    margin:0;
+  	padding:0;
+  	height:100%;
+}
+
+.wrapper{
+  min-height:100%;
+  padding: 5% 0;
+	position:relative;
 }
 
 .text-muted {
@@ -720,8 +729,12 @@ section#contact .text-danger {
 }
 
 footer {
-    padding: 25px 0;
     text-align: center;
+    width:100%;
+    height: 60px;
+  	position:absolute;
+  	bottom:0;
+  	left:0;
 }
 
 footer span.copyright {
