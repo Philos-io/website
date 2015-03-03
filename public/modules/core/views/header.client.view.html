@@ -15,10 +15,21 @@
 
                     </li>
                 </ul> -->
-                <ul class="list-inline social-buttons navbar-right">
-                    <li><a href="/#!/signin"><i class="fa fa-sign-in"></i></i></a>
+
+                <ul ng-if="user.authenticated" class="list-inline navbar-right social-buttons">
+                    <li>
+                      <a href="/#!/signin">
+                        <i class="fa fa-sign-in"></i></i>
+                      </a>
                     </li>
                 </ul>
+
+                <div ng-if="!user.authenticated" class="navbar-right authenticated animated fadeInRight">
+                  <a href="/#!/account/workshops">
+                    {{user.fullName}}
+                    <!-- <i class="fa fa-user"></i> -->
+                  </a>
+                </div>
             </div>
             <!-- /.navbar-collapse -->
         </div>

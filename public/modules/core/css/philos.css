@@ -568,3 +568,26 @@ li.active{
   border: 1px solid #ccc;
   background: #ccc;
 }
+
+div.authenticated{
+  border: 1px solid white;
+  padding: .5%;
+  text-transform: uppercase;
+  font-family: 'Raleway', "Helvetica Neue",Helvetica,Arial,sans-serif;
+  border-radius: 50px;
+  padding-right: 25px;
+  padding-left: 25px;
+}
+
+div.authenticated a{
+  color: #fff;
+}
+
+div.authenticated i{
+  margin-left: 1px;
+}
+
+a.authenticated:hover,
+a.authenticated:active{
+
+}

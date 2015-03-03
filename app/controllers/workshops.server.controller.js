@@ -14,6 +14,7 @@ exports.list = function(req, res){
 
 exports.get = function(req, res){
   var id = req.params.workshopId;
+  
   Workshop.find({id: id}, function(err, result){
     if(err) throw err;
     res.json(result);

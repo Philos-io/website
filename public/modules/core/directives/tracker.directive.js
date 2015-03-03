@@ -10,8 +10,6 @@ function tracker($location){
         var el = document.getElementById(element);
         angular.element(el).addClass('fadeOut');
         $('body').css('background-color', '#071418');
-        // if (angular.element(el).hasClass('fadeOut') && /sign/.exec()) {
-        // }
       });
     }
   };
