@@ -6,11 +6,6 @@ function AuthenticationController($http, $location, Authentication) {
 
 	self.authentication = Authentication;
 
-	self.firstName = 'davy';
-	self.lastName = 'engone';
-	self.email = 'davy@philos.io';
-	self.password ='this is a test';
-
 	// If user is signed in then redirect back home
 	if (self.authentication.user) $location.path('/');
 
