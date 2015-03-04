@@ -6,7 +6,7 @@ var ionicjs = {
   description: 'Have you tried LinkedIn mobile? How did you find it? Straight to the point, right? Imagine you had the skills to build such an application? This is what you are going to learn during this intense session! Our mentors will teach you how to use Angularjs, Cordova (ng-cordova) and NodeJS to build your version of LinkedIn mobile! Join US!',
   level: 'beginner',
   category: 'JavaScript Framework',
-  importantPoints: ['6 sessions of 3 hours each!','6 people maximum! Quality matters.', 'Philos Methodology: Learn.Build.Share.'],
+  importantPoints: ['6 sessions of 3 hours each!','6 people maximum! Quality matters.', 'Philos Methodology: Learn.Build.Share.', 'Evening Sessions can be organised in-house'],
   language: 'English',
   pricing: '200 €/pers./session excl. taxes',
   modules:[
@@ -49,7 +49,7 @@ var nodejs = {
   level: 'intermediaire',
   shortTitle: 'NodeJS',
   category: 'JS Runtime Environment',
-  importantPoints: ['6 sessions of 3 hours each!','6 people maximum! Quality matters.', 'Philos Methodology: Learn.Build.Share.'],
+  importantPoints: ['6 sessions of 3 hours each!','6 people maximum! Quality matters.', 'Philos Methodology: Learn.Build.Share.', 'Evening Sessions can be organised in-house'],
   language: 'English',
   pricing: '200 €/pers./session excl. taxes',
   takeAways: ['Be able to prototype quickly your NodeJS application', 'Pair programming', 'JavaScript OS: The big picture', 'Write clean and maintenable code', 'NodeJS will become a very good friend'],
@@ -93,7 +93,7 @@ var angularjs = {
   shortTitle: 'AngularJS',
   category: 'JavaScript Framework',
   takeAways: ['Why using AngularJS in your next project', 'Developping big project with JavaScript', 'Write clean and maintenable code', 'Advanced debugging techniques'],
-  importantPoints: ['6 sessions of 3 hours each!','6 people maximum! Quality matters.', 'Philos Methodology: Learn.Build.Share.'],
+  importantPoints: ['6 sessions of 3 hours each!','6 people maximum! Quality matters.', 'Philos Methodology: Learn.Build.Share.', 'Evening Sessions can be organised in-house'],
   language: 'English',
   pricing: '200 €/pers./session excl. taxes',
   modules: [

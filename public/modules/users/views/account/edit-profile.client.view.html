@@ -1,4 +1,4 @@
-<section id="profile" class="container animated fadeInUpSmall">
+<section id="profile" class="container animated fadeInUpSmall" data-ng-controller="AuthenticationController as auth">
 	<div class="row">
 		<div class="col-lg-12 text-center">
 				<h2 class="section-heading">Manage your account</h2>
@@ -19,6 +19,9 @@
 			  </li>
 				<li>
 			    <a href ui-sref="account.settings()">Settings</a>
+			  </li>
+				<li>
+			    <a href data-ng-click="auth.logout()">Logout</a>
 			  </li>
 			</ul>
 		</div>

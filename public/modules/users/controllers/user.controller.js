@@ -1,14 +1,13 @@
 (function(){
   'use strict';
 
-  function UserController($scope, $http, $location, Users, Authentication) {
-    $scope.user = Authentication.user;
+  function UserController($http, $location, Users, Authentication) {
+    var self = this;
 
-    // If user is not signed in then redirect back home
-    if (!$scope.user) $location.path('/');
+    self.user = Authentication.user;
   }
 
-  UserController.$inject = ['$scope', '$http', '$location', 'Users', 'Authentication'];
+  UserController.$inject = ['$http', '$location', 'Users', 'Authentication'];
 
   angular.module('users').controller('UserController', UserController);
 

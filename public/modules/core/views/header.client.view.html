@@ -1,5 +1,6 @@
 
-<div class="container-fluid animated" id="header">
+<div class="container-fluid animated" id="header" class="animated" data-ng-controller="AuthenticationController as vm"
+  ng-show="!vm.signPage">
 	<!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
@@ -9,25 +10,15 @@
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" data-ng-controller="AuthenticationController as vm">
-                <!-- <ul class="nav navbar-nav navbar-right">
-                    <li>
-
-                    </li>
-                </ul> -->
-
-                <ul ng-if="!vm.authentication.user" class="list-inline navbar-right social-buttons">
-                    <li>
-                      <a href="/#!/signin">
-                        <i class="fa fa-sign-in"></i></i>
-                      </a>
-                    </li>
-                </ul>
-
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <div ng-if="!vm.authentication.user"class="navbar-right authenticated">
+                  <a href="/#!/signin">
+                    Sign In
+                  </a>
+                </div>
                 <div ng-if="vm.authentication.user" class="navbar-right authenticated animated fadeInRight">
                   <a href="/#!/account/workshops">
                     {{vm.authentication.user.fullName}}
-                    <!-- <i class="fa fa-user"></i> -->
                   </a>
                 </div>
             </div>

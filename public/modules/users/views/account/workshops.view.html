@@ -1,0 +1,5 @@
+<div class="row">
+    <div data-ng-repeat="ws in user.workshops | limitTo: 3">
+      <course data-model="ws" data-get="model.get(ws.id)" data-display="false"></course>
+    </div>
+</div>

@@ -113,7 +113,7 @@ h2{
 }
 
 /**Training section***/
-section#portfolio, section#profile{
+section#portfolio{
   padding-top:120px;
     height: 90%;
 }
@@ -219,7 +219,7 @@ section#portfolio.home{
 
 
     /**Training section***/
-    section#portfolio, section#profile{
+    section#portfolio{
       padding-top:70px;
         height: 90%;
     }

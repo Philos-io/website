@@ -5,9 +5,14 @@ function AuthenticationController($http, $location, Authentication) {
 	var self = this;
 
 	self.authentication = Authentication;
+	/sign/.exec('"/signup"')[0].length
+	self.signPage = !!(/sign/.exec($location.path()));
+
+	self.email = 'davy@philos.io';
+	self.password = 'this is a test';
 
 	// If user is signed in then redirect back home
-	if (self.authentication.user) $location.path('/');
+	//if (self.authentication.user) $location.path('/');
 
 	self.signup = function() {
 		$http.post('/auth/signup', self).success(function(response) {
@@ -34,6 +39,11 @@ function AuthenticationController($http, $location, Authentication) {
 			self.error = response.message;
 		});
 	};
+
+	self.logout = function(){
+		self.authentication.user = null;
+		$location.path('/');
+	}
 }
 
 AuthenticationController.$inject = ['$http', '$location', 'Authentication'];
