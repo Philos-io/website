@@ -1,6 +1,8 @@
 'use strict';
 var mongoose = require('mongoose');
 var Workshop = mongoose.model('Workshop');
+var Subscriber = mongoose.model('Subscriber');
+var User = mongoose.model('User');
 var nodemailer = require('nodemailer');
 
 exports.list = function(req, res){
@@ -14,11 +16,68 @@ exports.list = function(req, res){
 
 exports.get = function(req, res){
   var id = req.params.workshopId;
-  
+
   Workshop.find({id: id}, function(err, result){
     if(err) throw err;
     res.json(result);
   });
+};
+
+exports.subscribe = function (req, res) {
+  var info = req.body.info;
+
+	Workshop.findOne({id: info.workshop }, function(err, ws){
+    	if(err) throw err;
+
+    	if (ws) {
+    		// check if this user exists then add that workshop
+    		// in his list
+    		User.findOne({ email:info.email }, function(err, user){
+    			if (err) throw err;
+
+    			if (user) {
+            // If this workshop is already registered then return
+            if (user.workshops.indexOf(ws._id) === -1) {
+              user.workshops.push(ws._id);
+              user.save(function(){
+                res.json(user);
+              });
+            }else{
+              user.isSubscribed = true;
+              console.log('user has already subscribed');
+              res.json(user);
+            }
+    			}else{
+    				Subscriber.findOne({email:info.email}, function(err, sub){
+              if (err) throw err;
+
+        			if (sub) {
+                // If this workshop is already registered then return
+                if (sub.workshops.indexOf(ws._id) === -1) {
+                  sub.workshops.push(ws._id);
+                  sub.save(function(){
+                    res.json(subscriber);
+                  });
+                }else{
+                  sub.isSubscribed = true;
+                  res.json(subscriber);
+                }
+              }else{
+
+                var subscriber = new Subscriber();
+                subscriber.email = info.email;
+                subscriber.workshops.push(ws._id);
+                subscriber.save(function(){
+                  res.json(subscriber);
+                });
+
+              }
+            });
+
+    			}
+    		});
+    	}
+  	});
 };
 
 exports.register = function(req, res){

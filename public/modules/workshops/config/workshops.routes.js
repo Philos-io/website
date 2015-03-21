@@ -32,5 +32,11 @@ angular.module('workshops').config(['$stateProvider', '$urlRouterProvider',
 			controller: 'WorkshopDetailsController',
 			controllerAs: 'ws'
 		});
+		// .state('detail', {
+		// 	url: '/workshops/{workshop_id}',
+		// 	templateUrl: 'modules/workshops/views/workshops.comingsoon.details.view.html',
+		// 	controller: 'WorkshopDetailsController',
+		// 	controllerAs: 'ws'
+		// });
 	}
 ]);

@@ -7,7 +7,7 @@
 	<hr/>
 	<div class="row">
 		<div class="col-lg-6 col-xs-12 col-md-6">
-			<img data-ng-src="{{::ws.logo}}" alt="{{::ws.title}}" class="img-thumbnail animated pulse"/>
+			<img data-ng-src="{{::ws.logo}}" alt="{{::ws.title}}" class="img-thumbnail"/>
 		</div>
 
 		<div class="col-lg-6 col-xs-12 col-md-6">
@@ -17,58 +17,80 @@
 		</div>
 	</div>
 	<br/>
-	<div class="row">
-		<div class="col-lg-6 col-xs-12 col-md-6">
-			<h4>Mentor(s)</h4>
-			<hr/>
-			<div>
-				<ul data-ng-repeat="instructor in ::ws.instructors track by $index">
-					<mentor data-model="::instructor"></mentor>
-				</ul>
+	<div ng-if="ws.type==='comingsoon'">
+		<hr/>
+		<form name="userForm" data-ng-submit="ws.join()" class="form" novalidate>
+			<div class="row">
+				<div class="col-lg-12 text-center">
+					<h5 class>Get informed when this course will be live!</h5>
+				</div>
 			</div>
-		</div>
-		<div class="col-lg-6 col-xs-12 col-md-6">
-			<h4 class="info">Key points</h4>
-			<hr/>
-			<p>
-				<ul data-ng-repeat="ls in ::ws.importantPoints track by $index">
-					<li data-ng-if="$first" class="first">
-						<span>{{::ws.pricing}}</span>
-
-					</li>
-					<li><span>{{::ws.importantPoints[$index]}}</span></li>
-					<li data-ng-if="$last" class="last">
-						<span>{{::ws.language}}</span>
-					</li>
-				</ul>
-			</p>
 			<br/>
-			<a data-ui-sref="join({workshop_id:ws.id})" class="btn btn-philos form-control"><span>Book your workshop now!</span></a>
-			<!-- <button class="btn btn-philos form-control" ng-click="ws.join(ws.id)">Book your workshop now!</button> -->
-			<!-- <a data-ui-sref="workshops.join" class="btn btn-philos form-control"><span>Book your workshop now!</span></a> -->
-		</div>
-
-	</div>
-	<br/>
-	<div class="row">
-		<div class="col-lg-6 col-xs-12 col-md-12">
-			<h4>Course details</h4>
-			<hr/>
-			<div data-ng-repeat="desc in ws.modules track by desc.title">
-				<h5 data-ng-bind="desc.title"></h5>
-				<br>
-				<ul data-ng-repeat="topic in desc.topics track by $index">
-						<li><span data-ng-bind="desc.topics[$index]"></span></li>
-				</ul>
-				<br>
+			<div class="col-md-offset-3 col-md-4">
+				<input type="email" id="email" name="email" class="form-control" data-ng-model="ws.user.email" placeholder="Email">
 			</div>
-		</div>
-
+			<div class="col-lg-4">
+				<button type="submit" class="btn btn-lg btn-philos">Join</button>
+			</div>
+		</form>
 	</div>
-	<br/>
-	<div class="row hidden-lg hidden-md">
-		<div class="col-lg-offset-4 col-lg-4">
-			<input type="button" value="Book your workshop now!" class="btn btn-philos form-control">
+
+	<div ng-if="ws.type==='corporate'">
+
+
+		<div class="row">
+			<div class="col-lg-6 col-xs-12 col-md-6">
+				<h4>Mentor(s)</h4>
+				<hr/>
+				<div>
+					<ul data-ng-repeat="instructor in ::ws.instructors track by $index">
+						<mentor data-model="::instructor"></mentor>
+					</ul>
+				</div>
+			</div>
+			<div class="col-lg-6 col-xs-12 col-md-6">
+				<h4 class="info">Key points</h4>
+				<hr/>
+				<p>
+					<ul data-ng-repeat="ls in ::ws.importantPoints track by $index">
+						<li data-ng-if="$first" class="first">
+							<span>{{::ws.pricing}}</span>
+
+						</li>
+						<li><span>{{::ws.importantPoints[$index]}}</span></li>
+						<li data-ng-if="$last" class="last">
+							<span>{{::ws.language}}</span>
+						</li>
+					</ul>
+				</p>
+				<br/>
+				<a data-ui-sref="join({workshop_id:ws.id})" class="btn btn-philos form-control"><span>Book your workshop now!</span></a>
+				<!-- <button class="btn btn-philos form-control" ng-click="ws.join(ws.id)">Book your workshop now!</button> -->
+				<!-- <a data-ui-sref="workshops.join" class="btn btn-philos form-control"><span>Book your workshop now!</span></a> -->
+			</div>
+
+		</div>
+		<br/>
+		<div class="row">
+			<div class="col-lg-6 col-xs-12 col-md-12">
+				<h4>Course details</h4>
+				<hr/>
+				<div data-ng-repeat="desc in ws.modules track by desc.title">
+					<h5 data-ng-bind="desc.title"></h5>
+					<br>
+					<ul data-ng-repeat="topic in desc.topics track by $index">
+							<li><span data-ng-bind="desc.topics[$index]"></span></li>
+					</ul>
+					<br>
+				</div>
+			</div>
+
+		</div>
+		<br/>
+		<div class="row hidden-lg hidden-md">
+			<div class="col-lg-offset-4 col-lg-4">
+				<input type="button" value="Book your workshop now!" class="btn btn-philos form-control">
+			</div>
 		</div>
 	</div>
 </section>

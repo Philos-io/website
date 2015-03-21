@@ -52,14 +52,11 @@ exports.signup = function(req, res) {
 exports.signin = function(req, res, next) {
 	passport.authenticate('local', function(err, user, info) {
 		if (err || !user) {
-			debugger;
 			res.status(400).send(info);
 		} else {
 			// Remove sensitive data before login
 			user.password = undefined;
 			user.salt = undefined;
-
-			debugger;
 
 			req.login(user, function(err) {
 				if (err) {

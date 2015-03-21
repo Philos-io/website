@@ -11,7 +11,24 @@
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <div ng-if="!vm.authentication.user"class="navbar-right authenticated">
+              <ul class="nav navbar-nav navbar-right">
+                  <li class="hidden">
+                      <a href="#page-top"></a>
+                  </li>
+                  <li>
+                      <ul class="list-inline social-buttons">
+                        <li><a href="https://twitter.com/philos_io" target="_blank"><i class="fa fa-twitter"></i></a>
+                        </li>
+                        <li><a href="https://www.linkedin.com/company/philos-io" target="_blank"><i class="fa fa-linkedin"></i></a>
+                        </li>
+                        <li><a href="https://www.facebook.com/pages/Philosio/1507808566114369" target="_blank"><i class="fa fa-facebook"></i></a>
+                        </li>
+                        <li><a href="https://angel.co/philos-io" target="_blank"><i class="fa fa-angellist"></i></a>
+                        </li>
+                      </ul>
+                    </li>
+                </ul>
+                <!-- <div ng-if="!vm.authentication.user"class="navbar-right authenticated">
                   <a href="/#!/signin">
                     Sign In
                   </a>
@@ -20,7 +37,7 @@
                   <a href="/#!/account/workshops">
                     {{vm.authentication.user.fullName}}
                   </a>
-                </div>
+                </div> -->
             </div>
             <!-- /.navbar-collapse -->
         </div>

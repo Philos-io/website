@@ -11,4 +11,7 @@ module.exports = function(app){
 
 	app.route('/api/workshops/register')
 		.post(workshops.register);
+
+	app.route('/api/workshops/subscribe')
+		.post(workshops.subscribe);
 };

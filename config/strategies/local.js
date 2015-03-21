@@ -14,8 +14,6 @@ module.exports = function() {
 			passwordField: 'password'
 		},
 		function(email, password, done) {
-			debugger;
-			
 			User.findOne({
 				email: email
 			}, function(err, user) {
