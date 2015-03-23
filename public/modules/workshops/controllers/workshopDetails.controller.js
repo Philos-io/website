@@ -11,6 +11,9 @@
 		};
 
 		this.join = function(){
+
+			if (!self.user.email) return;
+
 			var info = {
 				email: self.user.email,
 				workshop: $stateParams.workshop_id
