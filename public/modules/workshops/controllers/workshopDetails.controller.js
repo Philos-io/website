@@ -29,7 +29,8 @@
 		}
 
 		function success(result){
-			_.extend(self, result.data[0]);
+			var data = result.data? result.data[0]: result[0];
+			_.extend(self, data);
 			self.fullName = self.firstName + " "+ self.lastName;
 
 			WorkshopService.getAll().then(function(result){
