@@ -1,14 +1,19 @@
-'use strict';
+(function(module){
+  'use strict';
 
-function Mentor(){
+  function Mentor(){
 
-  return {
-    restrict: 'E',
-    templateUrl:'modules/workshops/views/mentor.view.html',
-    scope:{
-      model: '='
-    }
-  };
-}
+    return {
+      restrict: 'E',
+      templateUrl:'modules/workshops/views/mentor.view.html',
+      scope:{
+        model: '='
+      }
+    };
+  }
 
-angular.module('workshops').directive('mentor', Mentor);
+  Mentor.$inject = [];
+
+  module.directive('mentor', Mentor);
+
+})(angular.module('workshops'));

@@ -1,30 +1,33 @@
-'use strict';
+(function(module){
+  'use strict';
 
-function CommonController($http, $state){
+  function CommonController($http, $state){
 
-  this.suggest = function(){
+    this.suggest = function(){
 
-    var info = {
-      name: this.name,
-      email: this.email,
-      phone: this.phone,
-      technology: this.technology,
-      message: this.message
-    };
+      var info = {
+        name: this.name,
+        email: this.email,
+        phone: this.phone,
+        technology: this.technology,
+        message: this.message
+      };
 
-    $http.post('api/suggest', {info: info}).then(success, error);
+      $http.post('api/suggest', {info: info}).then(success, error);
 
-    function success(data){
-      $state.transitionTo('workshops');
-    }
+      function success(data){
+        $state.transitionTo('workshops');
+      }
 
-    function error(err){
-      debugger
+      function error(err){
+        debugger
+      }
     }
   }
-}
 
 
-CommonController.$inject = ['$http', '$state'];
+  CommonController.$inject = ['$http', '$state'];
 
-angular.module('core').controller('CommonController', CommonController);
+  module.controller('CommonController', CommonController);
+
+})(angular.module('core'));

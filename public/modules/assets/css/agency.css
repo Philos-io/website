@@ -277,7 +277,7 @@ header {
     text-align: center;
     color: #fff;
     background-attachment:fixed;
-	background-image:url(../content/images/pattern_image.png);
+	background-image:url(../../assets/images/branding/pattern_image.png);
     background-position: top center;
     background-repeat:repeat;
 }

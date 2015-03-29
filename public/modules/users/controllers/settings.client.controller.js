@@ -1,7 +1,7 @@
-'use strict';
+(function(module){
+	'use strict';
 
-angular.module('users').controller('SettingsController', ['$scope', '$http', '$location', 'Users', 'Authentication',
-	function($scope, $http, $location, Users, Authentication) {
+	function SettingsController($scope, $http, $location, Users, Authentication) {
 		$scope.user = Authentication.user;
 
 		// If user is not signed in then redirect back home
@@ -54,4 +54,9 @@ angular.module('users').controller('SettingsController', ['$scope', '$http', '$l
 			});
 		};
 	}
-]);
+
+	SettingsController.$inject = ['$scope', '$http', '$location', 'Users', 'Authentication'];
+
+	module.controller('SettingsController', SettingsController);
+
+})(angular.module('users'));
