@@ -1,36 +1,13 @@
-(function(){
+(function(module){
 	'use strict';
 
-	function WorkshopService($http, $cacheFactory, $q){
-
-		var apiUrls = {
-			workshops: 'api/workshops'
-		};
+	function WorkshopService($http){
 
 		function getAll(){
-
-			return $http.get(apiUrls.workshops, {cache: true});
+			return $http.get('api/workshops');
 		}
 
 		function getDetails(id){
-
-			var cache = $cacheFactory.get('$http');
-
-			if (cache.get(apiUrls.workshops)) {
-				var defer = $q.defer();
-
-				var data = JSON.parse(cache.get('api/workshops')[1]);
-
-				var selectWorkshop = data.workshops.filter(function(ws){
-					return ws.id === id;
-				});
-
-				if(selectWorkshop){
-					defer.resolve(selectWorkshop);
-					return defer.promise;
-				}
-			}
-
 			return $http.get('api/workshops/'+id);
 		}
 
@@ -50,9 +27,8 @@
 		};
 	}
 
-	WorkshopService.$inject = ['$http', '$cacheFactory', '$q'];
+	WorkshopService.$inject = ['$http'];
 
+	module.factory('WorkshopService', WorkshopService);
 
-	angular.module('workshops').factory('WorkshopService', WorkshopService);
-
-})();
+})(angular.module('workshops'));

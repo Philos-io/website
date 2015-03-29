@@ -1,21 +1,24 @@
-'use strict';
+(function(module){
+  'use strict';
 
-function tracker($location){
-  var options = {
-    restrict: 'A',
-    link: function(scope, element, attr){
-      var target = attr.target.split(',');
+  function tracker($location){
+    var options = {
+      restrict: 'A',
+      link: function(scope, element, attr){
+        var target = attr.target.split(',');
 
-      target.forEach(function(element){
-        var el = document.getElementById(element);
-        angular.element(el).addClass('fadeOut');
-        $('body').css('background-color', '#071418');
-      });
-    }
-  };
-  return options;
-}
+        target.forEach(function(element){
+          var el = document.getElementById(element);
+          angular.element(el).addClass('fadeOut');
+          $('body').css('background-color', '#071418');
+        });
+      }
+    };
+    return options;
+  }
 
-tracker.$inject = ['$location'];
+  tracker.$inject = ['$location'];
 
-angular.module('core').directive('tracker', tracker);
+  module.directive('tracker', tracker);
+
+})(angular.module('core'));

@@ -13,9 +13,10 @@ module.exports = {
 	assets: {
 		lib: {
 			css: [
-				'public/lib/bootstrap/dist/css/bootstrap.css',
-				'public/lib/bootstrap/dist/css/bootstrap-theme.css',
-				'public/lib/animate-css//animate.css'
+				'public/lib/bootstrap/css/bootstrap.css',
+				'public/lib/bootstrap/css/bootstrap-theme.css',
+				'public/lib/font-awesome/css/font-awesome.css',
+				'public/lib/animate-css/animate.css'
 			],
 			js: [
 				'public/lib/jquery/dist/jquery.js',
@@ -29,11 +30,12 @@ module.exports = {
 				'public/lib/angular-bootstrap/ui-bootstrap-tpls.js',
 				'public/lib/bootstrap/dist/js/bootstrap.js',
 				'public/lib/wow/dist/wow.js',
+				'public/lib/underscore/underscore.js',
 				'public/lib/underscore/underscore.js'
 			]
 		},
 		css: [
-			'public/modules/**/css/*.css'
+			'public/modules/assets/css/*.css'
 		],
 		js: [
 			'public/config.js',

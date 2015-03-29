@@ -7,21 +7,6 @@
             </div>
         </div>
         <hr/>
-        <!-- <div class="row toggle_buttons">
-          <div class="category_toggle">
-            <a href="#!/workshops/corporate">All</a>
-          </div>
-          <div class="category_toggle">
-            <a href="#!/workshops/corporate">#Corporate</a>
-          </div>
-          <div class="category_toggle">
-            <a href="#onedayonetech">#1Day1Tech</a>
-          </div>
-          <div class="category_toggle">
-            <a href="#comingsoon">#comingsoon</a>
-          </div>
-        </div> -->
-
         <div class="row">
             <div data-ng-repeat="info in model.corporate">
               <course data-model="info" data-get="model.get(info.id)" data-display="true"></course>
@@ -40,7 +25,7 @@
         <div class="row">
             <div class="col-lg-12 text-center">
                 <h5 class="text-muted">Nothing that suits you?</h5>
-                <a href="#!/suggest" class="btn btn-philos btn-lg">Suggest a workshop</a>
+                <a href="#/suggest" class="btn btn-philos btn-lg">Suggest a workshop</a>
             </div>
         </div>
     </div>
