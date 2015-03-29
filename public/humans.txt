@@ -1,15 +1,18 @@
 # humanstxt.org/
-# The humans responsible & technology colophon
+# The humans responsible & technology PHilos.io
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    <davyengone> -- <lead dev> -- <@davyengone>
+    <mehdimitchel> -- <lead design> -- <@mehdimitchel>
 
 # THANKS
 
-    <name>
+    <Philos.io>
 
-# TECHNOLOGY COLOPHON
+# TECHNOLOGY Philos.io
 
     HTML5, CSS3
     jQuery, Modernizr
+    AngularJS, Express
+    NodeJS, Mocha, Chai

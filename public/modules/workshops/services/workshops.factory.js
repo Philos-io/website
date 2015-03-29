@@ -1,32 +1,34 @@
-'use strict';
+(function(module){
+	'use strict';
 
-function WorkshopService($http){
+	function WorkshopService($http){
 
-	function getAll(){
-		return $http.get('api/workshops');
+		function getAll(){
+			return $http.get('api/workshops');
+		}
+
+		function getDetails(id){
+			return $http.get('api/workshops/'+id);
+		}
+
+		function register(info){
+			return $http.post('api/workshops/register', {info: info});
+		}
+
+		function subscribe(info){
+			return $http.post('api/workshops/subscribe', {info: info});
+		}
+
+		return {
+			getAll: getAll,
+			get: getDetails,
+			register: register,
+			subscribe: subscribe
+		};
 	}
 
-	function getDetails(id){
-		return $http.get('api/workshops/'+id);
-	}
+	WorkshopService.$inject = ['$http'];
 
-	function register(info){
-		return $http.post('api/workshops/register', {info: info});
-	}
+	module.factory('WorkshopService', WorkshopService);
 
-	function subscribe(info){
-		return $http.post('api/workshops/subscribe', {info: info});
-	}
-
-	return {
-		getAll: getAll,
-		get: getDetails,
-		register: register,
-		subscribe: subscribe
-	};
-}
-
-WorkshopService.$inject = ['$http'];
-
-
-angular.module('workshops').factory('WorkshopService', WorkshopService);
+})(angular.module('workshops'));

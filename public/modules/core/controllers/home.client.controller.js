@@ -1,8 +1,11 @@
-'use strict';
+(function(module){
+  'use strict';
 
 
-function HomeController(){
+  function HomeController(){
 
-}
+  }
 
-angular.module('core').controller('HomeController', HomeController);
+  module.controller('HomeController', HomeController);
+
+})(angular.module('core'));

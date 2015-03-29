@@ -1,4 +1,4 @@
-(function(){
+(function(module){
   'use strict';
 
   function UserController($http, $location, Users, Authentication) {
@@ -9,6 +9,6 @@
 
   UserController.$inject = ['$http', '$location', 'Users', 'Authentication'];
 
-  angular.module('users').controller('UserController', UserController);
+  module.controller('UserController', UserController);
 
-})();
+})(angular.module('users'));

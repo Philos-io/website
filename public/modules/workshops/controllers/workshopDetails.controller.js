@@ -1,4 +1,4 @@
-(function(){
+(function(module){
 	'use strict';
 
 	function WorkshopDetailsController($stateParams, $state, WorkshopService){
@@ -45,6 +45,6 @@
 
 	WorkshopDetailsController.$inject = ['$stateParams', '$state', 'WorkshopService'];
 
-	angular.module('workshops').controller('WorkshopDetailsController', WorkshopDetailsController);
+	module.controller('WorkshopDetailsController', WorkshopDetailsController);
 
-})();
+})(angular.module('workshops'));
