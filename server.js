@@ -6,7 +6,8 @@ var init = require('./config/init')(),
 	config = require('./config/config'),
 	mongoose = require('mongoose'),
 	chalk = require('chalk'),
-	seed = require('./app/models/seedDatabase');
+	seed = require('./app/models/seedDatabase'),
+	enforce = require('express-sslify');
 
 /**
  * Main application entry file.
@@ -25,6 +26,8 @@ var db = mongoose.connect(config.db, function(err) {
 
 // Init the express application
 var app = require('./config/express')(db);
+
+app.use(enforce.HTTPS(false, true))
 
 // Bootstrap passport config
 require('./config/passport')();
