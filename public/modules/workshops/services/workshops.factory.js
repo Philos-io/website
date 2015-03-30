@@ -4,11 +4,11 @@
 	function WorkshopService($http){
 
 		function getAll(){
-			return $http.get('api/workshops');
+			return $http.get('api/workshops', {cache: true});
 		}
 
 		function getDetails(id){
-			return $http.get('api/workshops/'+id);
+			return $http.get('api/workshops/'+id, {cache: true});
 		}
 
 		function register(info){
