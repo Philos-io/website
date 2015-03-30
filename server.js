@@ -6,6 +6,7 @@ var init = require('./config/init')(),
 	config = require('./config/config'),
 	mongoose = require('mongoose'),
 	chalk = require('chalk'),
+	http = require('http'),
 	seed = require('./app/models/seedDatabase'),
 	enforce = require('express-sslify');
 
@@ -33,7 +34,8 @@ app.use(enforce.HTTPS(false, true))
 require('./config/passport')();
 
 // Start the app by listening on <port>
-app.listen(config.port);
+//app.listen(config.port);
+http.createServer(app).listen(config.port);
 
 // Expose app
 exports = module.exports = app;
