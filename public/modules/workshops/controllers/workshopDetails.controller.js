@@ -1,10 +1,12 @@
 (function(module){
 	'use strict';
 
-	function WorkshopDetailsController($stateParams, $state, WorkshopService){
+	function WorkshopDetailsController($stateParams, $state, $document, WorkshopService){
 		var self = this;
 
 		self.user = {};
+
+		$document.scrollTop(0, 0);
 
 		this.get = function(id){
 			$state.transitionTo('detail', {workshop_id: id});
@@ -47,7 +49,7 @@
 
 	}
 
-	WorkshopDetailsController.$inject = ['$stateParams', '$state', 'WorkshopService'];
+	WorkshopDetailsController.$inject = ['$stateParams', '$state', '$document', 'WorkshopService'];
 
 	module.controller('WorkshopDetailsController', WorkshopDetailsController);
 
