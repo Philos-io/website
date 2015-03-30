@@ -6,7 +6,7 @@ module.exports = {
 		description: 'philos, Learn.Build.Share',
 		keywords: 'software engineering, workshops, training, monitoring and more...'
 	},
-	port: process.env.PORT || 1337,
+	port: process.env.PORT || 3000,
 	templateEngine: 'swig',
 	sessionSecret: 'philosontherise',
 	sessionCollection: 'sessions',
