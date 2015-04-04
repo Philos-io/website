@@ -4,16 +4,11 @@
 	function WorkshopDetailsController($stateParams, $state, $document, WorkshopService){
 		var self = this;
 
-		self.user = {};
-
-		$document.scrollTop(0, 0);
-
 		this.get = function(id){
 			$state.transitionTo('detail', {workshop_id: id});
 		};
 
 		this.join = function(){
-
 			if (!self.user.email) return;
 
 			var info = {
@@ -24,10 +19,6 @@
 			WorkshopService.subscribe(info).then(function(){
 				$state.transitionTo('workshops');
 			});
-		}
-
-		function activate(){
-			WorkshopService.get($stateParams.workshop_id).then(success, error);
 		}
 
 		function success(result){
@@ -42,11 +33,19 @@
 			});
 		}
 
-		function error(){
+		function error(err){
+			throw err;
 		}
 
-		activate();
+		function activate(){
+			WorkshopService.get($stateParams.workshop_id).then(success, error);
 
+			self.user = {};
+
+			$document.scrollTop(0, 0);
+		}
+		
+		activate();
 	}
 
 	WorkshopDetailsController.$inject = ['$stateParams', '$state', '$document', 'WorkshopService'];

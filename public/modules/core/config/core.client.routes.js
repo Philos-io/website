@@ -10,13 +10,20 @@
 		$stateProvider.
 		state('home', {
 			url: '/',
-			templateUrl: 'modules/core/views/home.client.view.html'
+			templateUrl: 'modules/core/views/home.client.view.html',
+			controller: 'HomeController'
 		})
 		.state('suggest', {
 			url: '/suggest',
 			controller: 'CommonController',
 			controllerAs: 'vm',
 			templateUrl: 'modules/core/views/suggestWorkshop.view.html'
+		})
+		.state('testimonial', {
+			url: '/testimonial',
+			controller: 'CommonController',
+			controllerAs: 'vm',
+			templateUrl: 'modules/core/views/testimonial.view.html'
 		});
 
 	}
@@ -26,5 +33,12 @@
 
 	// Setting up route
 	module.config(dependencies);
+
+	module.config(function($httpProvider) {
+    	//Enable cross domain calls
+    	// $httpProvider.defaults.useXDomain = true;
+
+    	//  delete $httpProvider.defaults.headers.common['X-Requested-With'];
+	});
 
 })(angular.module('core'));

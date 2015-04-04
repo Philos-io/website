@@ -16,33 +16,48 @@ exports.signup = function(req, res) {
 	// For security measurement we remove the roles from the req.body object
 	delete req.body.roles;
 
-	// Init Variables
-	var user = new User(req.body);
-	var message = null;
+	User.findOne({email: req.body.email}, function(err, user){
+		// Init Variables
+		if (err) throw err;
 
-	// Add missing user fields
-	user.provider = 'local';
-	user.displayName = user.firstName + ' ' + user.lastName;
-
-	// Then save the user
-	user.save(function(err) {
-		if (err) {
-			return res.status(400).send({
-				message: errorHandler.getErrorMessage(err)
-			});
-		} else {
-			// Remove sensitive data before login
+		// If user exists already just redirect to signin page
+		if (user) {
 			user.password = undefined;
 			user.salt = undefined;
 
-			req.login(user, function(err) {
-				if (err) {
-					res.status(400).send(err);
-				} else {
-					res.json(user);
-				}
-			});
+			return res.status(301).send({
+					message: 'This user already exists'
+				});
 		}
+
+		// Else just create and add this user
+		var user = new User(req.body);
+		var message = null;
+
+		// Add missing user fields
+		user.provider = 'local';
+		user.displayName = user.firstName + ' ' + user.lastName;
+
+		// Then save the user
+		user.save(function(err) {
+			if (err) {
+				return res.status(400).send({
+					message: errorHandler.getErrorMessage(err)
+				});
+			} else {
+				// Remove sensitive data before login
+				user.password = undefined;
+				user.salt = undefined;
+
+				req.login(user, function(err) {
+					if (err) {
+						res.status(400).send(err);
+					} else {
+						res.json(user);
+					}
+				});
+			}
+		});
 	});
 };
 
@@ -83,12 +98,13 @@ exports.signout = function(req, res) {
 exports.oauthCallback = function(strategy) {
 	return function(req, res, next) {
 		passport.authenticate(strategy, function(err, user, redirectURL) {
+
 			if (err || !user) {
-				return res.redirect('/#!/signin');
+				return res.redirect('/#/signin');
 			}
 			req.login(user, function(err) {
 				if (err) {
-					return res.redirect('/#!/signin');
+					return res.redirect('/#/signin');
 				}
 
 				return res.redirect(redirectURL || '/');
@@ -125,30 +141,29 @@ exports.saveOAuthUserProfile = function(req, providerUserProfile, done) {
 				return done(err);
 			} else {
 				if (!user) {
-					var possibleUsername = providerUserProfile.username || ((providerUserProfile.email) ? providerUserProfile.email.split('@')[0] : '');
-
-					User.findUniqueUsername(possibleUsername, null, function(availableUsername) {
-						user = new User({
-							firstName: providerUserProfile.firstName,
-							lastName: providerUserProfile.lastName,
-							username: availableUsername,
-							displayName: providerUserProfile.displayName,
-							email: providerUserProfile.email,
-							provider: providerUserProfile.provider,
-							providerData: providerUserProfile.providerData
-						});
-
-						// And save the user
-						user.save(function(err) {
-							return done(err, user);
-						});
+					// Create a new user with those information
+					user = new User({
+						firstName: providerUserProfile.firstName,
+						lastName: providerUserProfile.lastName,
+						displayName: providerUserProfile.displayName,
+						email: providerUserProfile.email,
+						provider: providerUserProfile.provider,
+						providerData: providerUserProfile.providerData
 					});
+
+					// And save the user
+					user.save(function(err) {
+						return done(err, user, '/#/signup');
+					});
+
 				} else {
-					return done(err, user);
+					return done(err, user, req.redirectURL);
 				}
 			}
 		});
 	} else {
+
+
 		// User is already logged in, join the provider data to the existing user
 		var user = req.user;
 
@@ -163,10 +178,10 @@ exports.saveOAuthUserProfile = function(req, providerUserProfile, done) {
 
 			// And save the user
 			user.save(function(err) {
-				return done(err, user, '/#!/settings/accounts');
+				return done(err, user, '/#/testimonial');
 			});
-		} else {
-			return done(new Error('User is already connected using this provider'), user);
+		}else {
+			return done(new Error('User is already connected using this provider'), user, '/#/testimonial');
 		}
 	}
 };

@@ -94,7 +94,7 @@ h2{
   color: rgb(51, 51, 51);
 }
 
-.btn-philos{
+.btn-philos, .btn-philos-deactivate{
     color: #fff;
     text-transform: uppercase;
     font-family: 'Raleway', "Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -105,6 +105,10 @@ h2{
     padding-left: 25px;
     transition: all 300ms;
     height: 45px;
+}
+
+.btn-philos-deactivate{
+  background: rgba(205, 186, 182, 0.9);
 }
 
 .form-control{
@@ -600,7 +604,124 @@ div.authenticated i{
   margin-left: 1px;
 }
 
-a.authenticated:hover,
-a.authenticated:active{
+.alert {
+  margin-bottom: 0;
+}
+
+
+
+/*.header_container{
+  position:fixed;
+  z-index: 1000;
+  width:100%;
+}
+
+.navbar-header{ 
+}
+
+.navbar {
+  position: relative;
+  border: 0px;
+}
+
+.logo{
+}
+
+.logo a{
+  background:hsla(0,0%,0%,1.00) url(../../assets/images/branding/philos_logo-sm-2.png) center center no-repeat;
+  color:hsla(0,0%,100%,0.00);
+  display:block;
+  font-family: 'Raleway', sans-serif; 
+  font-size:36px;
+  font-weight:300;
+  height:80px;
+  letter-spacing:5px;
+  line-height:20px;
+  padding:29px 30px;
+  text-transform:uppercase;
+  text-shadow:none;
+}
+
+.logo a:hover{
+  background:hsla(10, 100%, 58%, 1) url(../../assets/images/branding/philos_logo-sm-w.png) center center no-repeat;
+  text-shadow:none;
+  color:hsla(0,0%,100%,0.00);
+}
+
+.menu_top,
+.menu_top li{
+  color:hsla(0,0%,100%,1.00);
+  display:inline-block;
+  font-weight:400;
+  text-transform:uppercase;
+  font-size:18px;
+  letter-spacing:2px;
+  list-style:none;
+  margin:18px 10px;
+}
+
+.menu_top li a{
+  color:hsla(0,0%,100%,1.00);
+  transition: all 300ms;
+  text-decoration:none;
+}
+
+.menu_top li a:hover{
+  color:hsla(15,86%,54%,1.00);
+}
+
+.menu_top{
+  display: block;
+}
+
+.menu_icon{
+  color:hsla(0,0%,100%,1.00);
+  margin-top:18px;
+}
+*/
+
+.align_menu_top {
+  padding: 15px;
+}
+.nav-pills>li>a{
+  color:hsla(0, 0%, 100%, 1.0);
+  border-radius:50px;
+  border:hsla(0,0%,0%,0) 2px solid;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 5px;
+  height:100%;
+  transition: 300ms all;
+}
+
+.nav-pills>li>a:hover,
+.nav-pills>li.login>a:hover{
+  background-color:hsla(10, 100%, 58%, 1);;
+  border:hsla(10, 100%, 58%, 1) 2px solid;
+  color:hsla(0, 0%, 100%, 1.0);
 
 }
+
+.nav-pills>li.active>a, 
+.nav-pills>li.active>a:focus, 
+.nav-pills>li.active>a:hover, 
+.nav-pills>li>a:focus{
+  background-color: #000;
+  color:hsla(0, 0%, 100%, 1.0);
+  border:hsla(0, 0%, 100%, 1.0) 2px solid;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 5px;
+}
+
+
+
+.nav-pills>li.login>a  {
+  background-color: #000;
+  color:hsla(0, 0%, 100%, 1.0);
+  border:hsla(0, 0%, 100%, 1.0) 2px solid;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 5px;
+}
+
