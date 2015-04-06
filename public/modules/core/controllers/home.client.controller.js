@@ -3,8 +3,9 @@
 
 
   function HomeController(){
-
   }
+
+  HomeController.$inject = [];
 
   module.controller('HomeController', HomeController);
 
