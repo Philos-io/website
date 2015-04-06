@@ -3,7 +3,6 @@
 
   function HomeController($scope, Authentication, $http, $location, $document, Common, $anchorScroll){
 
-<<<<<<< HEAD
   	var self = this;
 
   	function activate(){
@@ -54,12 +53,7 @@
   }
 
   HomeController.$inject = ['$scope', 'Authentication', '$http', '$location', '$document', 'Common', '$anchorScroll'];
-=======
-  function HomeController(){
-  }
 
-  HomeController.$inject = [];
->>>>>>> preview
 
   module.controller('HomeController', HomeController);
 

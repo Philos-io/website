@@ -129,9 +129,14 @@ input.form-control {
   background: #00b36e;
 }
 
-/**Training section***/
+/**portfolio section***/
 section#portfolio{
-  padding-top:80px;
+  padding-top:150px;
+  height: 90%;
+}
+
+section.team{
+  padding-top:180px !important;
     height: 90%;
 }
 
@@ -194,9 +199,15 @@ section#trainingDetails{
   font-family: "droid serif", serif;
 }
 
+section#team{
+  padding-top: 140px;
+  height: 90%;
+  min-height: 750px;
+}
+
 @media(min-width:768px) {
     header .intro-text {
-        padding-top: 150px;
+        padding-top: 180px;
         padding-bottom: 50px;
     }
 
@@ -240,7 +251,7 @@ section#portfolio.home{
 
 
     /**Training section***/
-    section#portfolio{
+    section#portfolio, section#team{
       padding-top:80px;
         height: 90%;
     }
@@ -564,6 +575,15 @@ section h2.section-heading{
 
 .clients{
   padding-top:80px;
+  background-attachment: fixed;
+  background-image: url(../../assets/images/branding/pattern_image.png);
+  background-position: top center;
+  background-repeat: repeat;
+}
+
+.clients hr{
+  color: #353535;
+  margin-bottom: 40px;
 }
 
 .section-subheading{
@@ -732,12 +752,25 @@ div.authenticated i{
   margin: 0 5px;
 }
 
-=======
 .fadeOut-remove, .fadeOut-remove-active{
   transition: all ease bounce 3s;
 } 
 
 .home_screen{
-  height: 50vh;
+  height: 45vh;
 }
->>>>>>> preview
+
+section#portfolio.services{
+  padding-top: 80px;
+}
+
+.service, #portfolio .service .portfolio-caption{
+  background: #f7f7f7;
+}
+
+.service img{
+  border: none;
+}
+.service .caption{
+  padding: 20px 0 0;
+}
