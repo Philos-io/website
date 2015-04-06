@@ -6,6 +6,10 @@ body{
   transition: background-color 1s ease;
 }
 
+.flip{
+  transition: width ease 1s;
+}
+
 a{
   color:#00B36E;
 }
@@ -100,7 +104,7 @@ h2{
     font-family: 'Raleway', "Helvetica Neue",Helvetica,Arial,sans-serif;
     background: rgba(255,76,39,.9);
     letter-spacing: 3px;
-    border-radius: 5px;
+    border-radius: 50px;
     padding-right: 25px;
     padding-left: 25px;
     transition: all 300ms;
@@ -245,6 +249,8 @@ section#portfolio.home{
 
     .clients{
       padding-top:70px;
+      position: relative;
+      bottom: 0;
     }
 }
 
@@ -557,7 +563,7 @@ section h2.section-heading{
 }
 
 .clients{
-  padding-top:120px;
+  padding-top:80px;
 }
 
 .section-subheading{
@@ -660,6 +666,7 @@ div.authenticated i{
   margin:18px 10px;
 }
 
+<<<<<<< HEAD
 .menu_top li a{
   color:hsla(0,0%,100%,1.00);
   transition: all 300ms;
@@ -725,3 +732,12 @@ div.authenticated i{
   margin: 0 5px;
 }
 
+=======
+.fadeOut-remove, .fadeOut-remove-active{
+  transition: all ease bounce 3s;
+} 
+
+.home_screen{
+  height: 50vh;
+}
+>>>>>>> preview
