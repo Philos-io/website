@@ -1,7 +1,7 @@
 (function(module){
 	'use strict';
-
 	function WorkshopsController($state, $stateParams, WorkshopService, WorkshopType){
+
 
 		var self = this;
 
@@ -62,7 +62,7 @@
 
 		activate();
 	}
-
+	
 	WorkshopsController.$inject = ['$state', '$stateParams', 'WorkshopService', 'WorkshopType'];
 
 	module.controller('WorkshopsController', WorkshopsController);

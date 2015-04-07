@@ -142,7 +142,7 @@ section.team{
 
 /**Training section***/
 section#trainingDetails{
-    padding-top: 80px;
+    padding-top: 150px;
     height: 90%;
     min-height: 750px;
 }
@@ -599,7 +599,7 @@ img.img-thumbnail{
 
 /**Training section***/
 section#suggest, section#join{
-    padding-top: 80px;
+    padding-top: 150px;
     min-height: 700px;
 }
 
