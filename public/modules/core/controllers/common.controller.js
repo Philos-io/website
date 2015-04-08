@@ -1,7 +1,7 @@
 (function(module){
   'use strict';
 
-  function CommonController($http, $state){
+  function CommonController($http, $state, $document){
 
     var self = this;
 
@@ -27,7 +27,8 @@
 
 
     function activate(){
-
+      $document.scrollTop(0, 0);
+      
       self.team = [
         {
           fullName: 'Maxime CZETWERTYNSKI',
@@ -101,7 +102,7 @@
   }
 
 
-  CommonController.$inject = ['$http', '$state'];
+  CommonController.$inject = ['$http', '$state', '$document'];
 
   module.controller('CommonController', CommonController);
 
