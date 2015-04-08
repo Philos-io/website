@@ -28,6 +28,7 @@ module.exports = {
 				'public/lib/angular-ui-router/release/angular-ui-router.js',
 				'public/lib/angular-ui-utils/ui-utils.js',
 				'public/lib/angular-bootstrap/ui-bootstrap-tpls.js',
+				'public/lib/angular-scroll/angular-scroll.js',
 				'public/lib/bootstrap/dist/js/bootstrap.js',
 				'public/lib/wow/dist/wow.js',
 				'public/lib/underscore/underscore.js',

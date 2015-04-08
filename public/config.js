@@ -4,7 +4,7 @@
 var ApplicationConfiguration = (function() {
 	// Init module configuration options
 	var applicationModuleName = 'philos';
-	var dependencies = ['ngResource', 'ngAnimate',  'ngTouch',  'ui.router', 'ui.bootstrap', 'ui.utils'];
+	var dependencies = ['ngResource', 'ngAnimate',  'ngTouch',  'ui.router', 'ui.bootstrap', 'ui.utils', 'duScroll'];
 
 	// Add a new vertical module
 	var registerModule = function(moduleName, dependencies) {

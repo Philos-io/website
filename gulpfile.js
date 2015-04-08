@@ -1,34 +1,47 @@
 'use strict';
 
-var gulp = require('gulp'),
-    plugins    = require('gulp-load-plugins');
+var gulp       = require('gulp'),
+    plugins    = require('gulp-load-plugins'),
+    args       = require('yargs').argv,
+    files      = require('./gulp.config')();
 
 var $ = plugins({
   lazy: true
 });
 
-var files = {
-  js: ['*.js', '**/*.js'],
-  css: '',
-  baseSrc: 'public',
-  dist: 'public/dist',
-  images: 'public/dist/images'
-};
+
 
 gulp.task('default', ['express', 'watch']);
+
+gulp.task('validate', function(){
+    $.util.log($.util.colors.blue('validation starts'));
+
+    return gulp.src(files.js)
+      //.pipe($.jscs())
+      .pipe($.if(args.verbose, $.print()))
+      .pipe($.jshint())
+      .pipe($.jshint.reporter('jshint-stylish', {verbose: true}))
+      .pipe('fail');
+});
+
+
+gulp.task('styles', function(){
+  $.util.log($.util.colors.blue('css minification starts'));
+
+    gulp.src(files.css)
+      .pipe($.autoprefixer({browsers: ['last 2 version']}))
+      .pipe($.cssmin())
+      .pipe($.rename({suffix: '.min'}))
+      .pipe(gulp.dest(files.dist));
+});
+
 
 gulp.task('help', function(){
   return $.taskListing();
 });
 
 gulp.task('watch', function(){
-  return  gulp.watch(files.js, ['jshint']);
-});
-
-gulp.task('jshint', function(){
-  gulp.src(files.js)
-        .pipe($.jshint());
-
+  gulp.watch(files.js, ['validate']);
 });
 
 gulp.task('clean', function(){
@@ -74,15 +87,13 @@ gulp.task('debug', function(){
 
 gulp.task('build', ['compress', '']);
 
+gulp.task('concurrent', ['nodemon', 'watch']);
+
+gulp.task('concurrent-debug', ['nodemon', 'watch', 'node-inspector']);
 
 gulp.task('express', function() {
-  var express = require('express');
-  var app = express();
-  app.use(require('connect-livereload')({port: 4002}));
-  app.use(express.static(__dirname));
-  app.listen(3000);
+  require('./server');
 });
-
 
 var tinylr;
 gulp.task('livereload', function() {

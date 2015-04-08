@@ -98,7 +98,7 @@ h2{
   color: rgb(51, 51, 51);
 }
 
-.btn-philos{
+.btn-philos, .btn-philos-deactivate{
     color: #fff;
     text-transform: uppercase;
     font-family: 'Raleway', "Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -109,6 +109,10 @@ h2{
     padding-left: 25px;
     transition: all 300ms;
     height: 45px;
+}
+
+.btn-philos-deactivate{
+  background: rgba(205, 186, 182, 0.9);
 }
 
 .form-control{
@@ -125,15 +129,20 @@ input.form-control {
   background: #00b36e;
 }
 
-/**Training section***/
+/**portfolio section***/
 section#portfolio{
-  padding-top:80px;
+  padding-top:150px;
+  height: 90%;
+}
+
+section.team{
+  padding-top:180px !important;
     height: 90%;
 }
 
 /**Training section***/
 section#trainingDetails{
-    padding-top: 80px;
+    padding-top: 150px;
     height: 90%;
     min-height: 750px;
 }
@@ -190,9 +199,15 @@ section#trainingDetails{
   font-family: "droid serif", serif;
 }
 
+section#team{
+  padding-top: 140px;
+  height: 90%;
+  min-height: 750px;
+}
+
 @media(min-width:768px) {
     header .intro-text {
-        padding-top: 150px;
+        padding-top: 180px;
         padding-bottom: 50px;
     }
 
@@ -236,7 +251,7 @@ section#portfolio.home{
 
 
     /**Training section***/
-    section#portfolio{
+    section#portfolio, section#team{
       padding-top:80px;
         height: 90%;
     }
@@ -286,7 +301,7 @@ section#portfolio.home{
 }
 
 section#signup, section#signin{
-  padding: 10px;
+  padding: 80px;
   margin-top: 10%;
 }
 
@@ -560,6 +575,15 @@ section h2.section-heading{
 
 .clients{
   padding-top:80px;
+  background-attachment: fixed;
+  background-image: url(../../assets/images/branding/pattern_image.png);
+  background-position: top center;
+  background-repeat: repeat;
+}
+
+.clients hr{
+  color: #353535;
+  margin-bottom: 40px;
 }
 
 .section-subheading{
@@ -575,7 +599,7 @@ img.img-thumbnail{
 
 /**Training section***/
 section#suggest, section#join{
-    padding-top: 80px;
+    padding-top: 150px;
     min-height: 700px;
 }
 
@@ -606,9 +630,54 @@ div.authenticated i{
   margin-left: 1px;
 }
 
-a.authenticated:hover,
-a.authenticated:active{
+.alert {
+  margin-bottom: 0;
+}
 
+
+.align_menu_top {
+  padding: 15px;
+}
+.nav-pills>li>a{
+  color:hsla(0, 0%, 100%, 1.0);
+  border-radius:50px;
+  border:hsla(0,0%,0%,0) 2px solid;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 5px;
+  height:100%;
+  transition: 300ms all;
+}
+
+.nav-pills>li>a:hover,
+.nav-pills>li.login>a:hover{
+  background-color:hsla(10, 100%, 58%, 1);;
+  border:hsla(10, 100%, 58%, 1) 2px solid;
+  color:hsla(0, 0%, 100%, 1.0);
+
+}
+
+.nav-pills>li.active>a, 
+.nav-pills>li.active>a:focus, 
+.nav-pills>li.active>a:hover, 
+.nav-pills>li>a:focus{
+  background-color: #000;
+  color:hsla(0, 0%, 100%, 1.0);
+  border:hsla(0, 0%, 100%, 1.0) 2px solid;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 5px;
+}
+
+
+
+.nav-pills>li.login>a  {
+  background-color: #000;
+  color:hsla(0, 0%, 100%, 1.0);
+  border:hsla(0, 0%, 100%, 1.0) 2px solid;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 5px;
 }
 
 .fadeOut-remove, .fadeOut-remove-active{
@@ -616,5 +685,24 @@ a.authenticated:active{
 } 
 
 .home_screen{
+  height: 45vh;
+}
+
+section#portfolio.services{
+  padding-top: 80px;
+}
+
+.service, #portfolio .service .portfolio-caption{
+  background: #f7f7f7;
+}
+
+.service img{
+  border: none;
+}
+
+.home_screen{
   height: 50vh;
+}
+.service .caption{
+  padding: 20px 0 0;
 }

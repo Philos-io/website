@@ -27,7 +27,7 @@
 			  		// 	.then(function(){
 			  		// 		$animate.addClass(el, 'fadeIn');
 			  		// 	});
-			  		
+
 			  		el.fadeOut(1000).text(keywords[i++]).fadeIn(1000).delay(9000);
 			  			// .delay(1000);
 

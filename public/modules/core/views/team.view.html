@@ -7,6 +7,7 @@
             </div>
         </div>
         <hr/>
+<<<<<<< HEAD
         <div class="col-lg-3 portfolio-item animated fadeInUpSmall sessionCard">
             <a href="" class="portfolio-link" data-toggle="modal">
                 <div class="portfolio-hover">
@@ -92,6 +93,49 @@
         </div>
     </div>
     </div>
+=======
+        <div class="row">
+            <div class="col-lg-4 portfolio-item animated fadeInUpSmall text-center service" data-ng-repeat="user in common.team">
+                <a href="" class="portfolio-link" data-toggle="modal">
+                    <div class="portfolio-hover">
+                        <div class="portfolio-hover-content">
+                            <p data-ng-bind="user.twitter"></p>
+                            <p data-ng-bind="user.phone"></p>
+                        </div>
+                    </div>
+                    <div>
+                        <img data-ng-src="{{user.picture}}" class="img-circle" alt="{{user.fullName}}">
+                    </div>
+                </a>
+                <div class="portfolio-caption">
+                    <h4 data-ng-bind="user.fullName"></h4>
+                    <h5 data-ng-bind="user.role"></h5>
+                </div>
+                <social-media data-info="user.media"></social-media>    
+                <div class="portfolio-caption">
+                    <p class="description" data-ng-bind="user.description"/>
+                    <hr/>
+                </div>
+            <!-- </div>
+            <div class="col-lg-3 portfolio-item animated fadeInUpSmall text-center service">
+                <div>
+                    <img ng-src="modules/assets/images/team/team_davy.jpg" class="img-circle" alt="{{model.displayName}}">
+                </div>
+                <div class="portfolio-caption">
+                    <h4>Davy Engone</h4>
+                    <h5>Software Engineer</h5>
+                </div>
+                <div class="portfolio-caption">
+                    <p class="description">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                    </p>
+                    <hr/>
+                    <social-media></social-media>
+                </div>
+            </div> -->
+        </div>
+>>>>>>> team
 </section>
 
 
@@ -118,14 +162,25 @@
 
 
 
+<<<<<<< HEAD
 <!-- <section id="portfolio" class="team">
     
     <div class="col-lg-3 portfolio-item animated fadeInUpSmall sessionCard">
+=======
+
+<!-- <section id="portfolio" class="team">
+    
+    <div class="col-lg-3 portfolio-item animated fadeInUpSmall service">
+>>>>>>> team
         <a href="" class="portfolio-link" data-toggle="modal">
             <div class="portfolio-hover">
                 
                 <div class="portfolio-hover-content">
+<<<<<<< HEAD
                     <span>@maxczet</span>
+=======
+                    <p>@maxczet</p>
+>>>>>>> team
                 </div>
             </div>
             <img ng-src="modules/assets/images/team/team_max.jpg" class="img-circle" alt="{{model.title}}">

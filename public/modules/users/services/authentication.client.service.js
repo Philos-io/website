@@ -1,17 +1,23 @@
 (function(module){
 	'use strict';
 
-	function UserFactory() {
-		var _this = this;
+	function UserFactory($http) {
 
-		_this._data = {
-			user: window.user
+		function logout(){
+			return $http.get('/auth/signout');
+		}
+
+		function getCurrentUser(){
+			return $http.get('/users/me');	
+		}
+
+		return {
+			logout: logout,
+			getCurrent: getCurrentUser
 		};
-
-		return _this._data;
 	}
 
-	UserFactory.$inject = [];
+	UserFactory.$inject = ['$http'];
 
 	// Authentication service for user variables
 	module.factory('Authentication', UserFactory);

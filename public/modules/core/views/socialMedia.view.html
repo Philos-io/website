@@ -1,10 +1,7 @@
 <ul class="list-inline social-buttons">
-    <li><a href="https://twitter.com/philos_io" target="_blank"><i class="fa fa-twitter"></i></a>
-    </li>
-    <li><a href="https://www.linkedin.com/company/philos-io" target="_blank"><i class="fa fa-linkedin"></i></a>
-    </li>
-    <li><a href="https://www.facebook.com/pages/Philosio/1507808566114369" target="_blank"><i class="fa fa-facebook"></i></a>
-    </li>
-    <li><a href="https://angel.co/philos-io" target="_blank"><i class="fa fa-angellist"></i></a>
+    <li data-ng-repeat="media in info">
+    	<a data-ng-href="{{media.url}}" target="_blank">
+    		<i data-ng-class="media.icon"></i>
+		</a>
     </li>
 </ul>
