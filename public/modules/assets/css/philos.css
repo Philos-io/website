@@ -692,8 +692,8 @@ section#portfolio.services{
   padding-top: 80px;
 }
 
-.service, #portfolio .service .portfolio-caption{
-  background: #f7f7f7;
+.service{
+  background: #fff;
 }
 
 .service img{
@@ -705,4 +705,8 @@ section#portfolio.services{
 }
 .service .caption{
   padding: 20px 0 0;
+}
+
+.service.main{
+  border: 1px solid rgba(255,76,39,.9);
 }
