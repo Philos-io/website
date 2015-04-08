@@ -1,13 +1,18 @@
 (function(module){
   'use strict';
 
-  function UserController($http, $location, Users, Authentication) {
-    var self = this;
+  function UserController($http, $location, Authentication) {
+	
+	var self = this;
 
-    self.user = Authentication.user;
+    function activate(){
+    	if (!Authentication.user) $location.path('/');
+    }
+
+    activate();
   }
 
-  UserController.$inject = ['$http', '$location', 'Users', 'Authentication'];
+  UserController.$inject = ['$http', '$location', 'Authentication'];
 
   module.controller('UserController', UserController);
 

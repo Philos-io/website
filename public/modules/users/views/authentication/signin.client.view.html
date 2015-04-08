@@ -1,26 +1,37 @@
 <section id="signin" class="row animated fadeInUpSmall">
 	<div class="container">
-		<div class="row">
-			<form name="userForm" data-ng-submit="auth.signin()" class="form" novalidate>
-				<fieldset>
-					<div class="row">
-						<div class="col-lg-offset-2 col-lg-4">
-							<input type="email" id="email" name="email" class="form-control input-lg" data-ng-model="auth.email" placeholder="Email">
-						</div>
-						<div class="col-lg-4">
-							<input type="password" id="password" name="password" class="form-control input-lg" data-ng-model="auth.password" placeholder="Password">
-						</div>
-						<div class="col-lg-2">
-							<button type="submit" class="btn btn-lg btn-philos">Sign in</button>
-						</div>
+		<!-- <div class="row">
+			  	<div class="col-md-offset-2 col-md-4 col-xs-offset-1 col-xs-4 col-lg-offset-4 col-lg-4" data-ng-if="!auth.user">
+		  			<a href="/auth/linkedin" class="btn btn-lg btn-philos">LinkedIn</a>
+		  			<a href="/auth/github" class="btn btn-lg btn-philos pull-right">Github</a>
+			  	</div>
+	  	</div>
+		<br/> -->
+		<form class="form" name="userForm" data-ng-submit="auth.signin()">
+			<div class="row">
+				<div data-ng-if="auth.errorMessage" class="col-md-offset-2 col-md-8 col-xs-offset-1 col-xs-10 col-lg-offset-4 col-lg-4 form-group animated fadeInUpSmall">
+					<div class="alert alert-danger text-center" role="alert">
+					  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					  <span data-ng-bind="auth.errorMessage"></span>
 					</div>
-					<br/>
-					<a href="/#/signup" class="show-signup">Sign up</a>
-					<!-- <div data-ng-show="error" class="text-center text-danger">
-						<strong data-ng-bind="error"></strong>
-					</div> -->
-				</fieldset>
-			</form>
-		</div>
+      			</div>
+	      	</div>
+			<div class="row">
+		      <div class="col-md-offset-2 col-md-8 col-xs-offset-1 col-xs-10 col-lg-offset-4 col-lg-4 form-group" data-ng-class="{'has-error': userForm.email.$invalid && userForm.email.$dirty}">
+		          <input type="email" id="email" required name="email" class="form-control input-lg" data-ng-model="auth.email" placeholder="Email">
+		      </div>
+	      	</div>
+			<div class="row">
+		      <div class="form-group col-md-offset-2 col-md-8 col-xs-offset-1 col-xs-10 col-lg-offset-4 col-lg-4" data-ng-class="{'has-error': userForm.password.$invalid && userForm.password.$touched}">
+		          <input type="password" id="password" required name="password" class="form-control input-lg" data-ng-model="auth.password" placeholder="Password">
+		      </div>
+	      	</div>
+		  	<div class="row">
+			  	<div class="col-md-offset-2 col-md-4 col-xs-offset-1 col-xs-4 col-lg-offset-4 col-lg-4">
+		  			<button type="submit" class="btn btn-lg btn-philos" data-ng-disabled="userForm.$invalid">Sign in</button>
+		  			<a href="/#/signup" class="btn btn-lg btn-philos-deactivate pull-right">Sign up</a>
+			  	</div>
+		  	</div>
+		</form>
 	</div>
 </section>

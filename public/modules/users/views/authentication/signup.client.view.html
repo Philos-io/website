@@ -1,29 +1,51 @@
 <section id="signup" class="row animated fadeInUpSmall">
 	<div class="container">
-		<div class="col-lg-offset-3 col-lg-6 col-md-offset-3 col-md-6 col-xs-offset-1 col-xs-10">
-			<form name="userForm" data-ng-submit="auth.signup()" class="form-horizontal" novalidate autocomplete="off">
-				<fieldset>
-					<div class="form-group">
-						<input type="text" required id="firstName" name="firstName" class="form-control" data-ng-model="auth.firstName" placeholder="First Name">
+		<div class="row" data-ng-if="!auth.newUser">
+			  	<div class="col-md-offset-2 col-md-4 col-xs-offset-1 col-xs-4 col-lg-offset-4 col-lg-4">
+		  			<a href="/auth/linkedin" class="btn btn-lg btn-philos">LinkedIn</a>
+		  			<!-- <a href="/auth/github" class="btn btn-lg btn-philos pull-right">Github</a> -->
+			  	</div>
+	  	</div>
+		<br/>
+		<form class="form" name="userForm" data-ng-submit="auth.signup()" novalidate>
+			<div class="row" data-ng-if="!auth.newUser">
+		      <div class="col-md-offset-2 col-md-8 col-xs-offset-1 col-xs-10 col-lg-offset-4 col-lg-4 form-group" 
+		      		data-ng-class="{'has-error': userForm.firstName.$invalid && userForm.firstName.$dirty}">
+		          <input type="text" required name="firstName" class="form-control input-lg" data-ng-model="auth.firstName" placeholder="First Name">
+		      </div>
+	      	</div>
+	      	<div class="row" data-ng-if="!auth.newUser">
+		      <div class="col-md-offset-2 col-md-8 col-xs-offset-1 col-xs-10 col-lg-offset-4 col-lg-4 form-group" data-ng-class="	{'has-error': userForm.lastName.$invalid && userForm.lastName.$dirty}">
+		          <input type="text" required name="lastName" class="form-control input-lg" data-ng-model="auth.lastName" placeholder="Last Name">
+		      </div>
+	      	</div>
+			<div class="row" data-ng-if="!auth.newUser">
+		      <div class="col-md-offset-2 col-md-8 col-xs-offset-1 col-xs-10 col-lg-offset-4 col-lg-4 form-group" data-ng-class="	{'has-error': userForm.email.$invalid && userForm.email.$dirty}">
+		          <input type="email" required name="email" class="form-control input-lg" data-ng-model="auth.email" placeholder="Email">
+		      </div>
+	      	</div>
+	      	<div class="row" data-ng-if="auth.newUser">
+				<div class="col-md-offset-2 col-md-8 col-xs-offset-1 col-xs-10 col-lg-offset-4 col-lg-4 form-group">
+					<div class="alert alert-success text-center" role="alert">
+					  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					  <span>Welcome {{auth.firstName}}, just add a password to complete your registration.</span>
 					</div>
-					<div class="form-group">
-						<input type="text" id="lastName" name="lastName" class="form-control" data-ng-model="auth.lastName" placeholder="Last Name">
-					</div>
-					<div class="form-group">
-						<input type="email" id="email" name="email" class="form-control" data-ng-model="auth.email" placeholder="Email">
-					</div>
-					<div class="form-group">
-						<input type="password" id="password" name="password" class="form-control" data-ng-model="auth.password" placeholder="Password">
-					</div>
-					<div class="text-center form-group">
-						<button type="submit" class="btn btn-lg btn-philos">Sign up</button>&nbsp; or&nbsp;
-						<a href="/#/signin" class="show-signup">Sign in</a>
-					</div>
-					<!-- <div data-ng-show="error" class="text-center text-danger">
-						<strong data-ng-bind="error"></strong>
-					</div> -->
-				</fieldset>
-			</form>
-		</div>
+      			</div>
+	      	</div>
+			<div class="row">
+		      <div class="form-group col-md-offset-2 col-md-8 col-xs-offset-1 col-xs-10 col-lg-offset-4 col-lg-4" data-ng-class="{'has-error': userForm.password.$invalid && userForm.password.$touched}">
+		          <input type="password" required name="password" class="form-control input-lg" data-ng-model="auth.password" placeholder="Password">
+		      </div>
+	      	</div>
+		  	<div class="row">
+			  	<div class="col-md-offset-2 col-md-4 col-xs-offset-1 col-xs-4 col-lg-offset-4 col-lg-4">
+		  			<button type="submit" class="btn btn-lg btn-philos" data-ng-disabled="userForm.$invalid" data-ng-if="!auth.newUser">Sign up</button>
+
+		  			<a href="/#/signin" class="btn btn-lg btn-philos-deactivate pull-right" data-ng-if="!auth.newUser">Sign in</a>
+					
+					<button type="button" data-ng-click="auth.addPassword()" data-ng-if="auth.newUser" class="btn btn-lg btn-philos" data-ng-disabled="userForm.password.$invalid">Validate</button>
+			  	</div>
+		  	</div>
+		</form>
 	</div>
 </section>

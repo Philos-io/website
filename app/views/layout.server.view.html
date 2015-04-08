@@ -16,7 +16,7 @@
 	<!-- Semantic META -->
 	<meta name="keywords" content="{{keywords}}">
 	<meta name="description" content="{{description}}">
-
+	<meta name="google-site-verification" content="GQjirYVyajQHjsUfPcH8ZCL5D2dEZ1cf8srDBn6j0iY" />
 
 	<!-- Fav Icon -->
 	<link href="/modules/core/img/logos/philos-x32.png" rel="shortcut icon" type="image/x-icon">
@@ -32,7 +32,7 @@
 </head>
 
 <body class="ng-cloak">
-	<div class="wrapper">
+	<div class="wrapper" data-ng-controller="HomeController as main">
 		<div data-ng-include="'/modules/core/views/header.client.view.html'"></div>
 		<div>
 			{% block content %}{% endblock %}
