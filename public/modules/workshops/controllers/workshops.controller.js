@@ -1,11 +1,12 @@
 (function(module){
 	'use strict';
-	function WorkshopsController($state, $stateParams, WorkshopService, WorkshopType){
-
+	function WorkshopsController($state, $stateParams, $document, WorkshopService, WorkshopType){
 
 		var self = this;
 
 		function activate(){
+			$document.scrollTop(0, 0);
+
 			WorkshopService.getAll().then(success, error);
 		}
 
@@ -62,8 +63,8 @@
 
 		activate();
 	}
-	
-	WorkshopsController.$inject = ['$state', '$stateParams', 'WorkshopService', 'WorkshopType'];
+
+	WorkshopsController.$inject = ['$state', '$stateParams', '$document', 'WorkshopService', 'WorkshopType'];
 
 	module.controller('WorkshopsController', WorkshopsController);
 

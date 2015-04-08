@@ -28,7 +28,7 @@
 		.state('team', {
 			url: '/team',
 			controller: 'CommonController',
-			controllerAs: 'team',
+			controllerAs: 'common',
 			templateUrl: 'modules/core/views/team.view.html'
 		})
 		.state('about', {

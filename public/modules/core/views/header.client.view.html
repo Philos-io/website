@@ -1,4 +1,4 @@
-<div class="container-fluid animated" id="header" data-ng-controller="HomeController as home" data-ng-if="!home.isLoginPage">
+<div class="container-fluid animated" id="header" data-ng-if="!home.isLoginPage">
   <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
@@ -12,10 +12,11 @@
                   <!-- Collect the nav links, forms, and other content for toggling -->
                   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav nav-pills navbar-right">
+                      <social-media data-info="main.mediaInfo"></social-media>
                         <!-- <li role="presentation"><a href="/#/workshops" class="page-scroll">Workshops</a></li>
                         <li role="presentation"><a href="" ng-click="home.goTo('team')">Team</a></li>
                         <li role="presentation"><a href="" ng-click="home.goTo('contact')">Contact</a></li> -->
-
+                        <!-- 
                         <li data-ng-if="home.user" class="animated">
                           <a href="/#/account/workshops"><i class="fa fa-user"></i></a>
                         </li>
@@ -23,8 +24,8 @@
                           <a data-ng-click="home.logout()"><i class="fa fa-sign-out"></i></a>
                         </li>
                         <li role="presentation" class="login" data-ng-if="!home.user">
-                          <a href="/#/signin"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;Log in</a>
-                        </li>
+                          <a href="/#/signin"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;Sign in</a>
+                        </li> -->
                     </ul>
                   </div><!-- /.navbar-collapse -->
                 </div>

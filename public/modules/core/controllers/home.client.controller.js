@@ -1,14 +1,15 @@
 (function(module){
   'use strict';
 
-  function HomeController($scope, Authentication, $http, $location, $document, Common, $anchorScroll){
+  function HomeController($scope, Authentication, $http, $location, $document, $anchorScroll, AppConfig){
 
   	var self = this;
 
   	function activate(){
 		  $document.scrollTop(0, 0);
 
-      self.isLoginPage = Common.isLoginPage;
+
+      self.mediaInfo = AppConfig.media;
 
   		if (!self.user) {
   			$http.get('/users/me').then(function(response){
@@ -29,12 +30,6 @@
       $anchorScroll();
     };
 
-  	$scope.$watch(function(){
-  		return Common.isLoginPage;
-  	}, function(newVal, oldVal){
-  		if (newVal !== oldVal) self.isLoginPage = newVal;
-  	});
-
     $scope.$watch(function(){
       return Authentication.user;
     }, function(newVal, oldVal){
@@ -52,7 +47,7 @@
   	};
   }
 
-  HomeController.$inject = ['$scope', 'Authentication', '$http', '$location', '$document', 'Common', '$anchorScroll'];
+  HomeController.$inject = ['$scope', 'Authentication', '$http', '$location', '$document', '$anchorScroll', 'AppConfig'];
 
 
   module.controller('HomeController', HomeController);

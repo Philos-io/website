@@ -4,7 +4,6 @@
   function Feedback(){
     return {
       restrict: 'E',
-      replace: true,
       templateUrl: 'modules/core/views/feedback.view.html'
     };
   }
