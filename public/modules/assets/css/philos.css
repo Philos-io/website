@@ -690,11 +690,9 @@ div.authenticated i{
 
 section#portfolio.services{
   padding-top: 80px;
-}
-
-.service{
   background: #fff;
 }
+
 
 .service img{
   border: none;
@@ -707,6 +705,4 @@ section#portfolio.services{
   padding: 20px 0 0;
 }
 
-.service.main{
-  border: 1px solid rgba(255,76,39,.9);
-}
+
