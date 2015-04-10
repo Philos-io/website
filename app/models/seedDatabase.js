@@ -99,19 +99,25 @@ var angularjs = {
   modules: [
     {
       title: 'Unit 1: Getting started with AngularJS',
-      topics: ['JavaScript introduction', 'Why Angular', 'Introduction to Angular', 'Scopes', 'Controllers', 'Built-in directives', 'Built-in Filters', 'Angular expressions', 'XHR/Introduction to promises', '$http service', 'Introduction to ngRouter']
+      topics: ['JavaScript fundamentals for Angular', 'Why using AngularJS?', 'Introduction to Angular', 'Scopes', 'Controllers', 'Built-in directives', 'Built-in Filters', 'Angular expressions', 'XHR/Introduction to promises', '$http service', 'Introduction to ngRouter'],
+      gist: 'https://gist.github.com/davyengone/d89505cb97e631435975'
     },
     {
       title: 'Unit 2: Intermediate AngularJS topics',
-      topics: ['Building custom directives', 'Application architecture', 'Introduction to unit testing with Jasmine', 'Introduction to end-to-end testing with Jasmine', 'Require.js', 'Lazy-loading', 'The digest loop, in-depth', 'hardcore uiRouter']
+      topics: ['Building custom directives', 'Application architecture', 'Unit testing with Jasmine', 'End-to-end testing with Jasmine', 'Lazy loading: ocLazyLoad and requireJS', 'The digest loop, in-depth', 'Introduction to ui.router']
     },
     {
       title: 'Unit 3: Advanced AngularJS topics',
-      topics: [' Unit testing in-depth, by example', 'End-to-end testing in-depth, by example', 'Advanced optimization techniques', 'Deployment, strategies', 'Building for mobile (with Ionic)', 'Building games with Angular']
+      topics: [' Unit testing in-depth, by example', 'End-to-end testing in-depth, by example', 'Advanced optimization techniques', 'Getting ready for deployment', 'Introduction to Ionic Framework', 'Gulp plugins for AngularJS']
     },
     {
       title: 'Unit 4: More examples on using Angular',
-      topics: ['Using AngularJS with a NodeJS Backend', 'Using AngularJS with ASP.NET MVC and Visual Studio by example', 'Using AngularJS with Java/J2EE by example', 'Using AngularJS with Php/Lavarel by example']
+      topics: ['Using AngularJS with NodeJS', 'Using AngularJS with ASP.NET MVC and Visual Studio by example', 'Using AngularJS with Java/J2EE by example', 'SEO in AngularJS applications']
+    }
+    ,
+    {
+      title: 'Unit 5: Bonus',
+      topics: ['Using ES6 in your Angular applications']
     }
   ],
   requirements: ['Experience with at least one programming language', 'A computer', 'Github Account'],
