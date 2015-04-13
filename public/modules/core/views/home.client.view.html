@@ -106,8 +106,14 @@
         </div>
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h5 class="text-muted suggest_cation">Let's us know how we can help!</h5>
-                <a href="" data-ng-click="main.goTo('contact')" class="btn btn-philos btn-lg">Contact Us</a>
+                <h5 class="text-muted suggest_cation">Don't miss any info, stay tuned!</h5>
+                <form data-ng-submit="home.subscribe()" class="form-inline subscribeForm" name="subscribeForm"
+                    data-ng-class="{'has-error': subscribeForm.email.$invalid && subscribeForm.email.$dirty}">
+                  <div class="form-group">
+                    <input type="email" class="form-control input-lg" placeholder="email">
+                  </div>
+                  <button type="submit" data-ng-disabled="subscribeForm.$invalid" class="btn btn-philos btn-lg">Join</button>
+                </form>
             </div>
         </div>
     </div>
@@ -115,7 +121,7 @@
 
 
 <!-- Portfolio Grid Section -->
-<section id="portfolio" class="bg-light-gray home animated fadeInUpSmall" ng-controller="WorkshopsController as model">
+<section id="portfolio" class="bg-light-gray animated fadeInUpSmall workshops" ng-controller="WorkshopsController as model">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
@@ -129,8 +135,8 @@
         </div>
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h5 class="text-muted suggest_cation">Nothing that suits you?</h5>
-            	  <a href="#/suggest" class="btn btn-philos btn-lg">Suggest a workshop</a>
+                <h5 class="text-muted suggest_cation">We got more!</h5>
+            	  <a href="#/workshops" class="btn btn-philos btn-lg">See our workshops</a>
             </div>
         </div>
     </div>

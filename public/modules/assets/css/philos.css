@@ -231,9 +231,9 @@ section#team{
 	}
 
     .navbar-default.navbar-shrink {
-        padding: 10px 0;
+      padding: 10px 0;
   		background-attachment:fixed;
-		background-image:url(../../assets/images/branding/pattern_image.png);
+		  background-image:url(../../assets/images/branding/pattern_image.png);
   		background-position: top center;
   		background-repeat:repeat;
     }
@@ -715,4 +715,10 @@ section#services.services{
   padding: 20px 0 0;
 }
 
+.subscribeForm input[type='email']{
+  width: 270px;
+}
 
+section#portfolio.workshops{
+  padding-top: 80px;
+}
