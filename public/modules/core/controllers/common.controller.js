@@ -80,7 +80,7 @@
           twitter: '@davyengone',
           phone: '+32 488 79 03 41',
           picture: 'modules/assets/images/team/team_davy.jpg',
-          description: "If not busy coding, testing, or building cool projects with the new tools he just learned, Davy is most probably playing basketball or training for his next run. Intrigued by the potiential of the web, he started digging into JavaScript more than 9 years ago. After contributing to many projects in Paris, London and San Francisco for companies like Famo.us, Alten he cofounded Philos to accelerate the adoption of web technologies everywhere possible.",
+          description: "If not busy coding, testing, or building cool projects with the new tools he just learned, Davy is most probably playing basketball or training for his next run. Intrigued by the potiential of the web, he started digging into JavaScript more than 9 years ago. After contributing to many projects for companies like Famo.us, Alten he cofounded Philos to accelerate the adoption of web technologies everywhere possible.",
           media: [
             {
               url: 'https://twitter.com/davyengone',

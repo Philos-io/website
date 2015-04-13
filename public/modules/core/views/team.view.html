@@ -8,9 +8,9 @@
         </div>
         <hr/>
         <div class="row">
-            <div class="col-lg-4 portfolio-item animated fadeInUpSmall text-center service" data-ng-repeat="user in common.team">
+            <div class="col-lg-4 col-md-6 portfolio-item animated fadeInUpSmall text-center team" data-ng-repeat="user in common.team">
                 <a href="" class="portfolio-link" data-toggle="modal">
-                    <div class="portfolio-hover">
+                    <div class="portfolio-hover img-circle">
                         <div class="portfolio-hover-content">
                             <p data-ng-bind="user.twitter"></p>
                             <p data-ng-bind="user.phone"></p>
@@ -24,12 +24,10 @@
                     <h4 data-ng-bind="user.fullName"></h4>
                     <h5 data-ng-bind="user.role"></h5>
                 </div>
-                <social-media data-info="user.media"></social-media>    
+                <social-media data-info="user.media"></social-media>
                 <div class="portfolio-caption">
                     <p class="description" data-ng-bind="user.description"/>
-                    
                 </div>
-                <hr/>
             <!-- </div>
             <div class="col-lg-3 portfolio-item animated fadeInUpSmall text-center service">
                 <div>

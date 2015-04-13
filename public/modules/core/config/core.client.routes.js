@@ -37,12 +37,12 @@
 			controllerAs: 'about',
 			templateUrl: 'modules/core/views/about.view.html'
 		})
-		.state('services', {
-			url: '/services',
-			controller: 'CommonController',
-			controllerAs: 'services',
-			templateUrl: 'modules/core/views/services.view.html'
-		})
+		// .state('services', {
+		// 	url: '/services',
+		// 	controller: 'CommonController',
+		// 	controllerAs: 'services',
+		// 	templateUrl: 'modules/core/views/services.view.html'
+		// })
 		.state('jobs', {
 			url: '/jobs',
 			controller: 'CommonController',

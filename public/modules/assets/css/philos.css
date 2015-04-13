@@ -140,6 +140,21 @@ section.team{
     height: 90%;
 }
 
+section.team .social-buttons{
+  background: #fff;
+  margin-left: 0;
+}
+
+.team{
+  background: #fff;
+}
+
+div.team .portfolio-hover{
+    width: 210px !important;
+    margin: 0 75px;
+    border-radius: 50%;
+}
+
 /**Training section***/
 section#trainingDetails{
     padding-top: 150px;
@@ -556,6 +571,7 @@ section h2.section-heading{
   letter-spacing:0px;
   font-size:24px;
   color:#999;
+  margin-bottom: 25px;
 }
 
 #portfolio .portfolio-item .portfolio-caption h4{
@@ -607,11 +623,6 @@ textarea.form-control{
   min-height: 100px;
 }
 
-li.active{
-  border: 1px solid #ccc;
-  background: #ccc;
-}
-
 div.authenticated{
   border: 1px solid white;
   padding: .5%;
@@ -649,17 +660,16 @@ div.authenticated i{
   transition: 300ms all;
 }
 
+.nav-pills>li.active>a, 
+.nav-pills>li.active>a:hover,
+.nav-pills>li.active>a:focus, 
 .nav-pills>li>a:hover,
 .nav-pills>li.login>a:hover{
   background-color:hsla(10, 100%, 58%, 1);;
   border:hsla(10, 100%, 58%, 1) 2px solid;
   color:hsla(0, 0%, 100%, 1.0);
-
 }
 
-.nav-pills>li.active>a, 
-.nav-pills>li.active>a:focus, 
-.nav-pills>li.active>a:hover, 
 .nav-pills>li>a:focus{
   background-color: #000;
   color:hsla(0, 0%, 100%, 1.0);
@@ -688,7 +698,7 @@ div.authenticated i{
   height: 45vh;
 }
 
-section#portfolio.services{
+section#services.services{
   padding-top: 80px;
   background: #fff;
 }

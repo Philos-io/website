@@ -1,7 +1,7 @@
 (function(module){
   'use strict';
 
-  function HomeController($scope, Authentication, $http, $location, $document, $anchorScroll, AppConfig){
+  function HomeController($scope, Authentication, $http, $location, $document, $anchorScroll, AppConfig, $state){
 
   	var self = this;
 
@@ -25,7 +25,17 @@
 
     activate();
 
+    this.changeState = function(link){
+      return $state.includes(link);
+
+      // $state.includes('team')
+    }
+
     this.goTo = function(hash){
+      $anchorScroll.yOffset = 100;
+
+      if($location.path() !== '/') $location.path('/');
+      
       $location.hash(hash);
       $anchorScroll();
     };
@@ -47,7 +57,7 @@
   	};
   }
 
-  HomeController.$inject = ['$scope', 'Authentication', '$http', '$location', '$document', '$anchorScroll', 'AppConfig'];
+  HomeController.$inject = ['$scope', 'Authentication', '$http', '$location', '$document', '$anchorScroll', 'AppConfig', '$state'];
 
   module.controller('HomeController', HomeController);
 
