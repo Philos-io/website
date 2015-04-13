@@ -703,6 +703,11 @@ section#services.services{
   background: #fff;
 }
 
+section#about{
+  padding-top: 150px;
+  background: #fff;
+}
+
 
 .service img{
   border: none;
