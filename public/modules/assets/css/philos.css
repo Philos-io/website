@@ -1,6 +1,27 @@
 @charset "UTF-8";
 /* CSS Document */
 
+* {
+  margin: 0;
+}
+html, body {
+  height: 100%;
+}
+
+.wrapper {
+  min-height: 100%;
+  margin-bottom: -80px; 
+}
+
+.wrapper:after {
+  content: "";
+  display: block;
+}
+
+.site-footer, .wrapper:after {
+  height: 80px; 
+}
+
 body{
   font-family: 'Raleway', "Helvetica Neue",Helvetica,Arial,sans-serif;
   transition: background-color 1s ease;

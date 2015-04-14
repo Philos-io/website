@@ -12,12 +12,6 @@ body {
   	height:100%;
 }
 
-.wrapper{
-  min-height:100%;
-  padding:0;
-	position:relative;
-}
-
 .text-muted {
     color: #777;
 }
@@ -726,31 +720,6 @@ section#contact:-ms-input-placeholder {
 
 section#contact .text-danger {
     color: #e74c3c;
-}
-
-footer {
-    margin-top: 4%;
-    text-align: center;
-    width:100%;
-    height: 60px;
-  	position:absolute;
-  	bottom:0;
-  	left:0;
-}
-
-footer span.copyright {
-    text-transform: uppercase;
-    text-transform: none;
-    font-family: 'Raleway', "Helvetica Neue",Helvetica,Arial,sans-serif;
-    line-height: 40px;
-}
-
-footer ul.quicklinks {
-    margin-bottom: 0;
-    text-transform: uppercase;
-    text-transform: none;
-    font-family: 'Raleway', "Helvetica Neue",Helvetica,Arial,sans-serif;
-    line-height: 40px;
 }
 
 ul.social-buttons {
