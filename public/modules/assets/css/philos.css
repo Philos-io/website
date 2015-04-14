@@ -20,6 +20,7 @@ html, body {
 
 .site-footer, .wrapper:after {
   height: 80px; 
+  padding-top: 2%;
 }
 
 body{
