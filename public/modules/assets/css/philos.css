@@ -141,7 +141,12 @@ h2{
   height: 45px;
 }
 
-input.form-control {
+input.form-control, select.form-control{
+  border: 1px solid #00B36E;
+  border-radius: 50px;
+}
+
+textarea.form-control {
   border: 1px solid #00B36E;
 }
 
@@ -157,10 +162,6 @@ section#portfolio{
   height: 90%;
 }
 
-section.team{
-  padding-top:180px !important;
-    height: 90%;
-}
 
 section.team .social-buttons{
   background: #fff;
