@@ -7,7 +7,28 @@ var _ = require('lodash'),
 	errorHandler = require('../errors.server.controller.js'),
 	mongoose = require('mongoose'),
 	passport = require('passport'),
-	User = mongoose.model('User');
+	User = mongoose.model('User'),
+	Subscriber = mongoose.model('Subscriber');
+
+exports.subscribe = function(req, res){
+	var email = req.body.email;
+
+	Subscriber.findOne({email:email}, function(err, user){
+		if(err) throw err;
+
+		if (user) {
+			res.json({message: 'Oh, you are already part of our community!'});
+		}else{
+			var subscriber = new Subscriber();
+			subscriber.email = email;
+
+			subscriber.save(function(){
+				res.json({message: 'Thanks for joining our growing community!'});
+			});			
+		}
+
+	});
+};
 
 /**
  * Update user details

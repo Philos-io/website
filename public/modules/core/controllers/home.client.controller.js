@@ -25,13 +25,20 @@
 
     activate();
 
-    this.changeState = function(link){
+    self.subscribe = function(){
+
+      $http.post('/users/subscribe', {email: self.subscriberEmail})
+        .then(function(response){
+          self.subscriberEmail = "";
+          self.subscriberMessage = response.data.message;
+        });
+    };
+
+    self.changeState = function(link){
       return $state.includes(link);
+    };
 
-      // $state.includes('team')
-    }
-
-    this.goTo = function(hash){
+    self.goTo = function(hash){
       $anchorScroll.yOffset = 100;
 
       if($location.path() !== '/') $location.path('/');

@@ -12,8 +12,7 @@ var SubscriberSchema = new Schema({
 		match: [/.+\@.+\..+/, 'Please fill a valid email address']
 	},
 	workshops:{
-			type: [{ type: Schema.Types.ObjectId, ref: 'Workshop'}],
-			required: true
+			type: [{ type: Schema.Types.ObjectId, ref: 'Workshop'}]
 		}
 });
 
