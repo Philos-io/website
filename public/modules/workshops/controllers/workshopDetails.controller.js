@@ -5,6 +5,7 @@
 		var self = this;
 
 		this.get = function(id){
+			mixpanel.track("suggestion: "+id);
 			$state.transitionTo('detail', {workshop_id: id});
 		};
 
@@ -40,6 +41,7 @@
 		function activate(){
 			WorkshopService.get($stateParams.workshop_id).then(success, error);
 
+			mixpanel.track($stateParams.workshop_id);
 			self.user = {};
 
 			$document.scrollTop(0, 0);

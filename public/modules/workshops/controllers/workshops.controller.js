@@ -54,11 +54,8 @@
 		}
 
 		this.get = function(id){
+			mixpanel.track(id);
 			$state.transitionTo('detail', {workshop_id: id});
-		};
-
-		this.suggest = function(){
-			alert('not implemented yet!');
 		};
 
 		activate();
