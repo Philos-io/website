@@ -53,15 +53,20 @@
                     			<h4 class="info">Key points</h4>
                     			<hr/>
                     			<p>
-                    				<ul data-ng-repeat="ls in ::ws.currentWorkshop.importantPoints track by $index">
-                    					<li data-ng-if="$first" class="first">
-                    						<span>{{::ws.currentWorkshop.pricing}}</span>
-                    					</li>
-                    					<li><span>{{::ws.currentWorkshop.importantPoints[$index]}}</span></li>
-                    					<li data-ng-if="$last" class="last">
-                    						<span>{{::ws.currentWorkshop.language}}</span>
-                    					</li>
-                    				</ul>
+                    				<ul>
+                              <li>
+                                <span>{{::ws.currentWorkshop.pricing}}</span>
+                              </li>
+                              <li data-ng-repeat="ls in ::ws.currentWorkshop.importantPoints track by $index">
+                                <span>{{::ws.currentWorkshop.importantPoints[$index]}}</span>
+                              </li>
+                              <li data-ng-repeat="ls in ::ws.currentWorkshop.nextSessions track by $index">
+                                <span class="next-session">{{::ws.currentWorkshop.nextSessions[$index]}}</span>
+                              </li>
+                              <li>
+                                <span>{{::ws.currentWorkshop.language}}</span>
+                              </li>
+                            </ul>
                     			</p>
                     		</div>
                       </div>

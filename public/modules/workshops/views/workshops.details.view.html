@@ -36,8 +36,6 @@
 	</div>
 
 	<div ng-if="ws.type==='corporate'">
-
-
 		<div class="row">
 			<div class="col-lg-6 col-xs-12 col-md-6">
 				<h4>Mentor(s)</h4>
@@ -52,13 +50,17 @@
 				<h4 class="info">Key points</h4>
 				<hr/>
 				<p>
-					<ul data-ng-repeat="ls in ::ws.importantPoints track by $index">
-						<li data-ng-if="$first" class="first">
+					<ul>
+						<li>
 							<span>{{::ws.pricing}}</span>
-
 						</li>
-						<li><span>{{::ws.importantPoints[$index]}}</span></li>
-						<li data-ng-if="$last" class="last">
+						<li data-ng-repeat="ls in ::ws.importantPoints track by $index">
+							<span>{{::ws.importantPoints[$index]}}</span>
+						</li>
+						<li data-ng-repeat="ls in ::ws.nextSessions track by $index">
+							<span class="next-session">{{::ws.nextSessions[$index]}}</span>
+						</li>
+						<li>
 							<span>{{::ws.language}}</span>
 						</li>
 					</ul>

@@ -44,6 +44,7 @@ var WorkshopSchema = new Schema({
     required: true
   },
   importantPoints: [String],
+  nextSessions: [String],
   language: String,
   pricing: String,
   instructors: {
