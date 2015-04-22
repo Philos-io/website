@@ -94,7 +94,7 @@ var angularjs = {
   category: 'JavaScript Framework',
   takeAways: ['Why using AngularJS in your next project', 'Developping big project with JavaScript', 'Write clean and maintenable code', 'Advanced debugging techniques'],
   importantPoints: ['6 sessions of 3 hours each!','6 people maximum! Quality matters.', 'Philos Methodology: Learn.Build.Share.', 'Evening Sessions can be organised in-house'],
-  nextSessions: ['Next session (from 27/04 to 12/05)','Evening hacking from 17h to 21h','Location: Avenue Franklin Roosevelt 42, Brussels', '27/04 - 28/04: beginner to intermediaire', '04/05 - 05/05: intermediaire to advanced', '11/05 - 12/05: advanced'],
+  nextSessions: ['Next session (from 27/04 to 12/05)','Evening hacking from 17h to 21h','Location: Ch.de Charleroi 110, 1060. Bruxelles, salle DELTA', '27/04 - 28/04: beginner to intermediaire', '04/05 - 05/05: intermediaire to advanced', '11/05 - 12/05: advanced'],
   language: 'English',
   pricing: '200 €/pers./session excl. taxes',
   modules: [
