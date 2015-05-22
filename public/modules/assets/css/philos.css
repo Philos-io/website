@@ -835,3 +835,7 @@ section#portfolio.workshops{
 .next-session{
   color: rgba(255,76,39,.9);
 }
+
+span.unicode{
+  font-size: 20px;
+}
