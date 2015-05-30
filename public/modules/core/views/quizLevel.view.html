@@ -1,0 +1,36 @@
+<section id="quizz"  class="container animated fadeInUpSmall">
+	<div class="row">
+		<div class="col-lg-12 text-center">
+			<h2 class="section-heading" data-ng-bind="vm.technology"></h2>
+		</div>
+	</div>
+	<hr/>
+
+	<div class="row">
+		<div class="col-lg-offset-2 col-lg-8">
+			<div class="panel panel-primary">
+			  <div class="panel-heading">
+			    <h3 class="panel-title" data-ng-bind="vm.currentQuiz.question"></h3>
+			  </div>
+			  <div class="panel-body">
+			    <form name="quizForm" novalidate>
+				    <div data-ng-if="vm.destroy" class="radio" data-ng-repeat="answer in vm.currentQuiz.answers track by $index">
+					    <label>
+						    <input type="radio" name="optionsRadio" ng-model="answer.id">
+							{{answer.text}}
+					  	</label>
+				  	</div>
+			    </form>
+			  </div>
+
+			  <pre>	{{vm}}</pre>
+			  <div class="panel-body">
+			    <input class="btn btn-default pull-right" type="button" value="Next" data-ng-click="vm.next()"/>
+			    <span class="btn btn-default" data-ng-bind="vm.counter + '/' + vm.quizzes.length"></span>
+			  </div>
+			</div>	
+		</div>
+	</div>
+	
+
+</section>
