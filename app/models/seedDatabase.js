@@ -29,7 +29,7 @@ var ionicjs = {
   ],
   requirements: ['Your laptop', 'Github Account', 'Heroku Account', 'Ionic CLI installed', 'Android and/or iOS phone', 'A smile and a lot of energy'],
   takeAways: ['You can build advanced mobile applications with web technologies', 'Pair programming', 'JavaScript OS: The big picture', 'Write clean and maintenable code', 'Ionic Framework and AngularJS are here to stay'],
-  logo: 'modules/assets/images/workshops/TRAININGS-ILLUSTRATIONS-05.png',
+  logo: 'modules/assets/images/workshops/ionic.png',
   instructors: [{
             firstName: 'Davy',
             lastName: 'Engone',
@@ -72,7 +72,7 @@ var nodejs = {
     }
   ],
   requirements: ['Experience with at least one programming language', 'A computer', 'Github Account'],
-  logo: 'modules/assets/images/workshops/TRAININGS-ILLUSTRATIONS-01.png',
+  logo: 'modules/assets/images/workshops/nodejs.png',
   instructors: [{
             firstName: 'Davy',
             lastName: 'Engone',
@@ -122,7 +122,7 @@ var angularjs = {
     }
   ],
   requirements: ['Experience with at least one programming language', 'A computer', 'Github Account'],
-  logo: 'modules/assets/images/workshops/TRAININGS-ILLUSTRATIONS-03.png',
+  logo: 'modules/assets/images/workshops/angularjs.png',
   instructors: [{
             firstName: 'Davy',
             lastName: 'Engone',
@@ -166,7 +166,7 @@ var javascript = {
   ],
   requirements: ['Your laptop', 'Github Account', 'Heroku Account', 'Ionic CLI installed', 'Android and/or iOS phone', 'A smile and a lot of energy'],
   takeAways: ['You can build advanced mobile applications with web technologies', 'Pair programming', 'JavaScript OS: The big picture', 'Write clean and maintenable code', 'Ionic Framework and AngularJS are here to stay'],
-  logo: 'modules/assets/images/workshops/TRAININGS-ILLUSTRATIONS-02.png',
+  logo: 'modules/assets/images/workshops/js.png',
   instructors: [{
             firstName: 'Davy',
             lastName: 'Engone',
@@ -210,7 +210,7 @@ var gulpjs = {
   ],
   requirements: ['Your laptop', 'Github Account', 'Heroku Account', 'Ionic CLI installed', 'Android and/or iOS phone', 'A smile and a lot of energy'],
   takeAways: ['You can build advanced mobile applications with web technologies', 'Pair programming', 'JavaScript OS: The big picture', 'Write clean and maintenable code', 'Ionic Framework and AngularJS are here to stay'],
-  logo: 'modules/assets/images/workshops/TRAININGS-ILLUSTRATIONS-07.png',
+  logo: 'modules/assets/images/workshops/gulp.png',
   instructors: [{
             firstName: 'Davy',
             lastName: 'Engone',
@@ -254,7 +254,7 @@ var meteor = {
   ],
   requirements: ['Your laptop', 'Github Account', 'Heroku Account', 'Ionic CLI installed', 'Android and/or iOS phone', 'A smile and a lot of energy'],
   takeAways: ['You can build advanced mobile applications with web technologies', 'Pair programming', 'JavaScript OS: The big picture', 'Write clean and maintenable code', 'Ionic Framework and AngularJS are here to stay'],
-  logo: 'modules/assets/images/workshops/TRAININGS-ILLUSTRATIONS-06.png',
+  logo: 'modules/assets/images/workshops/meteor.png',
   instructors: [{
             firstName: 'Davy',
             lastName: 'Engone',
@@ -299,7 +299,7 @@ var html5 = {
   ],
   requirements: ['Your laptop', 'Github Account', 'Heroku Account', 'Ionic CLI installed', 'Android and/or iOS phone', 'A smile and a lot of energy'],
   takeAways: ['You can build advanced mobile applications with web technologies', 'Pair programming', 'JavaScript OS: The big picture', 'Write clean and maintenable code', 'Ionic Framework and AngularJS are here to stay'],
-  logo: 'modules/assets/images/workshops/TRAININGS-ILLUSTRATIONS-09.png',
+  logo: 'modules/assets/images/workshops/HTML5.png',
   instructors: [{
             firstName: 'Davy',
             lastName: 'Engone',
@@ -343,7 +343,7 @@ var es6 = {
   ],
   requirements: ['Your laptop', 'Github Account', 'Heroku Account', 'Ionic CLI installed', 'Android and/or iOS phone', 'A smile and a lot of energy'],
   takeAways: ['You can build advanced mobile applications with web technologies', 'Pair programming', 'JavaScript OS: The big picture', 'Write clean and maintenable code', 'Ionic Framework and AngularJS are here to stay'],
-  logo: 'modules/assets/images/workshops/TRAININGS-ILLUSTRATIONS-11.png',
+  logo: 'modules/assets/images/workshops/ES6.png',
   instructors: [{
             firstName: 'Davy',
             lastName: 'Engone',
@@ -387,7 +387,7 @@ var tdd = {
   ],
   requirements: ['Your laptop', 'Github Account', 'Heroku Account', 'Ionic CLI installed', 'Android and/or iOS phone', 'A smile and a lot of energy'],
   takeAways: ['You can build advanced mobile applications with web technologies', 'Pair programming', 'JavaScript OS: The big picture', 'Write clean and maintenable code', 'Ionic Framework and AngularJS are here to stay'],
-  logo: 'modules/assets/images/workshops/TRAININGS-ILLUSTRATIONS-10.png',
+  logo: 'modules/assets/images/workshops/TDD.png',
   instructors: [{
             firstName: 'Davy',
             lastName: 'Engone',
