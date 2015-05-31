@@ -47,12 +47,14 @@ module.exports = function(db) {
 	});
 
 	// Should be placed before express.static
-	app.use(compress({
-		filter: function(req, res) {
-			return (/json|text|javascript|css/).test(res.getHeader('Content-Type'));
-		},
-		level: 9
-	}));
+	// app.use(compress({
+	// 	filter: function(req, res) {
+	// 		return (/json|text|javascript|css/).test(res.getHeader('Content-Type'));
+	// 	},
+	// 	level: 9
+	// }));
+
+	app.use(compress());
 
 	// Showing stack errors
 	app.set('showStackError', true);
