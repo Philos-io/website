@@ -10,7 +10,7 @@ html, body {
 
 .wrapper {
   min-height: 100%;
-  margin-bottom: -80px; 
+  margin-bottom: -80px;
 }
 
 .wrapper:after {
@@ -19,7 +19,7 @@ html, body {
 }
 
 .site-footer, .wrapper:after {
-  height: 80px; 
+  height: 80px;
   padding-top: 2%;
 }
 
@@ -125,12 +125,12 @@ h2{
     text-transform: uppercase;
     font-family: 'Raleway', "Helvetica Neue",Helvetica,Arial,sans-serif;
     background: rgba(255,76,39,.9);
-    letter-spacing: 3px;
+    letter-spacing: 0.2em;
     border-radius: 50px;
     padding-right: 25px;
     padding-left: 25px;
     transition: all 300ms;
-    height: 45px;
+    height: 2.8em;
 }
 
 .btn-philos-deactivate{
@@ -246,7 +246,7 @@ section#team{
 @media(min-width:768px) {
     header .intro-text {
         padding-top: 180px;
-        padding-bottom: 50px;
+        padding-bottom: 10px;
     }
 
 	.navbar-brand-logo{
@@ -283,23 +283,39 @@ section#portfolio.home{
     }
 
     .btn-philos{
-      display: block;
-      margin: auto;
+      margin: 0.3em;
+      font-size: 0.9em;
     }
 
+    /**Home screen***/
+    .home_screen{
+      min-height: 35em;
+      margin-top: 5em;
+
+    }
+
+    /**not-show-mobile***/
+    .not-show-mobile{
+      display:none;
+    }
 
     /**Training section***/
     section#portfolio, section#team{
       padding-top:80px;
         height: 90%;
     }
+
+    #portfolio .portfolio-item .portfolio-caption p.description{
+      height: auto;
+    }
     /*end training*/
 
-
+    /**Customers section***/
     .clients{
-      padding-top:70px;
+      display: none;
+      /*padding-top:70px;
       position: relative;
-      bottom: 0;
+      bottom: 0;*/
     }
 }
 
@@ -585,16 +601,17 @@ section#signup, section#signin{
 
 #portfolio .portfolio-item .portfolio-caption p.description{
   text-align: left;
+  min-height: 350px;
 }
 
 
 section h2.section-heading{
   text-transform:none;
-  font-weight:300;
+  font-weight:700;
   letter-spacing:0px;
   font-size:24px;
   color:#999;
-  margin-bottom: 25px;
+  margin-bottom: 2.3em;
 }
 
 #portfolio .portfolio-item .portfolio-caption h4{
@@ -613,7 +630,6 @@ section h2.section-heading{
 }
 
 .clients{
-  padding-top:80px;
   background-attachment: fixed;
   background-image: url(../../assets/images/branding/pattern_image.png);
   background-position: top center;
@@ -622,7 +638,7 @@ section h2.section-heading{
 
 .clients hr{
   color: #353535;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .section-subheading{
@@ -683,9 +699,9 @@ div.authenticated i{
   transition: 300ms all;
 }
 
-.nav-pills>li.active>a, 
+.nav-pills>li.active>a,
 .nav-pills>li.active>a:hover,
-.nav-pills>li.active>a:focus, 
+.nav-pills>li.active>a:focus,
 .nav-pills>li>a:hover,
 .nav-pills>li.login>a:hover{
   background-color:hsla(10, 100%, 58%, 1);;
@@ -715,10 +731,10 @@ div.authenticated i{
 
 .fadeOut-remove, .fadeOut-remove-active{
   transition: all ease bounce 3s;
-} 
+}
 
 .home_screen{
-  height: 45vh;
+  height: auto;
 }
 
 section#services.services{
@@ -736,9 +752,12 @@ section#about{
   border: none;
 }
 
+/*
 .home_screen{
   height: 50vh;
 }
+*/
+
 .service .caption{
   padding: 20px 0 0;
 }
@@ -767,7 +786,7 @@ section#portfolio.workshops{
   left: 0;
   top: 0;
 }
- 
+
 .cd-headline.rotate-1 b.is-visible {
   position: relative;
   opacity: 1;
@@ -783,14 +802,14 @@ section#portfolio.workshops{
   left: 0;
   top: 0;
 }
- 
+
 .cd-headline.rotate-1 b.is-visible {
   position: relative;
   opacity: 1;
   transform: rotateX(0deg);
   animation: cd-rotate-1-in 1.2s;
 }
- 
+
 .cd-headline.rotate-1 b.is-hidden {
   transform: rotateX(180deg);
   animation: cd-rotate-1-out 1.2s;
@@ -813,7 +832,7 @@ section#portfolio.workshops{
     opacity: 1;
   }
 }
- 
+
 @keyframes cd-rotate-1-out {
   0% {
     transform: rotateX(0deg);

@@ -2,36 +2,18 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h2 class="section-heading">Our Services</h2>
+                <h2 class="section-heading">What we do</h2>
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-4 portfolio-item animated fadeInUpSmall text-center service">
-                
-                <div>
-                    <img ng-src="modules/assets/images/services/icons_lab.png" class="img-thumbnail" alt="{{model.title}}">
-                </div>
-                <div class="caption">
-                    <h4>Philos LAB</h4>
-                    <h5>Stay ahead</h5>
-                </div>
-                <div class="portfolio-caption">
-                    <p class="description">
-                        Technology doesn't stand still and neither do we. We combine emerging technologies, lean design and breakthrough thinking to empower your people and enable you to deliver your project, fast. Through our collaborative approach, we help you ensure that you stay ahead of the game.
-                    </p>
-                </div>
-                <!-- <div>
-                    <a href="" data-ng-click="main.goTo('contact')" class="btn btn-philos btn-lg">Contact Us</a>
-                </div> -->
-            </div>
             <div class="col-lg-4 portfolio-item animated fadeInUpSmall text-center service main">
-                
+
                 <div>
                     <img ng-src="modules/assets/images/services/icons_workshops.png" class="img-thumbnail" alt="{{model.title}}">
                 </div>
                 <div class="caption">
                     <h4>Workshops</h4>
-                    <h5>Skills builder</h5>
+                    <!--<h5>Skills builder</h5>-->
                 </div>
                 <div class="portfolio-caption">
                     <p class="description">
@@ -43,14 +25,14 @@
                 </div> -->
             </div>
             <div class="col-lg-4 portfolio-item animated fadeInUpSmall text-center service">
-                
+
                 <div>
                     <img ng-src="modules/assets/images/services/icons_conference.png" class="img-thumbnail" alt="{{model.title}}">
                 </div>
-                
+
                 <div class="caption">
                     <h4>Conferences</h4>
-                    <h5>One Day One Tech</h5>
+                    <!--<h5>One Day One Tech</h5>-->
                 </div>
                 <div class="portfolio-caption">
                     <p class="description">
@@ -61,19 +43,40 @@
                     <a href="" data-ng-click="main.goTo('contact')" class="btn btn-philos btn-lg">Contact Us</a>
                 </div> -->
             </div>
+            <div class="col-lg-4 portfolio-item animated fadeInUpSmall text-center service">
+
+                <div>
+                    <img ng-src="modules/assets/images/services/icons_lab.png" class="img-thumbnail" alt="{{model.title}}">
+                </div>
+                <div class="caption">
+                    <h4>Philos LAB</h4>
+                    <!--<h5>Stay ahead</h5>-->
+                </div>
+                <div class="portfolio-caption">
+                    <p class="description">
+                        Technology doesn't stand still and neither do we. We combine emerging technologies, lean design and breakthrough thinking to empower your people and enable you to deliver your project, fast. Through our collaborative approach, we help you ensure that you stay ahead of the game.
+                    </p>
+                </div>
+                <!-- <div>
+                    <a href="" data-ng-click="main.goTo('contact')" class="btn btn-philos btn-lg">Contact Us</a>
+                </div> -->
+            </div>
         </div>
-        <div class="row">
+
+        <br>
+
+        <div class="row not-show-mobile">
             <div class="col-lg-12 text-center" data-ng-if="!main.subscriberMessage">
-                <h5 class="text-muted suggest_cation">Don't miss any info, stay tuned!</h5>
+                <p class="text-muted suggest_cation">Get our events' update delivered straight to your inbox</p>
                 <form data-ng-submit="main.subscribe()" class="form-inline subscribeForm" name="subscribeForm"
                     data-ng-class="{'has-error': subscribeForm.email.$invalid && subscribeForm.email.$dirty}">
                   <div class="form-group">
-                    <input type="email" class="form-control input-lg" required data-ng-model="main.subscriberEmail" placeholder="email">
+                    <input type="email" class="form-control input-lg" required data-ng-model="main.subscriberEmail" placeholder="Your email">
                   </div>
-                  <button type="submit" data-ng-disabled="subscribeForm.$invalid" class="btn btn-philos btn-lg">Join</button>
+                  <button type="submit" data-ng-disabled="subscribeForm.$invalid" class="btn btn-philos btn-lg">Keep me posted</button>
                 </form>
                 <br/>
-                <h5 class="text-muted suggest_cation">Don't worry it comes only once a month, we hate spam too.</h5>
+                <p class="text-muted suggest_cation">Don't worry we only communicate when it's worth it, we hate spam too.</p>
             </div>
             <div class="col-lg-12 text-center animated tada" data-ng-if="main.subscriberMessage">
                 <span data-ng-bind="main.subscriberMessage" class="btn btn-philos btn-lg"></span>
