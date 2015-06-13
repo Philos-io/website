@@ -7,8 +7,7 @@
 
   	function activate(){
 		  $document.scrollTop(0, 0);
-
-
+      
       self.mediaInfo = AppConfig.media;
 
   		if (!self.user) {
@@ -23,9 +22,9 @@
 		  }
 
       // var animationDelay = 2500;
- 
+
       // animateHeadline($('.cd-headline'));
-       
+
       // function animateHeadline($headlines) {
       //   $headlines.each(function(){
       //     var headline = $(this);
@@ -40,11 +39,11 @@
       //   switchWord($word, nextWord);
       //   setTimeout(function(){ hideWord(nextWord) }, animationDelay);
       // }
-       
+
       // function takeNext($word) {
       //   return (!$word.is(':last-child')) ? $word.next() : $word.parent().children().eq(0);
       // }
-       
+
       // function switchWord($oldWord, $newWord) {
       //   $oldWord.removeClass('is-visible').addClass('is-hidden');
       //   $newWord.removeClass('is-hidden').addClass('is-visible');
@@ -72,7 +71,7 @@
       $anchorScroll.yOffset = 100;
 
       if($location.path() !== '/') $location.path('/');
-      
+
       $location.hash(hash);
       $anchorScroll();
     };
@@ -90,7 +89,7 @@
   		Authentication.logout().then(function(){
   			$location.path('/workshops');
   		});
-  		
+
   	};
   }
 

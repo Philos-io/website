@@ -9,6 +9,7 @@ html, body {
 }
 
 .wrapper {
+  display: none;
   min-height: 100%;
   margin-bottom: -80px;
 }
@@ -857,4 +858,9 @@ section#portfolio.workshops{
 
 span.unicode{
   font-size: 20px;
+}
+
+.pre-load{
+  text-align:center;
+  padding-top: 30vh;
 }
