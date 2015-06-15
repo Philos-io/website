@@ -6,6 +6,7 @@ module.exports = {
 		description: 'philos, Level up your JavaScript Skills',
 		keywords: 'software engineering, workshops, training, monitoring and more...'
 	},
+	prerender: process.env.PRERENDER,
 	port: process.env.PORT || 3000,
 	templateEngine: 'swig',
 	sessionSecret: 'philosontherise',
