@@ -2,8 +2,9 @@
 
 module.exports = {
 	db: process.env.MONGOLAB_URI || 'mongodb://localhost/philos',
+	prerender: process.env.PRERENDER, 
 	app: {
-		title: 'Philos | Learn.Build.Share'
+		title: 'Philos | Stay Ahead'
 	},
 	facebook: {
 		clientID: process.env.FACEBOOK_ID || 'APP_ID',

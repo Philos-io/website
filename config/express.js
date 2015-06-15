@@ -40,20 +40,14 @@ module.exports = function(db) {
 	app.locals.jsFiles = config.getJavaScriptAssets();
 	app.locals.cssFiles = config.getCSSAssets();
 
+	app.use(require('prerender-node').set('prerenderToken', config.prerender);
+
 	// Passing the request url to environment locals
 	app.use(function(req, res, next) {
 		res.locals.url = req.protocol + '://' + req.headers.host + req.url;
 		next();
 	});
-
-	// Should be placed before express.static
-	// app.use(compress({
-	// 	filter: function(req, res) {
-	// 		return (/json|text|javascript|css/).test(res.getHeader('Content-Type'));
-	// 	},
-	// 	level: 9
-	// }));
-
+	
 	app.use(compress());
 
 	// Showing stack errors

@@ -2,8 +2,8 @@
 
 module.exports = {
 	app: {
-		title: 'Philos | Learn.Build.Share',
-		description: 'philos, Learn.Build.Share',
+		title: 'Philos | Stay Ahead',
+		description: 'philos, Level up your JavaScript Skills',
 		keywords: 'software engineering, workshops, training, monitoring and more...'
 	},
 	port: process.env.PORT || 3000,
