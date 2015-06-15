@@ -27,6 +27,8 @@ module.exports = function(db) {
 	// Initialize express app
 	var app = express();
 
+	app.use(compress());
+
 	// Globbing model files
 	config.getGlobbedFiles('./app/models/**/*.js').forEach(function(modelPath) {
 		require(path.resolve(modelPath));
@@ -40,15 +42,13 @@ module.exports = function(db) {
 	app.locals.jsFiles = config.getJavaScriptAssets();
 	app.locals.cssFiles = config.getCSSAssets();
 
-	//app.use(require('prerender-node').set('prerenderToken', process.env.PRERENDER);
+	app.use(require('prerender-node').set('prerenderToken', process.env.PRERENDER);
 
 	// Passing the request url to environment locals
 	app.use(function(req, res, next) {
 		res.locals.url = req.protocol + '://' + req.headers.host + req.url;
 		next();
 	});
-	
-	app.use(compress());
 
 	// Showing stack errors
 	app.set('showStackError', true);
