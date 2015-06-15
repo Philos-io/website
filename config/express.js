@@ -42,7 +42,7 @@ module.exports = function(db) {
 	app.locals.jsFiles = config.getJavaScriptAssets();
 	app.locals.cssFiles = config.getCSSAssets();
 
-	app.use(require('prerender-node').set('prerenderToken', process.env.PRERENDER);
+	//app.use(require('prerender-node').set('prerenderToken', process.env.PRERENDER);
 
 	// Passing the request url to environment locals
 	app.use(function(req, res, next) {
