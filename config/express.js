@@ -44,8 +44,8 @@ module.exports = function(db) {
 
 
 	
-	app.use(require('prerender-node').set('prerenderToken', "v04qcLibMBW4AOnQ6jn8");
-	//app.use(require('prerender-node').set('prerenderToken', process.env.PRERENDER);
+	//app.use(require('prerender-node').set('prerenderToken', "v04qcLibMBW4AOnQ6jn8");
+	app.use(require('prerender-node').set('prerenderToken', process.env.PRERENDER);
 
 	// Passing the request url to environment locals
 	app.use(function(req, res, next) {
