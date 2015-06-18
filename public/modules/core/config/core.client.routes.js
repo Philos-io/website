@@ -1,10 +1,11 @@
 (function(module){
 	'use strict';
 
-	function Configuration($stateProvider, $urlRouterProvider, $compileProvider) {
+	function Configuration($stateProvider, $urlRouterProvider, $compileProvider, $httpProvider) {
 		// Redirect to home view when route not found
 		$urlRouterProvider.otherwise('/');
-		//$compileProvider.debugInfoEnabled(false);
+		$compileProvider.debugInfoEnabled(false);
+		$httpProvider.useApplyAsync(true);
 
 		// Home state routing
 		$stateProvider.
@@ -37,12 +38,6 @@
 			controllerAs: 'about',
 			templateUrl: 'modules/core/views/about.view.html'
 		})
-		// .state('services', {
-		// 	url: '/services',
-		// 	controller: 'CommonController',
-		// 	controllerAs: 'services',
-		// 	templateUrl: 'modules/core/views/services.view.html'
-		// })
 		.state('jobs', {
 			url: '/jobs',
 			controller: 'CommonController',
@@ -52,16 +47,9 @@
 	}
 
 	// Setting up dependencies
-	var dependencies = ['$stateProvider', '$urlRouterProvider', '$compileProvider', Configuration]
+	Configuration.$inject = ['$stateProvider', '$urlRouterProvider', '$compileProvider', '$httpProvider'];
 
 	// Setting up route
-	module.config(dependencies);
-
-	module.config(function($httpProvider) {
-    	//Enable cross domain calls
-    	// $httpProvider.defaults.useXDomain = true;
-
-    	//  delete $httpProvider.defaults.headers.common['X-Requested-With'];
-	});
+	module.config(Configuration);
 
 })(angular.module('core'));
